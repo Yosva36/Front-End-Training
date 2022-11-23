@@ -1,0 +1,263 @@
+@media only screen and (max-width: 425px) {
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    position: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: white;
+    height: 100px;
+    width: auto;
+  }
+
+  .nav-bar img {
+    height: 30px;
+  }
+
+  .list-items ul {
+    display: none;
+  }
+
+  .logo {
+    padding-left: 20px;
+  }
+
+  .icons {
+    padding-right: 20px;
+  }
+
+  .icons button i {
+    font-size: 22px;
+  }
+
+  #left-arrow {
+    display: none;
+  }
+
+  #right-arrow {
+    display: none;
+  }
+
+  .sub-container {
+    background-image: url("/Flower/images/flower-twenty-five.jpeg");
+    background-size: 665px;
+    background-repeat: no-repeat;
+    height: 445px;
+    width: 425px;
+  }
+
+  .home-description {
+    text-align: center;
+    padding-top: 137px;
+    height: auto;
+    width: 425px;
+    padding-bottom: 0px;
+  }
+
+  .home-header {
+    font-size: 30px;
+    margin-top: 4px;
+    margin-bottom: -5px;
+  }
+
+  .home-content p {
+    font-size: 13px;
+    margin-bottom: 30px;
+    color: grey;
+  }
+
+  .home-content {
+    margin-bottom: 0px;
+    margin-right: 0px;
+  }
+
+  .dots-page-swipe {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+  }
+
+  .dots-page-swipe i {
+    color: #e60a58;
+    padding: 2px;
+  }
+
+  .flowers {
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "header header header"
+      "header header header"
+      "header header header"
+      "menu menu main"
+      "menu menu main"
+      "right footer footer"
+      "right footer footer";
+    gap: 20px;
+    background-color: white;
+    padding: 15px;
+    height: auto;
+    margin-top: -60px;
+  }
+
+  .flower-one {
+    background-image: url(/Flower/images/flowers-in-pot.jpg);
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+  }
+
+  .rose-potted-plant {
+    padding-left: 0px;
+    background-image: url("/Flower/images/light-rose-.jpg");
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+    align-items: center;
+  }
+
+  .flower-three {
+    background-image: url(/Flower/images/flower-gift.jpg);
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+  }
+
+  .pots-two {
+    display: none;
+  }
+
+  #remove {
+    display: none;
+  }
+
+  .block {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  .deal-image {
+    display: flex;
+    justify-content: center;
+    height: 420px;
+    background-color: antiquewhite;
+  }
+
+  .deal-image img {
+    width: 425px;
+    height: 420px;
+  }
+
+  .gift img {
+    width: 150px;
+    height: auto;
+  }
+
+  .deadline {
+    height: 58px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    letter-spacing: 1px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    width: 375px;
+  }
+
+  .offer-pots {
+    display: block;
+    margin: 40px 15px 15px 15px;
+  }
+
+  .big-red-rose {
+    margin-left: 0px;
+  }
+
+  .tulip-flower {
+    margin-right: 0;
+  }
+
+  .red-tulip {
+    padding: 10px 0;
+  }
+
+  .email {
+    height: 220px;
+    background-color: #f8f8f8;
+    display: flex;
+    margin-top: 70px;
+    flex-direction: column;
+  }
+
+  .send-news-letter {
+    margin: 10px;
+    width: 90%;
+  }
+
+  .post-images {
+    display: block;
+    margin-top: 50px;
+    margin: 50px 10px 0px 10px;
+    width: 425px;
+  }
+
+  .post {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 0px 6px 1px rgb(196 184 196);
+    -moz-box-shadow: 0px 0px 6px 1px rgba(196, 184, 196, 1);
+    box-shadow: 0px 0px 6px 1px rgb(196 184 196);
+    width: 405px;
+    padding: -1px;
+    margin: 10px 0 10px 0;
+  }
+
+  .post img {
+    width: 100%;
+    height: auto;
+  }
+
+  .brand-logos {
+    display: flex;
+    justify-content: center;
+  }
+
+  .brands img {
+    width: 120px;
+    height: auto;
+  }
+
+  .brands {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 170px;
+    background: #f8f8f8;
+  }
+
+  .info {
+    height: 1000px;
+    background: #1b1b1b;
+  }
+
+  .list-of-info {
+    display: block;
+    padding-top: 15px;
+  }
+
+  .infos-one {
+    display: block;
+  }
+}

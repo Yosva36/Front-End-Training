@@ -1,0 +1,86 @@
+{
+    "sourceFile": "Flower/flowers(phones).css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 17,
+            "patches": [
+                {
+                    "date": 1669044980074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1669044990027,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,3 @@\n-@med\n\\ No newline at end of file\n+@media (screen) {\r\n+  \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669044996954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n-@media (screen) {\r\n+@media screen(max-w) {\r\n   \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669045013190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,2 @@\n-@media screen(max-w) {\r\n-  \r\n-}\n\\ No newline at end of file\n+@media screen(max-width:425px) {\r\n+}\r\n"
+                },
+                {
+                    "date": 1669045059807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,14 @@\n @media screen(max-width:425px) {\r\n+\r\n+  display: flex;\r\n+  justify-content: space-between;\r\n+  align-items: center;\r\n+  position: fixed;\r\n+  position: 0;\r\n+  top: 0;\r\n+  left: 0;\r\n+  right: 0;\r\n+  z-index: 1;\r\n+  background-color: #e9e9e9;\r\n }\r\n+}\r\n"
+                },
+                {
+                    "date": 1669045094585,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,15 @@\n @media screen(max-width:425px) {\r\n \r\n-  display: flex;\r\n-  justify-content: space-between;\r\n-  align-items: center;\r\n-  position: fixed;\r\n-  position: 0;\r\n-  top: 0;\r\n-  left: 0;\r\n-  right: 0;\r\n-  z-index: 1;\r\n-  background-color: #e9e9e9;\r\n+  .nav-bar {\r\n+    display: flex;\r\n+    justify-content: space-between;\r\n+    align-items: center;\r\n+    position: fixed;\r\n+    position: 0;\r\n+    top: 0;\r\n+    left: 0;\r\n+    right: 0;\r\n+    z-index: 1;\r\n+    background-color: #e9e9e9;\r\n+  }\r\n }\r\n-}\r\n"
+                },
+                {
+                    "date": 1669045184233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n-@media screen(max-width:425px) {\r\n-\r\n+@media onscreen(max-width:425px) {\r\n   .nav-bar {\r\n     display: flex;\r\n     justify-content: space-between;\r\n     align-items: center;\r\n"
+                },
+                {
+                    "date": 1669045238120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-@media onscreen(max-width:425px) {\r\n+@media only screenc and(max-width:425px) {\r\n   .nav-bar {\r\n     display: flex;\r\n     justify-content: space-between;\r\n     align-items: center;\r\n"
+                },
+                {
+                    "date": 1669045261426,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-@media only screenc and(max-width:425px) {\r\n+@media only screen and(max-width:425px) {\r\n   .nav-bar {\r\n     display: flex;\r\n     justify-content: space-between;\r\n     align-items: center;\r\n"
+                },
+                {
+                    "date": 1669045361598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-@media only screen and(max-width:425px) {\r\n+@media only screen and (max-width: 425px) {\r\n   .nav-bar {\r\n     display: flex;\r\n     justify-content: space-between;\r\n     align-items: center;\r\n@@ -10,5 +10,9 @@\n     right: 0;\r\n     z-index: 1;\r\n     background-color: #e9e9e9;\r\n   }\r\n+\r\n+  .nav-bar img {\r\n+    height: 25px;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669047451607,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,5 +14,11 @@\n \r\n   .nav-bar img {\r\n     height: 25px;\r\n   }\r\n+\r\n+  .list-items ul {\r\n+    display: flex;\r\n+    list-style: none;\r\n+    padding: 0;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669047481738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,7 @@\n     height: 25px;\r\n   }\r\n \r\n   .list-items ul {\r\n-    display: flex;\r\n-    list-style: none;\r\n-    padding: 0;\r\n+    display: none;\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669047567486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,5 +18,9 @@\n \r\n   .list-items ul {\r\n     display: none;\r\n   }\r\n+\r\n+  .logo {\r\n+    padding-left: 80px;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669047654380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n     left: 0;\r\n     right: 0;\r\n     z-index: 1;\r\n     background-color: #e9e9e9;\r\n+    \r\n   }\r\n \r\n   .nav-bar img {\r\n     height: 25px;\r\n"
+                },
+                {
+                    "date": 1669047666934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     left: 0;\r\n     right: 0;\r\n     z-index: 1;\r\n     background-color: #e9e9e9;\r\n-    \r\n+    height: 100px;\r\n   }\r\n \r\n   .nav-bar img {\r\n     height: 25px;\r\n"
+                },
+                {
+                    "date": 1669047724541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,5 +23,13 @@\n \r\n   .logo {\r\n     padding-left: 80px;\r\n   }\r\n+\r\n+  .icons {\r\n+    padding-right: 80px;\r\n+  }\r\n+\r\n+  .icons button i {\r\n+    font-size: 15px;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669048054444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,7 +29,7 @@\n     padding-right: 80px;\r\n   }\r\n \r\n   .icons button i {\r\n-    font-size: px;\r\n+    font-size: 3px;\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669048311919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     top: 0;\r\n     left: 0;\r\n     right: 0;\r\n     z-index: 1;\r\n-    background-color:#;\r\n+    background-color:;\r\n     height: 100px;\r\n     width: 425px;\r\n   }\r\n \r\n"
+                }
+            ],
+            "date": 1669044980074,
+            "name": "Commit-0",
+            "content": "@med"
+        }
+    ]
+}

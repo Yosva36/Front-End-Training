@@ -1,0 +1,318 @@
+{
+    "sourceFile": "Flower/flowers(Tablet).css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 75,
+            "patches": [
+                {
+                    "date": 1669097962680,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1669098033779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n-@media only screen and (max-width: 425px) {\r\n+@media only screen and (max-width: 768px) {\r\n }\r\n"
+                },
+                {
+                    "date": 1669098110737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,16 @@\n @media only screen and (max-width: 768px) {\r\n+  .nav-bar {\r\n+    display: flex;\r\n+    justify-content: space-between;\r\n+    align-items: center;\r\n+    position: fixed;\r\n+    position: 0;\r\n+    top: 0;\r\n+    left: 0;\r\n+    right: 0;\r\n+    z-index: 1;\r\n+    background-color: white;\r\n+    height: 100px;\r\n+    width: 768px;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669098236431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,5 +12,9 @@\n     background-color: white;\r\n     height: 100px;\r\n     width: 768px;\r\n   }\r\n+\r\n+  .list-items ul {\r\n+    display: none;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669098424929,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,5 +16,25 @@\n \r\n   .list-items ul {\r\n     display: none;\r\n   }\r\n+\r\n+  .logo {\r\n+    padding-left: 20px;\r\n+  }\r\n+\r\n+  .icons {\r\n+    padding-right: 20px;\r\n+  }\r\n+\r\n+  .icons button i {\r\n+    font-size: 22px;\r\n+  }\r\n+\r\n+  #left-arrow {\r\n+    display: none;\r\n+  }\r\n+\r\n+  #right-arrow {\r\n+    display: none;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669099580181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-@media only screen and (max-width: 768px) {\r\n+/* @media only screen and (max-width: 768px) {\r\n   .nav-bar {\r\n     display: flex;\r\n     justify-content: space-between;\r\n     align-items: center;\r\n@@ -36,5 +36,5 @@\n \r\n   #right-arrow {\r\n     display: none;\r\n   }\r\n-}\r\n+} */\r\n"
+                },
+                {
+                    "date": 1669099637028,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-/* @media only screen and (max-width: 768px) {\r\n+@media only screen and (max-width: 768px) {\r\n   .nav-bar {\r\n     display: flex;\r\n     justify-content: space-between;\r\n     align-items: center;\r\n@@ -36,5 +36,5 @@\n \r\n   #right-arrow {\r\n     display: none;\r\n   }\r\n-} */\r\n+}\r\n"
+                },
+                {
+                    "date": 1669099711853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-@media only screen and (max-width: 768px) {\r\n+/* @media only screen and (max-width: 768px) {\r\n   .nav-bar {\r\n     display: flex;\r\n     justify-content: space-between;\r\n     align-items: center;\r\n@@ -36,5 +36,5 @@\n \r\n   #right-arrow {\r\n     display: none;\r\n   }\r\n-}\r\n+} */\r\n"
+                },
+                {
+                    "date": 1669100296555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-/* @media only screen and (max-width: 768px) {\r\n+@media only screen and (max-width: 768px) {\r\n   .nav-bar {\r\n     display: flex;\r\n     justify-content: space-between;\r\n     align-items: center;\r\n@@ -36,5 +36,5 @@\n \r\n   #right-arrow {\r\n     display: none;\r\n   }\r\n-} */\r\n+}\r\n"
+                },
+                {
+                    "date": 1669100567383,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     height: 100px;\r\n     width: 768px;\r\n   }\r\n \r\n-  .list-items ul {\r\n+  .list-items {\r\n     display: none;\r\n   }\r\n \r\n   .logo {\r\n"
+                },
+                {
+                    "date": 1669100666566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,16 +21,8 @@\n   .logo {\r\n     padding-left: 20px;\r\n   }\r\n \r\n-  .icons {\r\n-    padding-right: 20px;\r\n-  }\r\n-\r\n-  .icons button i {\r\n-    font-size: 22px;\r\n-  }\r\n-\r\n   #left-arrow {\r\n     display: none;\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1669100680202,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,12 +17,8 @@\n   .list-items {\r\n     display: none;\r\n   }\r\n \r\n-  .logo {\r\n-    padding-left: 20px;\r\n-  }\r\n-\r\n   #left-arrow {\r\n     display: none;\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1669100687790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,11 @@\n     height: 100px;\r\n     width: 768px;\r\n   }\r\n \r\n-  .list-items {\r\n+  /* .list-items {\r\n     display: none;\r\n-  }\r\n+  } */\r\n \r\n   #left-arrow {\r\n     display: none;\r\n   }\r\n"
+                },
+                {
+                    "date": 1669100693819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,11 @@\n     height: 100px;\r\n     width: 768px;\r\n   }\r\n \r\n-  /* .list-items {\r\n+  .list-items {\r\n     display: none;\r\n-  } */\r\n+  }\r\n \r\n   #left-arrow {\r\n     display: none;\r\n   }\r\n"
+                },
+                {
+                    "date": 1669100740853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n @media only screen and (max-width: 768px) {\r\n-  .nav-bar {\r\n+  /* .nav-bar {\r\n     display: flex;\r\n     justify-content: space-between;\r\n     align-items: center;\r\n     position: fixed;\r\n@@ -11,9 +11,9 @@\n     z-index: 1;\r\n     background-color: white;\r\n     height: 100px;\r\n     width: 768px;\r\n-  }\r\n+  } */\r\n \r\n   .list-items {\r\n     display: none;\r\n   }\r\n"
+                },
+                {
+                    "date": 1669100758879,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n @media only screen and (max-width: 768px) {\r\n-  /* .nav-bar {\r\n+  .nav-bar {\r\n     display: flex;\r\n     justify-content: space-between;\r\n     align-items: center;\r\n     position: fixed;\r\n@@ -11,9 +11,9 @@\n     z-index: 1;\r\n     background-color: white;\r\n     height: 100px;\r\n     width: 768px;\r\n-  } */\r\n+  }\r\n \r\n   .list-items {\r\n     display: none;\r\n   }\r\n"
+                },
+                {
+                    "date": 1669100820253,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n @media only screen and (max-width: 768px) {\r\n-  .nav-bar {\r\n+  /* .nav-bar {\r\n     display: flex;\r\n     justify-content: space-between;\r\n     align-items: center;\r\n     position: fixed;\r\n@@ -11,9 +11,9 @@\n     z-index: 1;\r\n     background-color: white;\r\n     height: 100px;\r\n     width: 768px;\r\n-  }\r\n+  } */\r\n \r\n   .list-items {\r\n     display: none;\r\n   }\r\n"
+                },
+                {
+                    "date": 1669100859515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n @media only screen and (max-width: 768px) {\r\n-  /* .nav-bar {\r\n+  .nav-bar {\r\n     display: flex;\r\n     justify-content: space-between;\r\n     align-items: center;\r\n     position: fixed;\r\n@@ -11,9 +11,9 @@\n     z-index: 1;\r\n     background-color: white;\r\n     height: 100px;\r\n     width: 768px;\r\n-  } */\r\n+  }\r\n \r\n   .list-items {\r\n     display: none;\r\n   }\r\n"
+                },
+                {
+                    "date": 1669100979362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n @media only screen and (max-width: 768px) {\r\n-  .nav-bar {\r\n+  /* .nav-bar {\r\n     display: flex;\r\n     justify-content: space-between;\r\n     align-items: center;\r\n     position: fixed;\r\n@@ -11,9 +11,9 @@\n     z-index: 1;\r\n     background-color: white;\r\n     height: 100px;\r\n     width: 768px;\r\n-  }\r\n+  } */\r\n \r\n   .list-items {\r\n     display: none;\r\n   }\r\n"
+                },
+                {
+                    "date": 1669100989030,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n @media only screen and (max-width: 768px) {\r\n-  /* .nav-bar {\r\n+  .nav-bar {\r\n     display: flex;\r\n     justify-content: space-between;\r\n     align-items: center;\r\n     position: fixed;\r\n@@ -11,9 +11,9 @@\n     z-index: 1;\r\n     background-color: white;\r\n     height: 100px;\r\n     width: 768px;\r\n-  } */\r\n+  }\r\n \r\n   .list-items {\r\n     display: none;\r\n   }\r\n"
+                },
+                {
+                    "date": 1669101247861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     right: 0;\r\n     z-index: 1;\r\n     background-color: white;\r\n     height: 100px;\r\n-    width: 768px;\r\n+    width: auto;\r\n   }\r\n \r\n   .list-items {\r\n     display: none;\r\n"
+                },
+                {
+                    "date": 1669101275369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     right: 0;\r\n     z-index: 1;\r\n     background-color: white;\r\n     height: 100px;\r\n-    width: auto;\r\n+    width: 768px;\r\n   }\r\n \r\n   .list-items {\r\n     display: none;\r\n"
+                },
+                {
+                    "date": 1669102073268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,12 @@\n     height: 100px;\r\n     width: 768px;\r\n   }\r\n \r\n+  .nav-bar img {\r\n+    height: 30px;\r\n+  }\r\n+\r\n   .list-items {\r\n     display: none;\r\n   }\r\n \r\n@@ -24,5 +28,21 @@\n \r\n   #right-arrow {\r\n     display: none;\r\n   }\r\n+\r\n+  .nav-bar img {\r\n+    height: 30px;\r\n+  }\r\n+\r\n+  .logo {\r\n+    padding-left: 20px;\r\n+  }\r\n+\r\n+  .icons {\r\n+    padding-right: 20px;\r\n+  }\r\n+\r\n+  .icons button i {\r\n+    font-size: 22px;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669102186715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,5 +44,13 @@\n \r\n   .icons button i {\r\n     font-size: 22px;\r\n   }\r\n+\r\n+  .sub-container {\r\n+    background-image: url(\"/Flower/images/flower-twenty-five.jpeg\");\r\n+    background-size: 665px;\r\n+    background-repeat: no-repeat;\r\n+    height: 445px;\r\n+    width: 425px;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669102365059,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     right: 0;\r\n     z-index: 1;\r\n     background-color: white;\r\n     height: 100px;\r\n-    width: 768px;\r\n+    width: auto;\r\n   }\r\n \r\n   .nav-bar img {\r\n     height: 30px;\r\n"
+                },
+                {
+                    "date": 1669102415521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     left: 0;\r\n     right: 0;\r\n     z-index: 1;\r\n     background-color: white;\r\n-    height: 100px;\r\n+    height: 70px;\r\n     width: auto;\r\n   }\r\n \r\n   .nav-bar img {\r\n"
+                },
+                {
+                    "date": 1669102436250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,10 +47,10 @@\n   }\r\n \r\n   .sub-container {\r\n     background-image: url(\"/Flower/images/flower-twenty-five.jpeg\");\r\n-    background-size: 665px;\r\n+    /* background-size: 665px; */\r\n     background-repeat: no-repeat;\r\n     height: 445px;\r\n-    width: 425px;\r\n+    width: auto;\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669106194115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,8 @@\n   }\r\n \r\n   .sub-container {\r\n     background-image: url(\"/Flower/images/flower-twenty-five.jpeg\");\r\n-    /* background-size: 665px; */\r\n     background-repeat: no-repeat;\r\n     height: 445px;\r\n     width: auto;\r\n   }\r\n"
+                },
+                {
+                    "date": 1669106600516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,5 +51,13 @@\n     background-repeat: no-repeat;\r\n     height: 445px;\r\n     width: auto;\r\n   }\r\n+\r\n+  .home-description {\r\n+    text-align: center;\r\n+    padding-top: 137px;\r\n+    height: auto;\r\n+    width: 425px;\r\n+    padding-bottom: 0px;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669107033789,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,8 @@\n   .sub-container {\r\n     background-image: url(\"/Flower/images/flower-twenty-five.jpeg\");\r\n     background-repeat: no-repeat;\r\n     height: 445px;\r\n-    width: auto;\r\n   }\r\n \r\n   .home-description {\r\n     text-align: center;\r\n"
+                },
+                {
+                    "date": 1669107066773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,14 +49,15 @@\n   .sub-container {\r\n     background-image: url(\"/Flower/images/flower-twenty-five.jpeg\");\r\n     background-repeat: no-repeat;\r\n     height: 445px;\r\n+    width: auto;\r\n   }\r\n \r\n   .home-description {\r\n     text-align: center;\r\n     padding-top: 137px;\r\n-    height: auto;\r\n-    width: 425px;\r\n+    /* height: auto; */\r\n+    width: auto;\r\n     padding-bottom: 0px;\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669107325288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     right: 0;\r\n     z-index: 1;\r\n     background-color: white;\r\n     height: 70px;\r\n-    width: auto;\r\n+    width: 768px;\r\n   }\r\n \r\n   .nav-bar img {\r\n     height: 30px;\r\n"
+                },
+                {
+                    "date": 1669107335918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,8 @@\n     width: auto;\r\n   }\r\n \r\n   .home-description {\r\n-    text-align: center;\r\n     padding-top: 137px;\r\n     /* height: auto; */\r\n     width: auto;\r\n     padding-bottom: 0px;\r\n"
+                },
+                {
+                    "date": 1669107446677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,5 +58,17 @@\n     /* height: auto; */\r\n     width: auto;\r\n     padding-bottom: 0px;\r\n   }\r\n+\r\n+  .home-header {\r\n+    font-size: 30px;\r\n+    margin-top: 4px;\r\n+    margin-bottom: -5px;\r\n+  }\r\n+\r\n+  .home-content p {\r\n+    font-size: 13px;\r\n+    margin-bottom: 30px;\r\n+    color: grey;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669107455456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n     padding-bottom: 0px;\r\n   }\r\n \r\n   .home-header {\r\n-    font-size: 30px;\r\n+    font-size: 40px;\r\n     margin-top: 4px;\r\n     margin-bottom: -5px;\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1669107646962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,5 +70,10 @@\n     font-size: 13px;\r\n     margin-bottom: 30px;\r\n     color: grey;\r\n   }\r\n+\r\n+  .home-content {\r\n+    margin-bottom: 0px;\r\n+    margin-right: 0px;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669107684475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,6 +74,7 @@\n \r\n   .home-content {\r\n     margin-bottom: 0px;\r\n     margin-right: 0px;\r\n+    margin-left: 20px;\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669107978919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,5 +76,11 @@\n     margin-bottom: 0px;\r\n     margin-right: 0px;\r\n     margin-left: 20px;\r\n   }\r\n+\r\n+  .dots-page-swipe {\r\n+    display: flex;\r\n+    justify-content: center;\r\n+    padding-top: 30px;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669108531248,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,5 +82,9 @@\n     display: flex;\r\n     justify-content: center;\r\n     padding-top: 30px;\r\n   }\r\n+\r\n+  .home-description :last-child {\r\n+    text-align: end;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669109488357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,7 +84,8 @@\n     padding-top: 30px;\r\n   }\r\n \r\n   .home-description :last-child {\r\n-    text-align: end;\r\n+    display: flex;\r\n+    justify-content: end;\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669109527380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -86,6 +86,7 @@\n \r\n   .home-description :last-child {\r\n     display: flex;\r\n     justify-content: end;\r\n+    align-items: baseline;\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669109710193,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,9 +84,6 @@\n     padding-top: 30px;\r\n   }\r\n \r\n   .home-description :last-child {\r\n-    display: flex;\r\n-    justify-content: end;\r\n-    align-items: baseline;\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669111361958,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,8 +82,5 @@\n     display: flex;\r\n     justify-content: center;\r\n     padding-top: 30px;\r\n   }\r\n-\r\n-  .home-description :last-child {\r\n-  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669111368990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n   .home-description {\r\n     padding-top: 137px;\r\n     /* height: auto; */\r\n     width: auto;\r\n-    padding-bottom: 0px;\r\n+    padding-bottom: 60px;\r\n   }\r\n \r\n   .home-header {\r\n     font-size: 40px;\r\n"
+                },
+                {
+                    "date": 1669111401362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,5 +82,10 @@\n     display: flex;\r\n     justify-content: center;\r\n     padding-top: 30px;\r\n   }\r\n+\r\n+  .dots-page-swipe i {\r\n+    color: #e60a58;\r\n+    padding: 2px;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669111702240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -87,5 +87,32 @@\n   .dots-page-swipe i {\r\n     color: #e60a58;\r\n     padding: 2px;\r\n   }\r\n+\r\n+  .flowers {\r\n+    display: grid;\r\n+    grid-template-areas:\r\n+      \"header header header\"\r\n+      \"header header header\"\r\n+      \"header header header\"\r\n+      \"header header header\"\r\n+      \"menu menu main\"\r\n+      \"menu menu main\"\r\n+      \"right footer footer\"\r\n+      \"right footer footer\";\r\n+    gap: 30px;\r\n+    background-color: white;\r\n+    padding: 15px;\r\n+    height: 360px;\r\n+  }\r\n+\r\n+  .rose-potted-plant {\r\n+    padding-left: 0px;\r\n+    background-image: url(\"/Flower/images/light-rose-.jpg\");\r\n+    background-size: 100% 100%;\r\n+    display: flex;\r\n+    justify-content: center;\r\n+    height: 340px;\r\n+    align-items: center;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669111766509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -91,20 +91,14 @@\n \r\n   .flowers {\r\n     display: grid;\r\n     grid-template-areas:\r\n-      \"header header header\"\r\n-      \"header header header\"\r\n-      \"header header header\"\r\n-      \"header header header\"\r\n-      \"menu menu main\"\r\n-      \"menu menu main\"\r\n-      \"right footer footer\"\r\n-      \"right footer footer\";\r\n+      \"header header header menu menu menu main main\"\r\n+      \"header header header right right footer footer footer\";\r\n     gap: 30px;\r\n     background-color: white;\r\n-    padding: 15px;\r\n-    height: 360px;\r\n+    padding: 30px;\r\n+    height: 300px;\r\n   }\r\n \r\n   .rose-potted-plant {\r\n     padding-left: 0px;\r\n"
+                },
+                {
+                    "date": 1669111806963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -105,8 +105,8 @@\n     background-image: url(\"/Flower/images/light-rose-.jpg\");\r\n     background-size: 100% 100%;\r\n     display: flex;\r\n     justify-content: center;\r\n-    height: 340px;\r\n+    height: 320px;\r\n     align-items: center;\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669111837605,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -96,17 +96,17 @@\n       \"header header header right right footer footer footer\";\r\n     gap: 30px;\r\n     background-color: white;\r\n     padding: 30px;\r\n-    height: 300px;\r\n+    height: 350px;\r\n   }\r\n \r\n   .rose-potted-plant {\r\n     padding-left: 0px;\r\n     background-image: url(\"/Flower/images/light-rose-.jpg\");\r\n     background-size: 100% 100%;\r\n     display: flex;\r\n     justify-content: center;\r\n-    height: 320px;\r\n+    height: 340px;\r\n     align-items: center;\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669111860353,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -105,8 +105,8 @@\n     background-image: url(\"/Flower/images/light-rose-.jpg\");\r\n     background-size: 100% 100%;\r\n     display: flex;\r\n     justify-content: center;\r\n-    height: 340px;\r\n+    height: 320px;\r\n     align-items: center;\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669113452001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -108,5 +108,9 @@\n     justify-content: center;\r\n     height: 320px;\r\n     align-items: center;\r\n   }\r\n+\r\n+  .hide {\r\n+    display: none;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669113783740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -112,5 +112,10 @@\n \r\n   .hide {\r\n     display: none;\r\n   }\r\n+\r\n+  .deal-image img {\r\n+    width: 768px;\r\n+    height: 550px;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669113973691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -112,10 +112,5 @@\n \r\n   .hide {\r\n     display: none;\r\n   }\r\n-\r\n-  .deal-image img {\r\n-    width: 768px;\r\n-    height: 550px;\r\n-  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669114008907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -112,5 +112,10 @@\n \r\n   .hide {\r\n     display: none;\r\n   }\r\n+\r\n+  .deal-image img {\r\n+    width: 768px;\r\n+    height: 550px;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669114176784,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -113,9 +113,9 @@\n   .hide {\r\n     display: none;\r\n   }\r\n \r\n-  .deal-image img {\r\n+  .deal-image-backround {\r\n     width: 768px;\r\n     height: 550px;\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669114310836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -113,9 +113,9 @@\n   .hide {\r\n     display: none;\r\n   }\r\n \r\n-  .deal-image-backround {\r\n+  .deal-image-background {\r\n     width: 768px;\r\n-    height: 550px;\r\n+    height: auto;\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669114369684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -113,9 +113,9 @@\n   .hide {\r\n     display: none;\r\n   }\r\n \r\n-  .deal-image-background {\r\n-    width: 768px;\r\n-    height: auto;\r\n+  .deal-image img {\r\n+    width: 0px;\r\n+    height: 0px;\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669114391001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -112,10 +112,5 @@\n \r\n   .hide {\r\n     display: none;\r\n   }\r\n-\r\n-  .deal-image img {\r\n-    width: 0px;\r\n-    height: 0px;\r\n-  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669114458233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -112,5 +112,10 @@\n \r\n   .hide {\r\n     display: none;\r\n   }\r\n+\r\n+  .deal-image-background {\r\n+    width: auto;\r\n+    height: 550px;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669114556273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -109,13 +109,13 @@\n     height: 320px;\r\n     align-items: center;\r\n   }\r\n \r\n-  .hide {\r\n-    display: none;\r\n-  }\r\n-\r\n   .deal-image-background {\r\n     width: auto;\r\n     height: 550px;\r\n   }\r\n+\r\n+  .hide {\r\n+    display: none;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669114770920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -110,9 +110,9 @@\n     align-items: center;\r\n   }\r\n \r\n   .deal-image-background {\r\n-    width: auto;\r\n+    width: 90%;\r\n     height: 550px;\r\n   }\r\n \r\n   .hide {\r\n"
+                },
+                {
+                    "date": 1669115589863,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -117,5 +117,10 @@\n \r\n   .hide {\r\n     display: none;\r\n   }\r\n+\r\n+  .offer-pots img {\r\n+    height: auto;\r\n+    width: 210px;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669118483442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -122,5 +122,9 @@\n   .offer-pots img {\r\n     height: auto;\r\n     width: 210px;\r\n   }\r\n+\r\n+  .send-news-letter {\r\n+    width: 36%;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669118696734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -126,5 +126,22 @@\n \r\n   .send-news-letter {\r\n     width: 36%;\r\n   }\r\n+\r\n+  .post-content {\r\n+    display: flex;\r\n+    width: auto;\r\n+    margin: 0 35px;\r\n+    flex-direction: column;\r\n+  }\r\n+\r\n+  .post {\r\n+    display: flex;\r\n+    flex-direction: column;\r\n+    margin-inline: 13px;\r\n+    -webkit-box-shadow: 0px 0px 6px 1px rgb(196 184 196);\r\n+    -moz-box-shadow: 0px 0px 6px 1px rgba(196, 184, 196, 1);\r\n+    box-shadow: 0px 0px 6px 1px rgb(196 184 196);\r\n+    width: 30%;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669118716585,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -143,5 +143,10 @@\n     -moz-box-shadow: 0px 0px 6px 1px rgba(196, 184, 196, 1);\r\n     box-shadow: 0px 0px 6px 1px rgb(196 184 196);\r\n     width: 30%;\r\n   }\r\n+\r\n+  .post img {\r\n+    width: auto;\r\n+    height: 200px;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669126672007,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -120,9 +120,9 @@\n   }\r\n \r\n   .offer-pots img {\r\n     height: auto;\r\n-    width: 210px;\r\n+    width: 100%;\r\n   }\r\n \r\n   .send-news-letter {\r\n     width: 36%;\r\n"
+                },
+                {
+                    "date": 1669126740542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -148,5 +148,10 @@\n   .post img {\r\n     width: auto;\r\n     height: 200px;\r\n   }\r\n+\r\n+  .list-of-info {\r\n+    display: block;\r\n+    padding-top: 40px;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669126782269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -153,5 +153,10 @@\n   .list-of-info {\r\n     display: block;\r\n     padding-top: 40px;\r\n   }\r\n+\r\n+  .info {\r\n+    height: auto;\r\n+    background: #1b1b1b;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669126822378,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -158,5 +158,12 @@\n   .info {\r\n     height: auto;\r\n     background: #1b1b1b;\r\n   }\r\n+\r\n+  .content-parent {\r\n+    color: white;\r\n+    font-size: 13px;\r\n+    margin: 25px;\r\n+    width: 100%;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669126876163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -165,5 +165,12 @@\n     font-size: 13px;\r\n     margin: 25px;\r\n     width: 100%;\r\n   }\r\n+\r\n+  .content-one {\r\n+    color: white;\r\n+    font-size: 13px;\r\n+    margin: 25px;\r\n+    width: 50%;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669126888652,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -169,8 +169,7 @@\n \r\n   .content-one {\r\n     color: white;\r\n     font-size: 13px;\r\n-    margin: 25px;\r\n     width: 50%;\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669126913089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -169,7 +169,8 @@\n \r\n   .content-one {\r\n     color: white;\r\n     font-size: 13px;\r\n+    margin: 0;\r\n     width: 50%;\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669126932341,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -172,5 +172,11 @@\n     font-size: 13px;\r\n     margin: 0;\r\n     width: 50%;\r\n   }\r\n+  .content-two {\r\n+    color: white;\r\n+    font-size: 13px;\r\n+    margin: 0;\r\n+    width: 50%;\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669127736881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -169,9 +169,9 @@\n \r\n   .content-one {\r\n     color: white;\r\n     font-size: 13px;\r\n-    margin: 0;\r\n+    margin: 25px;\r\n     width: 50%;\r\n   }\r\n   .content-two {\r\n     color: white;\r\n"
+                },
+                {
+                    "date": 1669128084782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -151,9 +151,9 @@\n   }\r\n \r\n   .list-of-info {\r\n     display: block;\r\n-    padding-top: 40px;\r\n+    padding: 50px 0 0 50px;\r\n   }\r\n \r\n   .info {\r\n     height: auto;\r\n@@ -162,21 +162,15 @@\n \r\n   .content-parent {\r\n     color: white;\r\n     font-size: 13px;\r\n-    margin: 25px;\r\n+    margin: 0px;\r\n     width: 100%;\r\n   }\r\n \r\n   .content-one {\r\n     color: white;\r\n     font-size: 13px;\r\n-    margin: 25px;\r\n+    margin: 0px;\r\n     width: 50%;\r\n   }\r\n-  .content-two {\r\n-    color: white;\r\n-    font-size: 13px;\r\n-    margin: 0;\r\n-    width: 50%;\r\n-  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669181060188,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -120,11 +120,10 @@\n   }\r\n \r\n   .offer-pots img {\r\n     height: auto;\r\n-    width: 100%;\r\n+    width: 90%;\r\n   }\r\n-\r\n   .send-news-letter {\r\n     width: 36%;\r\n   }\r\n \r\n"
+                }
+            ],
+            "date": 1669097962680,
+            "name": "Commit-0",
+            "content": "@media only screen and (max-width: 425px) {\r\n}\r\n"
+        }
+    ]
+}

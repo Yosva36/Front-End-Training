@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flower</title>
     <link rel="stylesheet" href="flowers.css" />
+    <link rel="stylesheet" href="flowers(Tablet).css" />
+    <link rel="stylesheet" href="flowers(phones).css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -69,12 +71,16 @@
             <h1 class="home-header">2021 Flower Trend</h1>
             <p>
               Lorem ipsum dolor sit amet, pri autem nemore bonorum te. Autem
-              fierent<br />
-              ullamcorper ius no, nec ea quodsi invenire
+              fierent ullamcorper ius no, nec ea quodsi invenire nec ea quodsi
+              invenire
             </p>
             <button class="shop-now-button">Shop Now</button>
           </div>
           <i id="right-arrow" class="bi bi-arrow-right"></i>
+        </div>
+        <div class="dots-page-swipe">
+          <i id="rose" class="fa fa-circle" aria-hidden="true"></i>
+          <i id="white" class="fa fa-circle-o" aria-hidden="true"></i>
         </div>
       </div>
       <div class="flowers">
@@ -117,9 +123,9 @@
         <div class="pots-one">
           <div class="block">
             <img src="/Flower/images/green-roses.jpg" alt="red-rose" />
-            <div class="price">
+            <div id="block-one" class="price">
               <span>Dummy product name</span>
-              <div class="ratings">
+              <div id="rating-block-one" class="ratings">
                 <i class="fa fa-star-o" aria-hidden="true"></i>
                 <i class="fa fa-star-o" aria-hidden="true"></i>
                 <i class="fa fa-star-o" aria-hidden="true"></i>
@@ -131,9 +137,11 @@
           </div>
           <div class="block">
             <img src="/Flower/images/rose-pot.jpg" alt="red-roses-offer" />
-            <div class="price">
+            <span class="sale">-18%</span>
+            <span class="sale-label">Sale</span>
+            <div id="block-two" class="price">
               <span>Dummy product name</span>
-              <div class="ratings">
+              <div id="rating-block-two" class="ratings">
                 <i class="fa fa-star" aria-hidden="true"></i>
                 <i class="fa fa-star" aria-hidden="true"></i>
                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -144,7 +152,7 @@
               <span class="old-price">$60.00</span>
             </div>
           </div>
-          <div class="block">
+          <div id="remove" class="block">
             <img src="/Flower/images/rose-pot.jpg" alt="red-roses" />
             <div class="price">
               <span>Dummy product title</span>
@@ -158,7 +166,7 @@
               <span>$29.00</span>
             </div>
           </div>
-          <div class="block">
+          <div id="remove" class="block hide">
             <img src="/Flower/images/golden-rose.jpg" alt="red-roses" />
             <div class="price">
               <span>Dummy product name</span>
@@ -173,9 +181,10 @@
             </div>
           </div>
         </div>
-        <div class="pots-two">
+        <div class="pots-two hide">
           <div class="block">
             <img src="/Flower/images/white-rose.jpg" alt="red-rose" />
+            <span class="sale-label">Soldout</span>
             <div class="price">
               <span>Dummy product name</span>
               <div class="ratings">
@@ -191,6 +200,11 @@
           </div>
           <div class="block">
             <img src="/Flower/images/big-pot-rose.jpg" alt="red-roses-offer" />
+            <div class="pot-color-zero">
+              <i id="violet" class="fa fa-circle" aria-hidden="true"></i>
+            </div>
+            <span class="sale">-18%</span>
+            <span class="sale-label">Sale</span>
             <div class="price">
               <span>Dummy text for tittle</span>
               <div class="ratings">
@@ -206,6 +220,13 @@
           </div>
           <div class="block">
             <img src="/Flower/images/big-pot-rose.jpg" alt="red-roses" />
+            <div class="pot-color">
+              <i id="yellow" class="fa fa-circle" aria-hidden="true"></i>
+              <i id="gray" class="fa fa-circle" aria-hidden="true"></i>
+              <i id="violet" class="fa fa-circle" aria-hidden="true"></i>
+              <i id="brown" class="fa fa-circle" aria-hidden="true"></i>
+              <i id="blue" class="fa fa-circle" aria-hidden="true"></i>
+            </div>
             <div class="price">
               <span>Dummy product tittle</span>
               <div class="ratings">
@@ -245,6 +266,7 @@
         <div class="deal-image">
           <img
             class="deal-image-background"
+            id="remove"
             src="/Flower/images/pexels-photo-414660.png  "
             alt="background-deal-of-the-day"
           />
@@ -264,6 +286,8 @@
             <div class="duplicate-images">
               <div class="gift">
                 <img src="/Flower/images/big-pot-rose.jpg" alt="red-roses" />
+                <span class="sale">-18%</span>
+                <span class="sale-label">Sale</span>
                 <div class="price">
                   <span>Dummy product tittle</span>
                   <div class="ratings">
@@ -291,8 +315,10 @@
                   <span>$80.00</span>
                 </div>
               </div>
-              <div class="gift">
+              <div id="remove" class="gift hide">
                 <img src="/Flower/images/rose-pot.jpg" alt="red-roses" />
+                <span class="sale">-35%</span>
+                <span class="sale-label">Sale</span>
                 <div class="price">
                   <span>Dummy product tittle</span>
                   <div class="ratings">
@@ -349,7 +375,7 @@
             <img src="/Flower/images/red-tulip.jpg" alt="red-rose" />
           </div>
           <div class="tulip-flower">
-            <img src="/Flower/images/red-tulip.jpg" alt="red-rose" />
+            <img src="/Flower/images/tulip-flower.jpg" alt="red-rose" />
           </div>
         </div>
       </div>
@@ -464,13 +490,17 @@
             <img src="/Flower/images/hat-bill.png" alt="hat-bill" />
             <img src="/Flower/images/vintage.png" alt="vintage" />
             <img src="/Flower/images/hd.png" alt="harly-davidson" />
-            <img src="/Flower/images/vintage-two.png" alt="vintage" />
-            <img src="/Flower/images/gillette.png" alt="gillette" />
+            <img
+              id="remove"
+              src="/Flower/images/vintage-two.png"
+              alt="vintage"
+            />
+            <img id="remove" src="/Flower/images/gillette.png" alt="gillette" />
           </div>
         </div>
         <div class="info">
           <div class="list-of-info">
-            <div class="information">
+            <div class="information content-parent">
               <img src="/Flower/images/company-logo.png" alt="comapany-logo" />
               <p class="footer-text">
                 Lorem, ipsum dolor sit amet consectetur adipi<br />
@@ -493,36 +523,40 @@
                 <button><i class="fa fa-vimeo" aria-hidden="true"></i></button>
               </span>
             </div>
-            <div class="information">
-              <h2>Information</h2>
-              <p>Our Comapny</p>
-              <p>Contact Us</p>
-              <p>Our Services</p>
-              <p>Why We?</p>
-              <p>Careers</p>
+            <div class="infos-one">
+              <div class="information content-one">
+                <h2>Information</h2>
+                <p>Our Comapny</p>
+                <p>Contact Us</p>
+                <p>Our Services</p>
+                <p>Why We?</p>
+                <p>Careers</p>
+              </div>
+              <div class="information content-one">
+                <h2>Quicklink</h2>
+                <p>About</p>
+                <p>Blog</p>
+                <p>Shop</p>
+                <p>Cart</p>
+                <p>Contact</p>
+              </div>
             </div>
-            <div class="information">
-              <h2>Quicklink</h2>
-              <p>About</p>
-              <p>Blog</p>
-              <p>Shop</p>
-              <p>Cart</p>
-              <p>Contact</p>
-            </div>
-            <div class="information">
-              <h2>Support</h2>
-              <p>Online Support</p>
-              <p>Shipping Policy</p>
-              <p>Return Policy</p>
-              <p>Privacy Policy</p>
-              <p>Terms of Service</p>
-            </div>
-            <div class="information">
-              <h2>See Information</h2>
-              <p>123, ABC, Road##, Main City, Your</p>
-              <p>address goes here</p>
-              <p>Phone: 7339 225 972</p>
-              <p>Email: yosuva.rv@gmail.com</p>
+            <div class="infos-one">
+              <div class="information content-one">
+                <h2>Support</h2>
+                <p>Online Support</p>
+                <p>Shipping Policy</p>
+                <p>Return Policy</p>
+                <p>Privacy Policy</p>
+                <p>Terms of Service</p>
+              </div>
+              <div class="information content-one">
+                <h2>See Information</h2>
+                <p>123, ABC, Road##, Main City, Your</p>
+                <p>address goes here</p>
+                <p>Phone: 7339 225 972</p>
+                <p>Email: yosuva.rv@gmail.com</p>
+              </div>
             </div>
           </div>
         </div>

@@ -107,7 +107,7 @@ body i {
 }
 
 .home-header {
-  font-size: 4rem;
+  font-size: 50px;
   margin-top: 4px;
   margin-bottom: -5px;
 }
@@ -120,7 +120,8 @@ body i {
 
 .home-content {
   margin-bottom: 30px;
-  margin-right: 410px;
+  margin-right: 235px;
+  width: 500px;
 }
 
 .home-description i {
@@ -136,6 +137,10 @@ body i {
 #right-arrow {
   margin-right: 29px;
   cursor: pointer;
+}
+
+.dots-page-swipe {
+  display: none;
 }
 
 .list-of-sections {
@@ -240,6 +245,14 @@ body i {
   height: 38px;
 }
 
+.count-one :hover {
+  position: absolute;
+  background-color: #e60a58;
+  text-align: center;
+  width: 86px;
+  height: 38px;
+}
+
 .line-one {
   font-size: 10px;
   margin-bottom: 0px;
@@ -313,7 +326,28 @@ body i {
   font-size: 12px;
 }
 
+#block-one {
+  text-align: center;
+}
+
+#block-two {
+  font-weight: bold;
+  font-size: 12px;
+}
+
 .ratings i {
+  color: #e60a58;
+  font-size: 13px;
+  letter-spacing: -3px;
+}
+
+#rating-block-one i {
+  color: #e60a58;
+  font-size: 13px;
+  letter-spacing: -3px;
+}
+
+#rating-block-two i {
   color: #e60a58;
   font-size: 13px;
   letter-spacing: -3px;
@@ -338,6 +372,8 @@ body i {
 
 .block {
   margin: 30px;
+  position: relative;
+  overflow: hidden;
 }
 
 .products-header h5 {
@@ -375,7 +411,7 @@ body i {
 }
 
 .deal-image img {
-  width: 1289px;
+  width: 95%;
   height: 550px;
 }
 
@@ -448,6 +484,8 @@ sub.signature {
 
 .duplicate-images .gift {
   margin: 15px;
+  position: relative;
+  overflow: hidden;
 }
 
 .five-dots {
@@ -492,8 +530,8 @@ sub.signature {
 }
 
 .offer-pots img {
-  height: 270px;
-  width: 410px;
+  height: auto;
+  width: 90%;
 }
 
 .offer-pots {
@@ -504,10 +542,6 @@ sub.signature {
 
 .big-red-rose {
   margin-left: 30px;
-}
-
-.tulip-flower {
-  margin-right: 30px;
 }
 
 .letter-container {
@@ -615,8 +649,8 @@ sub.signature {
   font-size: 35px;
 }
 .post img {
-  width: 330px;
-  height: 200px;
+  width: 100%;
+  height: auto;
 }
 
 .post-one-content h4 {
@@ -652,6 +686,7 @@ sub.signature {
   -webkit-box-shadow: 0px 0px 6px 1px rgba(196, 184, 196, 1);
   -moz-box-shadow: 0px 0px 6px 1px rgba(196, 184, 196, 1);
   box-shadow: 0px 0px 6px 1px rgba(196, 184, 196, 1);
+  width: 30%;
 }
 
 .post-content {
@@ -685,7 +720,7 @@ sub.signature {
 }
 
 .brands img {
-  width: 201px;
+  width: 18%;
   padding-right: 10px;
 }
 
@@ -762,4 +797,76 @@ sub.signature {
 
 .footer {
   margin-top: 90px;
+}
+
+.brand-logos {
+  padding-left: 5%;
+}
+
+.sale {
+  position: absolute;
+  top: -67px;
+  right: -65px;
+  width: 90px;
+  height: 90px;
+  transform: rotate(45deg);
+  background: #e60a58;
+  padding: 10px;
+  color: white;
+  align-items: end;
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+}
+
+.sale-label {
+  position: absolute;
+  top: -67px;
+  left: -65px;
+  width: 90px;
+  height: 90px;
+  transform: rotate(-45deg);
+  background: #e60a58;
+  padding: 10px;
+  color: white;
+  align-items: end;
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+}
+
+.pot-color {
+  position: absolute;
+  top: 186px;
+  right: 50px;
+}
+
+.pot-color-zero {
+  position: absolute;
+  top: 186px;
+  right: 83px;
+}
+
+#yellow {
+  color: yellow;
+}
+
+#gray {
+  color: #585858;
+}
+
+#violet {
+  color: violet;
+}
+
+#brown {
+  color: brown;
+}
+
+#blue {
+  color: blue;
+}
+
+.infos-one {
+  display: flex;
 }

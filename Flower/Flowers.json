@@ -1,0 +1,66 @@
+[
+  {
+    "src":" images/roses-with-sun.jpg",
+    "name":"Rose",
+    "price":"$1.00" ,
+    "id": "rose1",
+    "count":1
+  },
+
+  {
+    "src":"images/rose-pot.jpg",
+    "name":"lilly",
+    "price":"$2.00",
+    "id": "lilly2",
+    "count":1
+  },
+
+  {
+    "src":"images/green-roses.jpg",
+    "name":"Sun flower",
+    "price":"$3.00",
+    "id":"sun3",
+    "count":1
+  },
+
+  {
+    "src":" images/golden-rose.jpg",
+    "name":"Daisy",
+    "price":"$4.00",
+    "id":"daisy4",
+    "count":1
+  },
+
+  {
+    "src":"images/white-rose.jpg",
+    "name":"Jasmine",
+    "price":"$5.00",
+    "id":"rose5",
+    "count":1
+  },
+
+  {
+    "src":" images/golden-rose.jpg",
+    "name":"Lavender",
+    "price":"$6.00",
+    "id":"lilly6",
+    "count":1
+    
+  },
+
+  {
+    "src":" images/big-pot-rose.jpg",
+    "name":"Water Lilly",
+    "price":"$7.00",
+    "id": "sun7",
+    "count":1
+  },
+
+  {
+    "src": " images/roses-with-sun.jpg",
+    "name":"Iris",
+    "price":"$8.00",
+    "id":"daisy8",
+    "count":1
+  }
+]

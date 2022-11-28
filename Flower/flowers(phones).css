@@ -1,5 +1,5 @@
 @media only screen and (max-width: 425px) {
-  .nav-bar {
+  .nav-belt {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,23 +14,23 @@
     width: auto;
   }
 
-  .nav-bar img {
+  .nav-belt img {
     height: 30px;
   }
 
-  .list-items ul {
+  .nav-fill ul {
     display: none;
   }
 
-  .logo {
+  .nav-left {
     padding-left: 20px;
   }
 
-  .icons {
+  .nav-right {
     padding-right: 20px;
   }
 
-  .icons button i {
+  .nav-right button i {
     font-size: 22px;
   }
 
@@ -42,7 +42,7 @@
     display: none;
   }
 
-  .sub-container {
+  .page-content {
     background-image: url("/Flower/images/flower-twenty-five.jpeg");
     background-size: 665px;
     background-repeat: no-repeat;
@@ -50,7 +50,7 @@
     width: 425px;
   }
 
-  .home-description {
+  .page-description {
     text-align: center;
     padding-top: 137px;
     height: auto;
@@ -64,13 +64,13 @@
     margin-bottom: -5px;
   }
 
-  .home-content p {
+  .home-page-content p {
     font-size: 13px;
     margin-bottom: 30px;
     color: grey;
   }
 
-  .home-content {
+  .home-page-content {
     margin-bottom: 0px;
     margin-right: 0px;
   }
@@ -86,7 +86,7 @@
     padding: 2px;
   }
 
-  .flowers {
+  .product-container {
     display: grid;
     grid-template-areas:
       "header header header"
@@ -104,7 +104,7 @@
     margin-top: -60px;
   }
 
-  .flower-one {
+  .sub-product-one {
     background-image: url(/Flower/images/flowers-in-pot.jpg);
     background-size: 100% 100%;
     display: flex;
@@ -113,7 +113,7 @@
     height: 25vh;
   }
 
-  .rose-potted-plant {
+  .top-product {
     padding-left: 0px;
     background-image: url("/Flower/images/light-rose-.jpg");
     background-size: 100% 100%;
@@ -123,7 +123,7 @@
     align-items: center;
   }
 
-  .flower-three {
+  .sub-product-three {
     background-image: url(/Flower/images/flower-gift.jpg);
     background-size: 100% 100%;
     display: flex;
@@ -146,19 +146,19 @@
     margin: 0;
   }
 
-  .deal-image {
+  .dod-container {
     display: flex;
     justify-content: center;
     height: 420px;
     background-color: antiquewhite;
   }
 
-  .deal-image img {
+  .dod-container img {
     width: 425px;
     height: 420px;
   }
 
-  .gift img {
+  .product img {
     width: 150px;
     height: auto;
   }
@@ -176,24 +176,15 @@
     width: 375px;
   }
 
-  .offer-pots {
-    display: block;
+  .history-bottom {
     margin: 40px 15px 15px 15px;
   }
 
-  .big-red-rose {
-    margin-left: 0px;
+  .offer-product {
+    width: 30%;
   }
 
-  .tulip-flower {
-    margin-right: 0;
-  }
-
-  .red-tulip {
-    padding: 10px 0;
-  }
-
-  .email {
+  .mail-box {
     height: 220px;
     background-color: #f8f8f8;
     display: flex;
@@ -201,12 +192,12 @@
     flex-direction: column;
   }
 
-  .send-news-letter {
+  .mail-box-content {
     margin: 10px;
     width: 90%;
   }
 
-  .post-images {
+  .post-card {
     display: block;
     margin-top: 50px;
     margin: 50px 10px 0px 10px;
@@ -247,17 +238,50 @@
     background: #f8f8f8;
   }
 
-  .info {
+  .footer-block {
     height: 1000px;
     background: #1b1b1b;
   }
 
-  .list-of-info {
+  .footer-row {
     display: block;
     padding-top: 15px;
   }
 
   .infos-one {
     display: block;
+  }
+
+  .cart-product-count {
+    position: absolute;
+    top: 28px;
+    height: 15px;
+    width: 15px;
+    color: white;
+    background: #e60a58;
+    border-radius: 11px;
+    font-size: 10px;
+    font-weight: bold;
+    right: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cart-area {
+    background-image: linear-gradient(
+      to right,
+      rgb(233, 233, 233),
+      rgb(247, 246, 235)
+    );
+    width: 80%;
+    position: fixed;
+    overflow: auto;
+    height: 400px;
+    top: 90px;
+    right: 5px;
+    display: none;
+    z-index: 1;
+    border-radius: 10px;
   }
 }

@@ -1,3 +1,7 @@
+.primary-color {
+  background-color: #e60a58;
+}
+
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
@@ -7,14 +11,14 @@ body i {
   cursor: pointer;
 }
 
-.sub-container {
+.page-content {
   background-image: url("/Flower/images/flower-twenty-five.jpeg");
   background-position: center;
   background-size: cover;
   margin-top: 32px;
 }
 
-.nav-bar {
+.nav-belt {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,62 +30,79 @@ body i {
   z-index: 1;
   background-color: #e9e9e9;
 }
-.nav-bar img {
+.nav-belt img {
   height: 25px;
 }
 
-.list-items ul {
+.nav-fill ul {
   display: flex;
   list-style: none;
   padding: 0;
 }
+.name-blank {
+  position: fixed;
+  margin-top: 100px;
+  background-color: #f5dbdf;
+  height: 75px;
+  display: none;
+  padding-top: 40px;
+  width: 350px;
+  z-index: 1;
+}
 
-.nav-bar ul li {
+.name-input {
+  height: 35px;
+  width: 60%;
+  border: none;
+  outline: none;
+}
+
+.nav-belt ul li {
   padding: 15px;
   font-size: 13px;
   font-weight: bold;
   cursor: pointer;
 }
 
-.nav-bar ul li:hover {
+.nav-belt ul li:hover {
   color: #e60a58;
 }
 
-.icons button {
+.nav-right button {
   border: 0;
   background-color: transparent;
   padding-right: 12px;
   cursor: pointer;
 }
 
-.icons :hover {
+.nav-right :hover {
   color: #e60a58;
 }
 
-.icons button :hover {
+.nav-right button :hover {
   color: #e60a58;
 }
 
-.logo {
+.nav-left {
   padding-left: 80px;
 }
 
-.icons {
+.nav-right {
   padding-right: 80px;
 }
 
-.icons button i {
+.nav-right button i {
   font-size: 15px;
 }
 
-.home-description {
+.page-description {
   padding-top: 225px;
   display: flex;
   justify-content: space-between;
   padding-bottom: 225px;
 }
 
-.top-trend-button {
+.top-trend-label {
   background-color: #e60a58;
   color: white;
   border: none;
@@ -93,7 +114,6 @@ body i {
 }
 
 .shop-now-button {
-  background-color: #e60a58;
   color: white;
   border: none;
   padding-left: 23px;
@@ -112,19 +132,19 @@ body i {
   margin-bottom: -5px;
 }
 
-.home-content p {
+.home-page-content p {
   font-size: 13px;
   margin-bottom: 30px;
   color: grey;
 }
 
-.home-content {
+.home-page-content {
   margin-bottom: 30px;
   margin-right: 235px;
   width: 500px;
 }
 
-.home-description i {
+.page-description i {
   margin-top: 95px;
   font-size: 27px;
 }
@@ -143,31 +163,31 @@ body i {
   display: none;
 }
 
-.list-of-sections {
+.nav-tools {
   vertical-align: middle;
 }
 
-.list-of-sections i {
+.nav-tools i {
   vertical-align: middle;
 }
 
-.rose-potted-plant {
+.top-product {
   grid-area: header;
 }
-.flower-one {
+.sub-product-one {
   grid-area: menu;
 }
-.flower-two {
+.sub-product-two {
   grid-area: main;
 }
-.flower-three {
+.sub-product-three {
   grid-area: right;
 }
-.flower-four {
+.sub-product-four {
   grid-area: footer;
 }
 
-.flowers {
+.product-container {
   display: grid;
   grid-template-areas:
     "header header header menu menu menu main main"
@@ -178,7 +198,7 @@ body i {
   height: 550px;
 }
 
-.rose-potted-plant {
+.top-product {
   padding-left: 11px;
   background-image: url("/Flower/images/light-rose-.jpg");
   background-size: 100% 100%;
@@ -186,16 +206,8 @@ body i {
   justify-content: center;
   align-items: center;
 }
-.rose-potted-plant img {
-  width: 490px;
-}
 
-.flower-one img {
-  width: 385px;
-  height: 250px;
-}
-
-.flower-one {
+.sub-product-one {
   background-image: url("/Flower/images/flowers-in-pot.jpg");
   background-size: 100% 100%;
   display: flex;
@@ -203,17 +215,7 @@ body i {
   align-items: center;
 }
 
-.flower-two img {
-  width: 330px;
-  height: 250px;
-}
-
-.flower-three img {
-  width: 248px;
-  height: 277px;
-}
-
-.flower-three {
+.sub-product-three {
   background-image: url("/Flower/images/flower-gift.jpg");
   background-size: 100% 100%;
   display: flex;
@@ -221,7 +223,7 @@ body i {
   align-items: center;
 }
 
-.flower-two {
+.sub-product-two {
   background-image: url("/Flower/images/red-rose.jpg");
   background-size: 100% 100%;
   display: flex;
@@ -229,7 +231,7 @@ body i {
   align-items: center;
 }
 
-.flower-four {
+.sub-product-four {
   background-image: url("/Flower/images/three-roses.jpg");
   background-size: 100% 100%;
   display: flex;
@@ -237,71 +239,44 @@ body i {
   align-items: center;
 }
 
-.count-one {
-  position: absolute;
+.product-label {
   background-color: white;
   text-align: center;
   width: 86px;
   height: 38px;
 }
 
-.count-one :hover {
-  position: absolute;
-  background-color: #e60a58;
-  text-align: center;
-  width: 86px;
-  height: 38px;
-}
-
-.line-one {
+.product-type {
   font-size: 10px;
   margin-bottom: 0px;
   font-weight: bold;
   margin-top: 8px;
 }
 
-.line-two {
+.product-stock {
   margin-top: 0px;
   font-size: 9px;
   color: #e60a58;
 }
 
-.count-two {
-  position: absolute;
-  background-color: white;
-  text-align: center;
-  width: 86px;
-  height: 38px;
-}
-
-.count-three {
-  position: absolute;
-  background-color: white;
-  text-align: center;
-  width: 86px;
-  height: 38px;
-}
-
-.count-four {
-  position: absolute;
-  background-color: white;
-  text-align: center;
-  width: 86px;
-  height: 38px;
-}
-
-.count-five {
-  position: absolute;
-  background-color: white;
-  text-align: center;
-  width: 86px;
-  height: 38px;
-}
-
-.products-header {
+.featured-products-header {
   text-align: center;
 }
 
+.cart-quantity {
+  border: 1px solid lightgray;
+  padding: 0px 5px;
+  font-size: 10px;
+}
+
+.remove-cart i {
+  visibility: hidden;
+}
+
+.cart-area li:hover .remove-cart i {
+  visibility: visible;
+  color: gray;
+}
 .pots-one {
   display: flex;
   justify-content: center;
@@ -315,6 +290,124 @@ body i {
 .pots-two img {
   width: 200px;
   height: 200px;
+}
+
+.fav {
+  height: 300px;
+  overflow: auto;
+}
+.trash {
+  cursor: pointer;
+}
+
+.cart-area {
+  /* background-image: linear-gradient(to right, #e9e9e9, #f7f6eb); */
+  background-color: white;
+  width: 30%;
+  position: fixed;
+  overflow: auto;
+  height: 400px;
+  top: 90px;
+  right: 5px;
+  display: none;
+  z-index: 1;
+  border-radius: 10px;
+  padding: 0 40px;
+  border: 1px solid lightgray;
+}
+
+.cart-area ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.remove-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-item-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e60a58;
+  font-weight: bold;
+  font-size: 13px;
+  padding-bottom: 7px;
+}
+
+.imagePriceDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-area li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 10px;
+}
+
+.cart-price {
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.cart-product-count {
+  position: absolute;
+  top: 20px;
+  height: 15px;
+  width: 15px;
+  color: white;
+  background: #e60a58;
+  border-radius: 11px;
+  font-size: 10px;
+  font-weight: bold;
+  right: 151px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nameQuantity {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin-left: -20%;
+}
+
+.cart-area img {
+  width: 70px;
+  border: 1px solid #efb7e3;
+  border-radius: 5px;
+}
+
+.total-price::before {
+  content: "$";
+}
+.total-price {
+  margin-left: -50%;
+}
+
+.list i {
+  display: flex;
+  align-items: center;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+
+  font-weight: bolder;
+  align-items: center;
+  height: 40px;
+  padding-top: 5px;
 }
 
 .price {
@@ -335,22 +428,13 @@ body i {
   font-size: 12px;
 }
 
-.ratings i {
-  color: #e60a58;
-  font-size: 13px;
-  letter-spacing: -3px;
-}
-
 #rating-block-one i {
   color: #e60a58;
   font-size: 13px;
-  letter-spacing: -3px;
 }
 
-#rating-block-two i {
+.ratings {
   color: #e60a58;
-  font-size: 13px;
-  letter-spacing: -3px;
 }
 
 .pots-two {
@@ -359,7 +443,7 @@ body i {
   margin-top: 40px;
 }
 
-.three-dots {
+.next-page-dots {
   display: flex;
   justify-content: center;
   margin-top: 40px;
@@ -370,21 +454,69 @@ body i {
   color: #585858;
 }
 
-.block {
-  margin: 30px;
-  position: relative;
-  overflow: hidden;
+.price-adjustment {
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.products-header h5 {
+.price-adjustment i:hover {
+  color: #e60a58;
+}
+
+.products-grid:first-child {
+  grid-area: s1;
+}
+.products-grid:nth-child(2) {
+  grid-area: s2;
+}
+.products-grid:nth-child(3) {
+  grid-area: s3;
+}
+.products-grid:nth-child(4) {
+  grid-area: s4;
+}
+
+.products-grid:nth-child(5) {
+  grid-area: s5;
+}
+
+.products-grid:nth-child(6) {
+  grid-area: s6;
+}
+.products-grid:nth-child(7) {
+  grid-area: s7;
+}
+.products-grid:last-child {
+  grid-area: s8;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-areas: "s1 s2 s3 s4";
+  gap: 20px;
+  background-color: white;
+  padding: 30px;
+  margin: 1% 1% 1% 10%;
+}
+
+.products-grid img {
+  width: 100%;
+}
+
+.block {
+  position: relative;
+  overflow: hidden;
+  width: 70%;
+}
+
+.featured-products-header h5 {
   font-size: 30px;
   word-spacing: 10px;
 }
 
-.products-header h6 {
+.featured-products-header h6 {
   font-size: 20px;
   margin-bottom: -33px;
-  color: #e60a58;
   letter-spacing: 2px;
 }
 
@@ -392,25 +524,48 @@ body i {
   margin-top: 40px;
 }
 
-.circle-icon i {
+.dots i {
   font-size: 10px;
   color: #e60a58;
 }
 
 .great-vibes {
   font-family: "Great Vibes", cursive;
+  color: #e60a58;
+}
+
+.cart-header {
+  text-align: center;
+  margin-top: 15px;
+  border-bottom: 1px solid lightgray;
+  height: 10%;
+}
+
+.cart-header i {
+  float: right;
+  padding: 0 10px 0 0;
+}
+
+.cart-header i:hover {
+  color: #e60a58;
+}
+
+.cart-header span {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 5px;
 }
 
 .slab {
   font-family: "Slabo 27px", serif;
 }
 
-.deal-image {
+.dod-container {
   display: flex;
   justify-content: center;
 }
 
-.deal-image img {
+.dod-container img {
   width: 95%;
   height: 550px;
 }
@@ -423,7 +578,7 @@ body i {
 .deal-image-background {
   opacity: 0.8;
 }
-.deal-of-the-day {
+.product-deal-container {
   margin-top: 65px;
 }
 
@@ -467,38 +622,38 @@ sub.signature {
   color: #545454;
 }
 
-.three-images {
+.dod-products {
   position: absolute;
   margin-top: 321px;
 }
 
-.gift img {
+.product img {
   width: 300px;
   height: 300px;
 }
 
-.duplicate-images {
+.dod-top-products {
   display: flex;
   justify-content: center;
 }
 
-.duplicate-images .gift {
+.dod-top-products .product {
   margin: 15px;
   position: relative;
   overflow: hidden;
 }
 
-.five-dots {
+.more-products {
   margin-top: 230px;
   display: flex;
   justify-content: center;
 }
 
-.history {
+.histor-container {
   margin-top: 65px;
 }
 
-.history-content {
+.history-content-container {
   text-align: center;
 }
 
@@ -511,7 +666,7 @@ sub.signature {
   letter-spacing: 3px;
 }
 
-.history-content h2 {
+.history-content-container h2 {
   font-family: "Josefin Slab", serif;
   font-size: 80px;
   letter-spacing: 0px;
@@ -519,32 +674,32 @@ sub.signature {
   margin-bottom: 35px;
 }
 
-.hulk {
+.sub-description {
   font-weight: bold;
   line-height: 25px;
 }
 
-.lorem {
+.history-description {
   color: #585858;
   line-height: 27px;
 }
 
-.offer-pots img {
+.history-bottom img {
   height: auto;
-  width: 90%;
+  width: 100%;
 }
 
-.offer-pots {
+.history-bottom {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-top: 65px;
 }
 
-.big-red-rose {
-  margin-left: 30px;
+.offer-product {
+  width: 30%;
 }
 
-.letter-container {
+.review-card {
   text-align: center;
 }
 
@@ -576,7 +731,7 @@ sub.signature {
   color: #585858;
 }
 
-.news-letter {
+.customer-review {
   margin-top: 90px;
 }
 
@@ -584,13 +739,13 @@ sub.signature {
   margin-top: 55px;
 }
 
-.we-love-clients h2 {
+.card-tittle h2 {
   letter-spacing: 2px;
   font-family: "Slabo 27px", serif;
   font-size: 35px;
 }
 
-.email {
+.mail-box {
   height: 220px;
   background-color: #f8f8f8;
   display: flex;
@@ -599,20 +754,20 @@ sub.signature {
   margin-top: 70px;
 }
 
-.send-news-letter p {
+.mail-box-content p {
   font-size: 13px;
   margin-bottom: 22px;
   color: #585858;
 }
 
-.send-news-letter h2 {
+.mail-box-content h2 {
   font-size: 30px;
   margin-bottom: 0;
   font-family: "Slabo 27px", sans-serif;
   letter-spacing: 2px;
 }
 
-.sub-button {
+.subscribe-button {
   background-color: #555555;
   color: white;
   border: none;
@@ -623,7 +778,7 @@ sub.signature {
   cursor: pointer;
 }
 
-.email input {
+.mail-box input {
   height: 31px;
   width: 300px;
   border: none;
@@ -657,11 +812,6 @@ sub.signature {
   font-size: 15px;
 }
 
-.by {
-  font-size: 12px;
-  color: #585858;
-}
-
 .post-description {
   font-size: 13px;
   color: #585858;
@@ -673,7 +823,7 @@ sub.signature {
   padding-bottom: 30px;
 }
 
-.post-images {
+.post-card {
   display: flex;
   justify-content: center;
   margin-top: 50px;
@@ -687,6 +837,19 @@ sub.signature {
   -moz-box-shadow: 0px 0px 6px 1px rgba(196, 184, 196, 1);
   box-shadow: 0px 0px 6px 1px rgba(196, 184, 196, 1);
   width: 30%;
+}
+
+.buy-button {
+  background-color: #e71761;
+  color: white;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  float: right;
 }
 
 .post-content {
@@ -732,7 +895,7 @@ sub.signature {
   background: #f8f8f8;
 }
 
-.info {
+.footer-block {
   height: 300px;
   background: #1b1b1b;
 }
@@ -771,7 +934,7 @@ sub.signature {
   margin: 25px;
 }
 
-.list-of-info {
+.footer-row {
   display: flex;
   justify-content: center;
   padding-top: 40px;
@@ -869,4 +1032,14 @@ sub.signature {
 
 .infos-one {
   display: flex;
+}
+
+.add-button {
+  cursor: pointer;
+  border: none;
+  background: #e60a58;
+  color: white;
+  border-radius: 10px;
+  font-size: 12px;
+  margin-left: 3px;
 }

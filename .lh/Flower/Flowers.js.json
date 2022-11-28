@@ -1,0 +1,1274 @@
+{
+    "sourceFile": "Flower/Flowers.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 314,
+            "patches": [
+                {
+                    "date": 1669206664390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1669208206078,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n-fetch(\"Flower.json\") //api for the get request\r\n+fetch(\"Flowers.json\") //api for the get request\r\n   .then((response) => response.json())\r\n   .then((data) => console.log(data));\r\n"
+                },
+                {
+                    "date": 1669208249471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n-fetch(\"Flowers.json\") //api for the get request\r\n+let file = \"Flowers.json\";\r\n+fetch(file) //api for the get request\r\n   .then((response) => response.json())\r\n   .then((data) => console.log(data));\r\n"
+                },
+                {
+                    "date": 1669208656270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+var images = {};\r\n let file = \"Flowers.json\";\r\n fetch(file) //api for the get request\r\n   .then((response) => response.json())\r\n   .then((data) => console.log(data));\r\n"
+                },
+                {
+                    "date": 1669208719259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n var images = {};\r\n let file = \"Flowers.json\";\r\n fetch(file) //api for the get request\r\n   .then((response) => response.json())\r\n-  .then((data) => console.log(data));\r\n+  .then((data) => {\r\n+    images = data;\r\n+  });\r\n"
+                },
+                {
+                    "date": 1669208771731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,7 @@\n fetch(file) //api for the get request\r\n   .then((response) => response.json())\r\n   .then((data) => {\r\n     images = data;\r\n+\r\n+    console.log(images);\r\n   });\r\n"
+                },
+                {
+                    "date": 1669208786785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,6 @@\n   .then((response) => response.json())\r\n   .then((data) => {\r\n     images = data;\r\n \r\n-    console.log(images);\r\n+    // console.log(images);\r\n   });\r\n"
+                },
+                {
+                    "date": 1669208956671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,10 @@\n   .then((response) => response.json())\r\n   .then((data) => {\r\n     images = data;\r\n \r\n-    // console.log(images);\r\n+    console.log(images);\r\n+\r\n+    Object.keys(data).forEach((key) => {\r\n+      var c = document.getElementById(\"first\");\r\n+    });\r\n   });\r\n"
+                },
+                {
+                    "date": 1669208999230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,7 @@\n     console.log(images);\r\n \r\n     Object.keys(data).forEach((key) => {\r\n       var c = document.getElementById(\"first\");\r\n+      c.setAttribute(\"src\", data[key]);\r\n     });\r\n   });\r\n"
+                },
+                {
+                    "date": 1669209138707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,8 @@\n     console.log(images);\r\n \r\n     Object.keys(data).forEach((key) => {\r\n       var c = document.getElementById(\"first\");\r\n+      console.log(c);\r\n       c.setAttribute(\"src\", data[key]);\r\n     });\r\n   });\r\n"
+                },
+                {
+                    "date": 1669209190401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,8 @@\n \r\n     Object.keys(data).forEach((key) => {\r\n       var c = document.getElementById(\"first\");\r\n       console.log(c);\r\n+      console.log(data[key]);\r\n       c.setAttribute(\"src\", data[key]);\r\n     });\r\n   });\r\n"
+                },
+                {
+                    "date": 1669209452992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,6 +11,7 @@\n       var c = document.getElementById(\"first\");\r\n       console.log(c);\r\n       console.log(data[key]);\r\n       c.setAttribute(\"src\", data[key]);\r\n+      document.getElementById(\"sample\").appendChild(c);\r\n     });\r\n   });\r\n"
+                },
+                {
+                    "date": 1669209487489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \r\n     console.log(images);\r\n \r\n     Object.keys(data).forEach((key) => {\r\n-      var c = document.getElementById(\"first\");\r\n+      var c = document.getElementById(\"first\").value;\r\n       console.log(c);\r\n       console.log(data[key]);\r\n       c.setAttribute(\"src\", data[key]);\r\n       document.getElementById(\"sample\").appendChild(c);\r\n"
+                },
+                {
+                    "date": 1669209495368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \r\n     console.log(images);\r\n \r\n     Object.keys(data).forEach((key) => {\r\n-      var c = document.getElementById(\"first\").value;\r\n+      var c = document.getElementById(\"first\");\r\n       console.log(c);\r\n       console.log(data[key]);\r\n       c.setAttribute(\"src\", data[key]);\r\n       document.getElementById(\"sample\").appendChild(c);\r\n"
+                },
+                {
+                    "date": 1669209526427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n     Object.keys(data).forEach((key) => {\r\n       var c = document.getElementById(\"first\");\r\n       console.log(c);\r\n       console.log(data[key]);\r\n-      c.setAttribute(\"src\", data[key]);\r\n+      c.setAttribute(\"src\", data[key].dir);\r\n       document.getElementById(\"sample\").appendChild(c);\r\n     });\r\n   });\r\n"
+                },
+                {
+                    "date": 1669209534509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,7 +11,7 @@\n       var c = document.getElementById(\"first\");\r\n       console.log(c);\r\n       console.log(data[key]);\r\n       c.setAttribute(\"src\", data[key].dir);\r\n-      document.getElementById(\"sample\").appendChild(c);\r\n+      // document.getElementById(\"sample\").appendChild(c);\r\n     });\r\n   });\r\n"
+                },
+                {
+                    "date": 1669209580215,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n     Object.keys(data).forEach((key) => {\r\n       var c = document.getElementById(\"first\");\r\n       console.log(c);\r\n       console.log(data[key]);\r\n-      c.setAttribute(\"src\", data[key].dir);\r\n+      c.setAttribute(\"src\", data[key].src);\r\n       // document.getElementById(\"sample\").appendChild(c);\r\n     });\r\n   });\r\n"
+                },
+                {
+                    "date": 1669209588632,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,7 +11,6 @@\n       var c = document.getElementById(\"first\");\r\n       console.log(c);\r\n       console.log(data[key]);\r\n       c.setAttribute(\"src\", data[key].src);\r\n-      // document.getElementById(\"sample\").appendChild(c);\r\n     });\r\n   });\r\n"
+                },
+                {
+                    "date": 1669225632845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,61 @@\n     images = data;\r\n \r\n     console.log(images);\r\n \r\n-    Object.keys(data).forEach((key) => {\r\n-      var c = document.getElementById(\"first\");\r\n-      console.log(c);\r\n+    data.forEach((key) => {\r\n+      var firstDiv = document.createElement(\"div\");\r\n+      firstDiv.className = \"block\";\r\n+      console.log(firstDiv);\r\n+\r\n+      var img = document.createElement(\"img\");\r\n+      img.setAttribute(\"src\", key.src);\r\n       console.log(data[key]);\r\n-      c.setAttribute(\"src\", data[key].src);\r\n+      firstDiv.appendChild(img);\r\n+\r\n+      var innerDiv = attribute(\"price\", \"div\", \"block-one\");\r\n+\r\n+      console.log(innerDiv);\r\n+\r\n+      var name = document.createElement(\"span\");\r\n+      var node = document.createTextNode(key.name);\r\n+      name.appendChild(node);\r\n+      innerDiv.appendChild(name);\r\n+\r\n+      console.log(name);\r\n+      let b = star();\r\n+      innerDiv.appendChild(b);\r\n+\r\n+      var rate = document.createElement(\"span\");\r\n+      var dolor = document.createTextNode(key.price);\r\n+      rate.appendChild(dolor);\r\n+      innerDiv.appendChild(rate);\r\n+\r\n+      firstDiv.appendChild(innerDiv);\r\n+      console.log(firstDiv);\r\n+      var c = document.getElementById(\"first-one\");\r\n+      c.appendChild(firstDiv);\r\n+      console.log(firstDiv.innerHTML);\r\n     });\r\n   });\r\n+\r\n+function star() {\r\n+  let ratings = document.createElement(\"div\");\r\n+  ratings.className = \"ratings\";\r\n+  ratings.setAttribute(\"id\", \"rating-block-one\");\r\n+  console.log(ratings);\r\n+\r\n+  for (let i = 0; i <= 4; i++) {\r\n+    let j = attribute(\"fa fa-star-o\", \"i\", \"f\");\r\n+    j.setAttribute(\"area-hidden\", \"true\");\r\n+    ratings.appendChild(j);\r\n+  }\r\n+\r\n+  return ratings;\r\n+}\r\n+\r\n+function attribute(className, tag, id) {\r\n+  let j = document.createElement(tag);\r\n+  j.className = className;\r\n+  j.setAttribute(\"id\", id);\r\n+  return j;\r\n+}\r\n"
+                },
+                {
+                    "date": 1669230428440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,4 +63,8 @@\n   j.className = className;\r\n   j.setAttribute(\"id\", id);\r\n   return j;\r\n }\r\n+\r\n+function login() {\r\n+  let name = document.getElementById(\"name-popup\");\r\n+}\r\n"
+                },
+                {
+                    "date": 1669230523554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,5 +66,7 @@\n }\r\n \r\n function login() {\r\n   let name = document.getElementById(\"name-popup\");\r\n+\r\n+  let menu = document.getElementById(\"menu\");\r\n }\r\n"
+                },
+                {
+                    "date": 1669230606012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,7 +66,10 @@\n }\r\n \r\n function login() {\r\n   let name = document.getElementById(\"name-popup\");\r\n+  let menu = document.getElementById(\"menu\");\r\n \r\n-  let menu = document.getElementById(\"menu\");\r\n+  if (name.style.display != \"none\") {\r\n+    name.style.display = \"none\";\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669230626948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,6 +70,8 @@\n   let menu = document.getElementById(\"menu\");\r\n \r\n   if (name.style.display != \"none\") {\r\n     name.style.display = \"none\";\r\n+  } else {\r\n+    name.style.display = \"block\";\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669231101871,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,10 +68,8 @@\n function login() {\r\n   let name = document.getElementById(\"name-popup\");\r\n   let menu = document.getElementById(\"menu\");\r\n \r\n-  if (name.style.display != \"none\") {\r\n-    name.style.display = \"none\";\r\n-  } else {\r\n+  if (name.style.display === \"none\") {\r\n     name.style.display = \"block\";\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669231119872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,8 +68,8 @@\n function login() {\r\n   let name = document.getElementById(\"name-popup\");\r\n   let menu = document.getElementById(\"menu\");\r\n \r\n-  if (name.style.display === \"none\") {\r\n+  if (name.style.display == \"none\") {\r\n     name.style.display = \"block\";\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669231230709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,7 +69,8 @@\n   let name = document.getElementById(\"name-popup\");\r\n   let menu = document.getElementById(\"menu\");\r\n \r\n   if (name.style.display == \"none\") {\r\n+    console.log(name.style.display);\r\n     name.style.display = \"block\";\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669231244343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n function login() {\r\n   let name = document.getElementById(\"name-popup\");\r\n   let menu = document.getElementById(\"menu\");\r\n \r\n-  if (name.style.display == \"none\") {\r\n+  if (name.style.display != \"none\") {\r\n     console.log(name.style.display);\r\n     name.style.display = \"block\";\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669231256141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n function login() {\r\n   let name = document.getElementById(\"name-popup\");\r\n   let menu = document.getElementById(\"menu\");\r\n \r\n-  if (name.style.display != \"none\") {\r\n+  if (name.style.display == \"none\") {\r\n     console.log(name.style.display);\r\n     name.style.display = \"block\";\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669231291459,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,8 +68,10 @@\n function login() {\r\n   let name = document.getElementById(\"name-popup\");\r\n   let menu = document.getElementById(\"menu\");\r\n \r\n+  console.log(name);\r\n+\r\n   if (name.style.display == \"none\") {\r\n     console.log(name.style.display);\r\n     name.style.display = \"block\";\r\n   }\r\n"
+                },
+                {
+                    "date": 1669231325310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,8 +69,9 @@\n   let name = document.getElementById(\"name-popup\");\r\n   let menu = document.getElementById(\"menu\");\r\n \r\n   console.log(name);\r\n+  console.log(name.style.display);\r\n \r\n   if (name.style.display == \"none\") {\r\n     console.log(name.style.display);\r\n     name.style.display = \"block\";\r\n"
+                },
+                {
+                    "date": 1669231395111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n   let name = document.getElementById(\"name-popup\");\r\n   let menu = document.getElementById(\"menu\");\r\n \r\n   console.log(name);\r\n-  console.log(name.style.display);\r\n+  console.log(name.style);\r\n \r\n   if (name.style.display == \"none\") {\r\n     console.log(name.style.display);\r\n     name.style.display = \"block\";\r\n"
+                },
+                {
+                    "date": 1669231530201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n   let name = document.getElementById(\"name-popup\");\r\n   let menu = document.getElementById(\"menu\");\r\n \r\n   console.log(name);\r\n-  console.log(name.style);\r\n+  console.log(name.style.display);\r\n \r\n   if (name.style.display == \"none\") {\r\n     console.log(name.style.display);\r\n     name.style.display = \"block\";\r\n"
+                },
+                {
+                    "date": 1669231547065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,9 +71,9 @@\n \r\n   console.log(name);\r\n   console.log(name.style.display);\r\n \r\n-  if (name.style.display == \"none\") {\r\n+  if (name.style.display == \"\") {\r\n     console.log(name.style.display);\r\n     name.style.display = \"block\";\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669231733099,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,4 +76,9 @@\n     console.log(name.style.display);\r\n     name.style.display = \"block\";\r\n   }\r\n }\r\n+\r\n+function closePopup() {\r\n+  let name = document.getElementById(\"name-popup\");\r\n+  let close = document.getElementById(\"close\");\r\n+}\r\n"
+                },
+                {
+                    "date": 1669231774255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -80,5 +80,8 @@\n \r\n function closePopup() {\r\n   let name = document.getElementById(\"name-popup\");\r\n   let close = document.getElementById(\"close\");\r\n+\r\n+  if(name.style.display==\"block\") {\r\n+    name.style.display = \"none\";\r\n }\r\n"
+                },
+                {
+                    "date": 1669231797035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,7 +81,8 @@\n function closePopup() {\r\n   let name = document.getElementById(\"name-popup\");\r\n   let close = document.getElementById(\"close\");\r\n \r\n-  if(name.style.display==\"block\") {\r\n-    name.style.display = \"none\";\r\n+  if (name.style.display == \"block\") {\r\n+    name.style.display = \"\";\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669231952759,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,8 +34,10 @@\n       var dolor = document.createTextNode(key.price);\r\n       rate.appendChild(dolor);\r\n       innerDiv.appendChild(rate);\r\n \r\n+      var add = attribute(\"add-button\", \"button\", \"add-to-cart\");\r\n+\r\n       firstDiv.appendChild(innerDiv);\r\n       console.log(firstDiv);\r\n       var c = document.getElementById(\"first-one\");\r\n       c.appendChild(firstDiv);\r\n"
+                },
+                {
+                    "date": 1669232016325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,8 +35,11 @@\n       rate.appendChild(dolor);\r\n       innerDiv.appendChild(rate);\r\n \r\n       var add = attribute(\"add-button\", \"button\", \"add-to-cart\");\r\n+      var value = document.createTextNode(\"Add\");\r\n+      add.appendChild(value);\r\n+      innerDiv.appendChild(add);\r\n \r\n       firstDiv.appendChild(innerDiv);\r\n       console.log(firstDiv);\r\n       var c = document.getElementById(\"first-one\");\r\n"
+                },
+                {
+                    "date": 1669232060422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,8 +36,9 @@\n       innerDiv.appendChild(rate);\r\n \r\n       var add = attribute(\"add-button\", \"button\", \"add-to-cart\");\r\n       var value = document.createTextNode(\"Add\");\r\n+      add.style.cursor = \"pointer\";\r\n       add.appendChild(value);\r\n       innerDiv.appendChild(add);\r\n \r\n       firstDiv.appendChild(innerDiv);\r\n"
+                },
+                {
+                    "date": 1669267456418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,8 @@\n fetch(file) //api for the get request\r\n   .then((response) => response.json())\r\n   .then((data) => {\r\n     images = data;\r\n-\r\n     console.log(images);\r\n \r\n     data.forEach((key) => {\r\n       var firstDiv = document.createElement(\"div\");\r\n"
+                },
+                {
+                    "date": 1669272007694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n       var img = document.createElement(\"img\");\r\n       img.setAttribute(\"src\", key.src);\r\n       console.log(data[key]);\r\n       firstDiv.appendChild(img);\r\n-\r\n+      var dolor = document.createTextNode(key.price);\r\n       var innerDiv = attribute(\"price\", \"div\", \"block-one\");\r\n \r\n       console.log(innerDiv);\r\n \r\n@@ -29,9 +29,9 @@\n       let b = star();\r\n       innerDiv.appendChild(b);\r\n \r\n       var rate = document.createElement(\"span\");\r\n-      var dolor = document.createTextNode(key.price);\r\n+\r\n       rate.appendChild(dolor);\r\n       innerDiv.appendChild(rate);\r\n \r\n       var add = attribute(\"add-button\", \"button\", \"add-to-cart\");\r\n"
+                },
+                {
+                    "date": 1669274454356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,10 +20,10 @@\n \r\n       console.log(innerDiv);\r\n \r\n       var name = document.createElement(\"span\");\r\n-      var node = document.createTextNode(key.name);\r\n-      name.appendChild(node);\r\n+\r\n+      name.appendChild(document.createTextNode(key.name));\r\n       innerDiv.appendChild(name);\r\n \r\n       console.log(name);\r\n       let b = star();\r\n"
+                },
+                {
+                    "date": 1669274483096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,8 @@\n \r\n       console.log(innerDiv);\r\n \r\n       var name = document.createElement(\"span\");\r\n-\r\n       name.appendChild(document.createTextNode(key.name));\r\n       innerDiv.appendChild(name);\r\n \r\n       console.log(name);\r\n"
+                },
+                {
+                    "date": 1669277533230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -89,4 +89,8 @@\n   if (name.style.display == \"block\") {\r\n     name.style.display = \"\";\r\n   }\r\n }\r\n+\r\n+function showCart() {\r\n+  let cart = document.getElementById(\"cart-button\");\r\n+}\r\n"
+                },
+                {
+                    "date": 1669277578706,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -92,5 +92,9 @@\n }\r\n \r\n function showCart() {\r\n   let cart = document.getElementById(\"cart-button\");\r\n+\r\n+  if (cart.style.display == \"\") {\r\n+    cart.style.display = \"block\";\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1669277654309,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -93,8 +93,10 @@\n \r\n function showCart() {\r\n   let cart = document.getElementById(\"cart-button\");\r\n \r\n-  if (cart.style.display == \"\") {\r\n+  let cartBlock = document.getElementById(\"cart-block\")\r\n+\r\n+  if (.style.display == \"\") {\r\n     cart.style.display = \"block\";\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669277665247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -92,11 +92,10 @@\n }\r\n \r\n function showCart() {\r\n   let cart = document.getElementById(\"cart-button\");\r\n+  let cartBlock = document.getElementById(\"cart-block\");\r\n \r\n-  let cartBlock = document.getElementById(\"cart-block\")\r\n-\r\n   if (.style.display == \"\") {\r\n     cart.style.display = \"block\";\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669277675113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -94,8 +94,8 @@\n function showCart() {\r\n   let cart = document.getElementById(\"cart-button\");\r\n   let cartBlock = document.getElementById(\"cart-block\");\r\n \r\n-  if (.style.display == \"\") {\r\n-    cart.style.display = \"block\";\r\n+  if (cartBlock.style.display == \"\") {\r\n+    cartBlock.style.display = \"block\";\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669277769926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,4 +98,12 @@\n   if (cartBlock.style.display == \"\") {\r\n     cartBlock.style.display = \"block\";\r\n   }\r\n }\r\n+\r\n+function closeCart() {\r\n+  let cartBlock = document.getElementById(\"cart-block\");\r\n+\r\n+  if (cartBlock.style.display == \"\") {\r\n+    cartBlock.style.display = \"block\";\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1669277785966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,8 +102,8 @@\n \r\n function closeCart() {\r\n   let cartBlock = document.getElementById(\"cart-block\");\r\n \r\n-  if (cartBlock.style.display == \"\") {\r\n+  if (cartBlock.style.display == \"block\") {\r\n     cartBlock.style.display = \"block\";\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669284477697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -103,7 +103,7 @@\n function closeCart() {\r\n   let cartBlock = document.getElementById(\"cart-block\");\r\n \r\n   if (cartBlock.style.display == \"block\") {\r\n-    cartBlock.style.display = \"block\";\r\n+    cartBlock.style.display = \"\";\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1669284759501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -106,4 +106,6 @@\n   if (cartBlock.style.display == \"block\") {\r\n     cartBlock.style.display = \"\";\r\n   }\r\n }\r\n+\r\n+var myCart = attribute(\"cart-area\", \"div\", \"cart-block\");\r\n"
+                },
+                {
+                    "date": 1669284956591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n \r\n   return ratings;\r\n }\r\n \r\n-function attribute(className, tag, id) {\r\n+function attribute(className = \"\", tag = \"\", id = \"\") {\r\n   let j = document.createElement(tag);\r\n   j.className = className;\r\n   j.setAttribute(\"id\", id);\r\n   return j;\r\n"
+                },
+                {
+                    "date": 1669285031878,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -108,4 +108,6 @@\n   }\r\n }\r\n \r\n var myCart = attribute(\"cart-area\", \"div\", \"cart-block\");\r\n+\r\n+var closeButton = attribute(\"fa fa-times\", \"i\");\r\n"
+                },
+                {
+                    "date": 1669285127289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -110,4 +110,6 @@\n \r\n var myCart = attribute(\"cart-area\", \"div\", \"cart-block\");\r\n \r\n var closeButton = attribute(\"fa fa-times\", \"i\");\r\n+\r\n+var list = attribute(\"\", \"ul\");\r\n"
+                },
+                {
+                    "date": 1669285186284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -110,6 +110,9 @@\n \r\n var myCart = attribute(\"cart-area\", \"div\", \"cart-block\");\r\n \r\n var closeButton = attribute(\"fa fa-times\", \"i\");\r\n+myCart.appendChild(closeButton);\r\n \r\n var list = attribute(\"\", \"ul\");\r\n+\r\n+var \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669285260718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -113,6 +113,7 @@\n var closeButton = attribute(\"fa fa-times\", \"i\");\r\n myCart.appendChild(closeButton);\r\n \r\n var list = attribute(\"\", \"ul\");\r\n+myCart.appendChild(list);\r\n \r\n var \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669287184624,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -114,6 +114,4 @@\n myCart.appendChild(closeButton);\r\n \r\n var list = attribute(\"\", \"ul\");\r\n myCart.appendChild(list);\r\n-\r\n-var \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669287490774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -114,4 +114,6 @@\n myCart.appendChild(closeButton);\r\n \r\n var list = attribute(\"\", \"ul\");\r\n myCart.appendChild(list);\r\n+\r\n+var unOrderList = attribute(\"\", \"li\");\r\n"
+                },
+                {
+                    "date": 1669287506923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -116,4 +116,5 @@\n var list = attribute(\"\", \"ul\");\r\n myCart.appendChild(list);\r\n \r\n var unOrderList = attribute(\"\", \"li\");\r\n+list.appendChild(list);\r\n"
+                },
+                {
+                    "date": 1669287512902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -116,5 +116,5 @@\n var list = attribute(\"\", \"ul\");\r\n myCart.appendChild(list);\r\n \r\n var unOrderList = attribute(\"\", \"li\");\r\n-list.appendChild(list);\r\n+list.appendChild(unOrderList);\r\n"
+                },
+                {
+                    "date": 1669287697800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -115,6 +115,8 @@\n \r\n var list = attribute(\"\", \"ul\");\r\n myCart.appendChild(list);\r\n \r\n-var unOrderList = attribute(\"\", \"li\");\r\n-list.appendChild(unOrderList);\r\n+// var unOrderList = attribute(\"\", \"li\");\r\n+// list.appendChild(unOrderList);\r\n+\r\n+var totalPrice = attribute(\"total\", \"div\");\r\n"
+                },
+                {
+                    "date": 1669287928879,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -119,4 +119,6 @@\n // var unOrderList = attribute(\"\", \"li\");\r\n // list.appendChild(unOrderList);\r\n \r\n var totalPrice = attribute(\"total\", \"div\");\r\n+\r\n+var total = attribute(\"\", \"span\");\r\n"
+                },
+                {
+                    "date": 1669287991479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -121,4 +121,5 @@\n \r\n var totalPrice = attribute(\"total\", \"div\");\r\n \r\n var total = attribute(\"\", \"span\");\r\n+totalPrice.appendChild(total);\r\n"
+                },
+                {
+                    "date": 1669288033666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -122,4 +122,6 @@\n var totalPrice = attribute(\"total\", \"div\");\r\n \r\n var total = attribute(\"\", \"span\");\r\n totalPrice.appendChild(total);\r\n+\r\n+var totalPrice = attribute(\"\", \"span\");\r\n"
+                },
+                {
+                    "date": 1669288078660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -121,7 +121,8 @@\n \r\n var totalPrice = attribute(\"total\", \"div\");\r\n \r\n var total = attribute(\"\", \"span\");\r\n+document.createTextNode(\"Total\").appendChild(total);\r\n totalPrice.appendChild(total);\r\n \r\n var totalPrice = attribute(\"\", \"span\");\r\n"
+                },
+                {
+                    "date": 1669288104898,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,4 +125,5 @@\n document.createTextNode(\"Total\").appendChild(total);\r\n totalPrice.appendChild(total);\r\n \r\n var totalPrice = attribute(\"\", \"span\");\r\n+document.createTextNode(\"$80.00\").appendChild(total);\r\n"
+                },
+                {
+                    "date": 1669288122260,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -124,6 +124,6 @@\n var total = attribute(\"\", \"span\");\r\n document.createTextNode(\"Total\").appendChild(total);\r\n totalPrice.appendChild(total);\r\n \r\n-var totalPrice = attribute(\"\", \"span\");\r\n+var price = attribute(\"\", \"span\");\r\n document.createTextNode(\"$80.00\").appendChild(total);\r\n"
+                },
+                {
+                    "date": 1669288136690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,5 +125,5 @@\n document.createTextNode(\"Total\").appendChild(total);\r\n totalPrice.appendChild(total);\r\n \r\n var price = attribute(\"\", \"span\");\r\n-document.createTextNode(\"$80.00\").appendChild(total);\r\n+document.createTextNode(\"$80.00\").appendChild(price);\r\n"
+                },
+                {
+                    "date": 1669288187406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -126,4 +126,5 @@\n totalPrice.appendChild(total);\r\n \r\n var price = attribute(\"\", \"span\");\r\n document.createTextNode(\"$80.00\").appendChild(price);\r\n+totalPrice.appendChild(price);\r\n"
+                },
+                {
+                    "date": 1669288218700,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -127,4 +127,6 @@\n \r\n var price = attribute(\"\", \"span\");\r\n document.createTextNode(\"$80.00\").appendChild(price);\r\n totalPrice.appendChild(price);\r\n+\r\n+myCart.appendChild(totalPrice);\r\n"
+                },
+                {
+                    "date": 1669288688607,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -129,4 +129,6 @@\n document.createTextNode(\"$80.00\").appendChild(price);\r\n totalPrice.appendChild(price);\r\n \r\n myCart.appendChild(totalPrice);\r\n+\r\n+document.getElementById(\"subContainer\");\r\n"
+                },
+                {
+                    "date": 1669288697414,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -130,5 +130,5 @@\n totalPrice.appendChild(price);\r\n \r\n myCart.appendChild(totalPrice);\r\n \r\n-document.getElementById(\"subContainer\");\r\n+document.getElementById(\"subContainer\").appendChild(myCart);\r\n"
+                },
+                {
+                    "date": 1669288784977,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -129,6 +129,7 @@\n document.createTextNode(\"$80.00\").appendChild(price);\r\n totalPrice.appendChild(price);\r\n \r\n myCart.appendChild(totalPrice);\r\n+console.log(myCart);\r\n \r\n document.getElementById(\"subContainer\").appendChild(myCart);\r\n"
+                },
+                {
+                    "date": 1669288892941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -110,8 +110,9 @@\n \r\n var myCart = attribute(\"cart-area\", \"div\", \"cart-block\");\r\n \r\n var closeButton = attribute(\"fa fa-times\", \"i\");\r\n+closeButton.onclick = closeCart();\r\n myCart.appendChild(closeButton);\r\n \r\n var list = attribute(\"\", \"ul\");\r\n myCart.appendChild(list);\r\n"
+                },
+                {
+                    "date": 1669289189108,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -99,20 +99,20 @@\n     cartBlock.style.display = \"block\";\r\n   }\r\n }\r\n \r\n-function closeCart() {\r\n-  let cartBlock = document.getElementById(\"cart-block\");\r\n+// function closeCart() {\r\n+//   let cartBlock = document.getElementById(\"cart-block\");\r\n \r\n-  if (cartBlock.style.display == \"block\") {\r\n-    cartBlock.style.display = \"\";\r\n-  }\r\n-}\r\n+//   if (cartBlock.style.display == \"block\") {\r\n+//     cartBlock.style.display = \"\";\r\n+//   }\r\n+// }\r\n \r\n var myCart = attribute(\"cart-area\", \"div\", \"cart-block\");\r\n \r\n var closeButton = attribute(\"fa fa-times\", \"i\");\r\n-closeButton.onclick = closeCart();\r\n+// closeButton.onclick = closeCart();\r\n myCart.appendChild(closeButton);\r\n \r\n var list = attribute(\"\", \"ul\");\r\n myCart.appendChild(list);\r\n"
+                },
+                {
+                    "date": 1669289243348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,8 +107,9 @@\n //     cartBlock.style.display = \"\";\r\n //   }\r\n // }\r\n \r\n+console.log(document.getElementById(\"subContainer\"));\r\n var myCart = attribute(\"cart-area\", \"div\", \"cart-block\");\r\n \r\n var closeButton = attribute(\"fa fa-times\", \"i\");\r\n // closeButton.onclick = closeCart();\r\n"
+                },
+                {
+                    "date": 1669289316440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -123,9 +123,9 @@\n \r\n var totalPrice = attribute(\"total\", \"div\");\r\n \r\n var total = attribute(\"\", \"span\");\r\n-document.createTextNode(\"Total\").appendChild(total);\r\n+total.appendChild(document.createTextNode(\"Total\"));\r\n totalPrice.appendChild(total);\r\n \r\n var price = attribute(\"\", \"span\");\r\n document.createTextNode(\"$80.00\").appendChild(price);\r\n"
+                },
+                {
+                    "date": 1669289340131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -127,9 +127,9 @@\n total.appendChild(document.createTextNode(\"Total\"));\r\n totalPrice.appendChild(total);\r\n \r\n var price = attribute(\"\", \"span\");\r\n-document.createTextNode(\"$80.00\").appendChild(price);\r\n+price.appendChild(document.createTextNode(\"$80.00\"));\r\n totalPrice.appendChild(price);\r\n \r\n myCart.appendChild(totalPrice);\r\n console.log(myCart);\r\n"
+                },
+                {
+                    "date": 1669289712246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -99,39 +99,39 @@\n     cartBlock.style.display = \"block\";\r\n   }\r\n }\r\n \r\n-// function closeCart() {\r\n-//   let cartBlock = document.getElementById(\"cart-block\");\r\n+function closeCart() {\r\n+  let cartBlock = document.getElementById(\"cart-block\");\r\n \r\n-//   if (cartBlock.style.display == \"block\") {\r\n-//     cartBlock.style.display = \"\";\r\n-//   }\r\n-// }\r\n+  if (cartBlock.style.display == \"block\") {\r\n+    cartBlock.style.display = \"\";\r\n+  }\r\n+}\r\n \r\n-console.log(document.getElementById(\"subContainer\"));\r\n-var myCart = attribute(\"cart-area\", \"div\", \"cart-block\");\r\n+// console.log(document.getElementById(\"subContainer\"));\r\n+// var myCart = attribute(\"cart-area\", \"div\", \"cart-block\");\r\n \r\n-var closeButton = attribute(\"fa fa-times\", \"i\");\r\n-// closeButton.onclick = closeCart();\r\n-myCart.appendChild(closeButton);\r\n+// var closeButton = attribute(\"fa fa-times\", \"i\");\r\n+// // closeButton.onclick = closeCart();\r\n+// myCart.appendChild(closeButton);\r\n \r\n-var list = attribute(\"\", \"ul\");\r\n-myCart.appendChild(list);\r\n+// var list = attribute(\"\", \"ul\");\r\n+// myCart.appendChild(list);\r\n \r\n-// var unOrderList = attribute(\"\", \"li\");\r\n-// list.appendChild(unOrderList);\r\n+// // var unOrderList = attribute(\"\", \"li\");\r\n+// // list.appendChild(unOrderList);\r\n \r\n-var totalPrice = attribute(\"total\", \"div\");\r\n+// var totalPrice = attribute(\"total\", \"div\");\r\n \r\n-var total = attribute(\"\", \"span\");\r\n-total.appendChild(document.createTextNode(\"Total\"));\r\n-totalPrice.appendChild(total);\r\n+// var total = attribute(\"\", \"span\");\r\n+// total.appendChild(document.createTextNode(\"Total\"));\r\n+// totalPrice.appendChild(total);\r\n \r\n-var price = attribute(\"\", \"span\");\r\n-price.appendChild(document.createTextNode(\"$80.00\"));\r\n-totalPrice.appendChild(price);\r\n+// var price = attribute(\"\", \"span\");\r\n+// price.appendChild(document.createTextNode(\"$80.00\"));\r\n+// totalPrice.appendChild(price);\r\n \r\n-myCart.appendChild(totalPrice);\r\n-console.log(myCart);\r\n+// myCart.appendChild(totalPrice);\r\n+// console.log(myCart);\r\n \r\n-document.getElementById(\"subContainer\").appendChild(myCart);\r\n+// document.getElementById(\"subContainer\").appendChild(myCart);\r\n"
+                },
+                {
+                    "date": 1669291322762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,8 +107,10 @@\n     cartBlock.style.display = \"\";\r\n   }\r\n }\r\n \r\n+var buy = document.getElementById(\"add-to-cart\");\r\n+\r\n // console.log(document.getElementById(\"subContainer\"));\r\n // var myCart = attribute(\"cart-area\", \"div\", \"cart-block\");\r\n \r\n // var closeButton = attribute(\"fa fa-times\", \"i\");\r\n"
+                },
+                {
+                    "date": 1669291411722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -108,8 +108,11 @@\n   }\r\n }\r\n \r\n var buy = document.getElementById(\"add-to-cart\");\r\n+buy.onclick = function () {\r\n+  var fav = document.getElementById(\"fav\");\r\n+};\r\n \r\n // console.log(document.getElementById(\"subContainer\"));\r\n // var myCart = attribute(\"cart-area\", \"div\", \"cart-block\");\r\n \r\n"
+                },
+                {
+                    "date": 1669291631014,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -109,9 +109,9 @@\n }\r\n \r\n var buy = document.getElementById(\"add-to-cart\");\r\n buy.onclick = function () {\r\n-  var fav = document.getElementById(\"fav\");\r\n+  var ul = document.getElementById(\"fav\");\r\n };\r\n \r\n // console.log(document.getElementById(\"subContainer\"));\r\n // var myCart = attribute(\"cart-area\", \"div\", \"cart-block\");\r\n"
+                },
+                {
+                    "date": 1669291728107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -109,9 +109,9 @@\n }\r\n \r\n var buy = document.getElementById(\"add-to-cart\");\r\n buy.onclick = function () {\r\n-  var ul = document.getElementById(\"fav\");\r\n+  addToCart(this);\r\n };\r\n \r\n // console.log(document.getElementById(\"subContainer\"));\r\n // var myCart = attribute(\"cart-area\", \"div\", \"cart-block\");\r\n"
+                },
+                {
+                    "date": 1669291758310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -139,4 +139,8 @@\n // myCart.appendChild(totalPrice);\r\n // console.log(myCart);\r\n \r\n // document.getElementById(\"subContainer\").appendChild(myCart);\r\n+\r\n+function addToCart(y) {\r\n+  console.log(y);\r\n+}\r\n"
+                },
+                {
+                    "date": 1669291794056,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -108,8 +108,9 @@\n   }\r\n }\r\n \r\n var buy = document.getElementById(\"add-to-cart\");\r\n+console.log(buy);\r\n buy.onclick = function () {\r\n   addToCart(this);\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1669292709754,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -108,9 +108,9 @@\n   }\r\n }\r\n \r\n var buy = document.getElementById(\"add-to-cart\");\r\n-console.log(buy);\r\n+console.log(buyl);\r\n buy.onclick = function () {\r\n   addToCart(this);\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1669292721623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n \r\n       rate.appendChild(dolor);\r\n       innerDiv.appendChild(rate);\r\n \r\n-      var add = attribute(\"add-button\", \"button\", \"add-to-cart\");\r\n+      var add = attribute(\"add-button\", \"button\", \"\");\r\n       var value = document.createTextNode(\"Add\");\r\n       add.style.cursor = \"pointer\";\r\n       add.appendChild(value);\r\n       innerDiv.appendChild(add);\r\n"
+                },
+                {
+                    "date": 1669292741968,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,10 +107,10 @@\n     cartBlock.style.display = \"\";\r\n   }\r\n }\r\n \r\n-var buy = document.getElementById(\"add-to-cart\");\r\n-console.log(buyl);\r\n+var buy = document.getElementsByClassName(\"add-to-cart\");\r\n+console.log(buy);\r\n buy.onclick = function () {\r\n   addToCart(this);\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1669292760707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,9 +107,9 @@\n     cartBlock.style.display = \"\";\r\n   }\r\n }\r\n \r\n-var buy = document.getElementsByClassName(\"add-to-cart\");\r\n+var buy = document.getElementsByClassName(\"add-button\");\r\n console.log(buy);\r\n buy.onclick = function () {\r\n   addToCart(this);\r\n };\r\n"
+                },
+                {
+                    "date": 1669293011083,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,29 +3,29 @@\n fetch(file) //api for the get request\r\n   .then((response) => response.json())\r\n   .then((data) => {\r\n     images = data;\r\n-    console.log(images);\r\n+    // console.log(images);\r\n \r\n     data.forEach((key) => {\r\n       var firstDiv = document.createElement(\"div\");\r\n       firstDiv.className = \"block\";\r\n-      console.log(firstDiv);\r\n+      // console.log(firstDiv);\r\n \r\n       var img = document.createElement(\"img\");\r\n       img.setAttribute(\"src\", key.src);\r\n-      console.log(data[key]);\r\n+      // console.log(data[key]);\r\n       firstDiv.appendChild(img);\r\n       var dolor = document.createTextNode(key.price);\r\n       var innerDiv = attribute(\"price\", \"div\", \"block-one\");\r\n \r\n-      console.log(innerDiv);\r\n+      // console.log(innerDiv);\r\n \r\n       var name = document.createElement(\"span\");\r\n       name.appendChild(document.createTextNode(key.name));\r\n       innerDiv.appendChild(name);\r\n \r\n-      console.log(name);\r\n+      // console.log(name);\r\n       let b = star();\r\n       innerDiv.appendChild(b);\r\n \r\n       var rate = document.createElement(\"span\");\r\n@@ -39,12 +39,12 @@\n       add.appendChild(value);\r\n       innerDiv.appendChild(add);\r\n \r\n       firstDiv.appendChild(innerDiv);\r\n-      console.log(firstDiv);\r\n+      // console.log(firstDiv);\r\n       var c = document.getElementById(\"first-one\");\r\n       c.appendChild(firstDiv);\r\n-      console.log(firstDiv.innerHTML);\r\n+      // console.log(firstDiv.innerHTML);\r\n     });\r\n   });\r\n \r\n function star() {\r\n"
+                },
+                {
+                    "date": 1669293032772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,9 +107,9 @@\n     cartBlock.style.display = \"\";\r\n   }\r\n }\r\n \r\n-var buy = document.getElementsByClassName(\"add-button\");\r\n+let buy = document.getElementsByClassName(\"add-button\");\r\n console.log(buy);\r\n buy.onclick = function () {\r\n   addToCart(this);\r\n };\r\n"
+                },
+                {
+                    "date": 1669293523652,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,8 +44,14 @@\n       var c = document.getElementById(\"first-one\");\r\n       c.appendChild(firstDiv);\r\n       // console.log(firstDiv.innerHTML);\r\n     });\r\n+\r\n+    let buy = document.getElementsByClassName(\"add-button\");\r\n+    console.log(buy);\r\n+    buy.onclick = function () {\r\n+      addToCart(this);\r\n+    };\r\n   });\r\n \r\n function star() {\r\n   let ratings = document.createElement(\"div\");\r\n@@ -107,14 +113,8 @@\n     cartBlock.style.display = \"\";\r\n   }\r\n }\r\n \r\n-let buy = document.getElementsByClassName(\"add-button\");\r\n-console.log(buy);\r\n-buy.onclick = function () {\r\n-  addToCart(this);\r\n-};\r\n-\r\n // console.log(document.getElementById(\"subContainer\"));\r\n // var myCart = attribute(\"cart-area\", \"div\", \"cart-block\");\r\n \r\n // var closeButton = attribute(\"fa fa-times\", \"i\");\r\n"
+                },
+                {
+                    "date": 1669293806282,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,8 +50,14 @@\n     console.log(buy);\r\n     buy.onclick = function () {\r\n       addToCart(this);\r\n     };\r\n+\r\n+    document\r\n+      .getElementsByClassName(\"add-button\")\r\n+      .addEventListener(\"click\", (e) => {\r\n+        console.log(e);\r\n+      });\r\n   });\r\n \r\n function star() {\r\n   let ratings = document.createElement(\"div\");\r\n"
+                },
+                {
+                    "date": 1669293867107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,13 +51,11 @@\n     buy.onclick = function () {\r\n       addToCart(this);\r\n     };\r\n \r\n-    document\r\n-      .getElementsByClassName(\"add-button\")\r\n-      .addEventListener(\"click\", (e) => {\r\n-        console.log(e);\r\n-      });\r\n+    buy.addEventListener(\"click\", (e) => {\r\n+      console.log(e);\r\n+    });\r\n   });\r\n \r\n function star() {\r\n   let ratings = document.createElement(\"div\");\r\n"
+                },
+                {
+                    "date": 1669293948256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   .then((data) => {\r\n     images = data;\r\n     // console.log(images);\r\n \r\n-    data.forEach((key) => {\r\n+    data.forEach((key, ii) => {\r\n       var firstDiv = document.createElement(\"div\");\r\n       firstDiv.className = \"block\";\r\n       // console.log(firstDiv);\r\n \r\n@@ -32,9 +32,9 @@\n \r\n       rate.appendChild(dolor);\r\n       innerDiv.appendChild(rate);\r\n \r\n-      var add = attribute(\"add-button\", \"button\", \"\");\r\n+      var add = attribute(\"add-button\", \"button\", ii);\r\n       var value = document.createTextNode(\"Add\");\r\n       add.style.cursor = \"pointer\";\r\n       add.appendChild(value);\r\n       innerDiv.appendChild(add);\r\n@@ -45,9 +45,9 @@\n       c.appendChild(firstDiv);\r\n       // console.log(firstDiv.innerHTML);\r\n     });\r\n \r\n-    let buy = document.getElementsByClassName(\"add-button\");\r\n+    let buy = document.getElementsById(0);\r\n     console.log(buy);\r\n     buy.onclick = function () {\r\n       addToCart(this);\r\n     };\r\n"
+                },
+                {
+                    "date": 1669293967977,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n       c.appendChild(firstDiv);\r\n       // console.log(firstDiv.innerHTML);\r\n     });\r\n \r\n-    let buy = document.getElementsById(0);\r\n+    let buy = document.getElementById(0);\r\n     console.log(buy);\r\n     buy.onclick = function () {\r\n       addToCart(this);\r\n     };\r\n"
+                },
+                {
+                    "date": 1669294081738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n       c.appendChild(firstDiv);\r\n       // console.log(firstDiv.innerHTML);\r\n     });\r\n \r\n-    let buy = document.getElementById(0);\r\n+    let buy = document.getElementsByTagName(\"button\");\r\n     console.log(buy);\r\n     buy.onclick = function () {\r\n       addToCart(this);\r\n     };\r\n"
+                },
+                {
+                    "date": 1669294104315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n       c.appendChild(firstDiv);\r\n       // console.log(firstDiv.innerHTML);\r\n     });\r\n \r\n-    let buy = document.getElementsByTagName(\"button\");\r\n+    let buy = document.getElementByTagName(\"button\");\r\n     console.log(buy);\r\n     buy.onclick = function () {\r\n       addToCart(this);\r\n     };\r\n"
+                },
+                {
+                    "date": 1669294177052,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   .then((data) => {\r\n     images = data;\r\n     // console.log(images);\r\n \r\n-    data.forEach((key, ii) => {\r\n+    data.forEach((key) => {\r\n       var firstDiv = document.createElement(\"div\");\r\n       firstDiv.className = \"block\";\r\n       // console.log(firstDiv);\r\n \r\n"
+                },
+                {
+                    "date": 1669294187032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n \r\n       rate.appendChild(dolor);\r\n       innerDiv.appendChild(rate);\r\n \r\n-      var add = attribute(\"add-button\", \"button\", ii);\r\n+      var add = attribute(\"add-button\", \"button\");\r\n       var value = document.createTextNode(\"Add\");\r\n       add.style.cursor = \"pointer\";\r\n       add.appendChild(value);\r\n       innerDiv.appendChild(add);\r\n"
+                },
+                {
+                    "date": 1669294437473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,8 +48,9 @@\n \r\n     let buy = document.getElementByTagName(\"button\");\r\n     console.log(buy);\r\n     buy.onclick = function () {\r\n+      console.log(\"1\");\r\n       addToCart(this);\r\n     };\r\n \r\n     buy.addEventListener(\"click\", (e) => {\r\n"
+                },
+                {
+                    "date": 1669294455973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n       c.appendChild(firstDiv);\r\n       // console.log(firstDiv.innerHTML);\r\n     });\r\n \r\n-    let buy = document.getElementByTagName(\"button\");\r\n+    let buy = document.getElementsByClassName(\"add-button\");\r\n     console.log(buy);\r\n     buy.onclick = function () {\r\n       console.log(\"1\");\r\n       addToCart(this);\r\n"
+                },
+                {
+                    "date": 1669294497086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,11 +52,11 @@\n       console.log(\"1\");\r\n       addToCart(this);\r\n     };\r\n \r\n-    buy.addEventListener(\"click\", (e) => {\r\n-      console.log(e);\r\n-    });\r\n+    // buy.addEventListener(\"click\", (e) => {\r\n+    //   console.log(e);\r\n+    // });\r\n   });\r\n \r\n function star() {\r\n   let ratings = document.createElement(\"div\");\r\n"
+                },
+                {
+                    "date": 1669294702776,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   .then((data) => {\r\n     images = data;\r\n     // console.log(images);\r\n \r\n-    data.forEach((key) => {\r\n+    data.forEach((key,index) => {\r\n       var firstDiv = document.createElement(\"div\");\r\n       firstDiv.className = \"block\";\r\n       // console.log(firstDiv);\r\n \r\n@@ -33,8 +33,14 @@\n       rate.appendChild(dolor);\r\n       innerDiv.appendChild(rate);\r\n \r\n       var add = attribute(\"add-button\", \"button\");\r\n+      add.onclick = function () {\r\n+      console.log(\"1\");\r\n+      addToCart(this);\r\n+    };\r\n+\r\n+      }\r\n       var value = document.createTextNode(\"Add\");\r\n       add.style.cursor = \"pointer\";\r\n       add.appendChild(value);\r\n       innerDiv.appendChild(add);\r\n@@ -44,16 +50,8 @@\n       var c = document.getElementById(\"first-one\");\r\n       c.appendChild(firstDiv);\r\n       // console.log(firstDiv.innerHTML);\r\n     });\r\n-\r\n-    let buy = document.getElementsByClassName(\"add-button\");\r\n-    console.log(buy);\r\n-    buy.onclick = function () {\r\n-      console.log(\"1\");\r\n-      addToCart(this);\r\n-    };\r\n-\r\n     // buy.addEventListener(\"click\", (e) => {\r\n     //   console.log(e);\r\n     // });\r\n   });\r\n"
+                },
+                {
+                    "date": 1669295432548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,12 @@\n let file = \"Flowers.json\";\r\n fetch(file) //api for the get request\r\n   .then((response) => response.json())\r\n   .then((data) => {\r\n-    images = data;\r\n+    // images = data;\r\n     // console.log(images);\r\n \r\n-    data.forEach((key,index) => {\r\n+    data.forEach((key) => {\r\n       var firstDiv = document.createElement(\"div\");\r\n       firstDiv.className = \"block\";\r\n       // console.log(firstDiv);\r\n \r\n@@ -34,13 +34,12 @@\n       innerDiv.appendChild(rate);\r\n \r\n       var add = attribute(\"add-button\", \"button\");\r\n       add.onclick = function () {\r\n-      console.log(\"1\");\r\n-      addToCart(this);\r\n-    };\r\n+        console.log(\"1\");\r\n+        addToCart(this);\r\n+      };\r\n \r\n-      }\r\n       var value = document.createTextNode(\"Add\");\r\n       add.style.cursor = \"pointer\";\r\n       add.appendChild(value);\r\n       innerDiv.appendChild(add);\r\n"
+                },
+                {
+                    "date": 1669295937872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n \r\n       rate.appendChild(dolor);\r\n       innerDiv.appendChild(rate);\r\n \r\n-      var add = attribute(\"add-button\", \"button\");\r\n+      var add = attribute(\"add-button\", \"button\", key.id);\r\n       add.onclick = function () {\r\n         console.log(\"1\");\r\n         addToCart(this);\r\n       };\r\n"
+                },
+                {
+                    "date": 1669296150098,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -144,6 +144,6 @@\n \r\n // document.getElementById(\"subContainer\").appendChild(myCart);\r\n \r\n function addToCart(y) {\r\n-  console.log(y);\r\n+  var identity = y.id;\r\n }\r\n"
+                },
+                {
+                    "date": 1669296159399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -145,5 +145,6 @@\n // document.getElementById(\"subContainer\").appendChild(myCart);\r\n \r\n function addToCart(y) {\r\n   var identity = y.id;\r\n+  console.log(identity);\r\n }\r\n"
+                },
+                {
+                    "date": 1669296173101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n let file = \"Flowers.json\";\r\n fetch(file) //api for the get request\r\n   .then((response) => response.json())\r\n   .then((data) => {\r\n-    // images = data;\r\n+    images = data;\r\n     // console.log(images);\r\n \r\n     data.forEach((key) => {\r\n       var firstDiv = document.createElement(\"div\");\r\n"
+                },
+                {
+                    "date": 1669296268156,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -146,5 +146,7 @@\n \r\n function addToCart(y) {\r\n   var identity = y.id;\r\n   console.log(identity);\r\n+\r\n+  images.forEach((key) => {});\r\n }\r\n"
+                },
+                {
+                    "date": 1669296352590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -147,6 +147,10 @@\n function addToCart(y) {\r\n   var identity = y.id;\r\n   console.log(identity);\r\n \r\n-  images.forEach((key) => {});\r\n+  images.forEach((key) => {\r\n+    if (key.id == identity) {\r\n+      var obj = key;\r\n+    }\r\n+  });\r\n }\r\n"
+                },
+                {
+                    "date": 1669296359937,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -150,7 +150,8 @@\n \r\n   images.forEach((key) => {\r\n     if (key.id == identity) {\r\n       var obj = key;\r\n+      console.log(obj);\r\n     }\r\n   });\r\n }\r\n"
+                },
+                {
+                    "date": 1669296684974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -151,7 +151,10 @@\n   images.forEach((key) => {\r\n     if (key.id == identity) {\r\n       var obj = key;\r\n       console.log(obj);\r\n+      return obj;\r\n     }\r\n   });\r\n }\r\n+\r\n+console.log();\r\n"
+                },
+                {
+                    "date": 1669296708799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -156,5 +156,5 @@\n     }\r\n   });\r\n }\r\n \r\n-console.log();\r\n+console.log(addToCart(y));\r\n"
+                },
+                {
+                    "date": 1669296899089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -151,10 +151,7 @@\n   images.forEach((key) => {\r\n     if (key.id == identity) {\r\n       var obj = key;\r\n       console.log(obj);\r\n-      return obj;\r\n     }\r\n   });\r\n }\r\n-\r\n-console.log(addToCart(y));\r\n"
+                },
+                {
+                    "date": 1669296931330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -151,7 +151,8 @@\n   images.forEach((key) => {\r\n     if (key.id == identity) {\r\n       var obj = key;\r\n       console.log(obj);\r\n+      return obj;\r\n     }\r\n   });\r\n }\r\n"
+                },
+                {
+                    "date": 1669297000930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -143,10 +143,10 @@\n // console.log(myCart);\r\n \r\n // document.getElementById(\"subContainer\").appendChild(myCart);\r\n \r\n-function addToCart(y) {\r\n-  var identity = y.id;\r\n+function addToCart(id) {\r\n+  var identity = id;\r\n   console.log(identity);\r\n \r\n   images.forEach((key) => {\r\n     if (key.id == identity) {\r\n@@ -155,4 +155,5 @@\n       return obj;\r\n     }\r\n   });\r\n }\r\n+console.log(addToCart(\"daisy4\"));\r\n"
+                },
+                {
+                    "date": 1669297040045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n \r\n       var add = attribute(\"add-button\", \"button\", key.id);\r\n       add.onclick = function () {\r\n         console.log(\"1\");\r\n-        addToCart(this);\r\n+        // addToCart(this);\r\n       };\r\n \r\n       var value = document.createTextNode(\"Add\");\r\n       add.style.cursor = \"pointer\";\r\n"
+                },
+                {
+                    "date": 1669297190698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -151,9 +151,7 @@\n   images.forEach((key) => {\r\n     if (key.id == identity) {\r\n       var obj = key;\r\n       console.log(obj);\r\n-      return obj;\r\n     }\r\n   });\r\n }\r\n-console.log(addToCart(\"daisy4\"));\r\n"
+                },
+                {
+                    "date": 1669297199873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -143,10 +143,10 @@\n // console.log(myCart);\r\n \r\n // document.getElementById(\"subContainer\").appendChild(myCart);\r\n \r\n-function addToCart(id) {\r\n-  var identity = id;\r\n+function addToCart(y) {\r\n+  var identity = y.id;\r\n   console.log(identity);\r\n \r\n   images.forEach((key) => {\r\n     if (key.id == identity) {\r\n"
+                },
+                {
+                    "date": 1669297206286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n \r\n       var add = attribute(\"add-button\", \"button\", key.id);\r\n       add.onclick = function () {\r\n         console.log(\"1\");\r\n-        // addToCart(this);\r\n+        addToCart(this);\r\n       };\r\n \r\n       var value = document.createTextNode(\"Add\");\r\n       add.style.cursor = \"pointer\";\r\n"
+                },
+                {
+                    "date": 1669297622552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -154,4 +154,8 @@\n       console.log(obj);\r\n     }\r\n   });\r\n }\r\n+\r\n+function insertCart() {\r\n+  let list = document.getElementById(\"fav\");\r\n+}\r\n"
+                },
+                {
+                    "date": 1669297919707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -151,11 +151,16 @@\n   images.forEach((key) => {\r\n     if (key.id == identity) {\r\n       var obj = key;\r\n       console.log(obj);\r\n+      insertCart(obj);\r\n     }\r\n   });\r\n }\r\n \r\n-function insertCart() {\r\n+function insertCart(x) {\r\n   let list = document.getElementById(\"fav\");\r\n+\r\n+  let image = document.createElement(\"img\");\r\n+\r\n+  let src = image.setAttribute(\"src\", x.src);\r\n }\r\n"
+                },
+                {
+                    "date": 1669298025682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -162,5 +162,7 @@\n \r\n   let image = document.createElement(\"img\");\r\n \r\n   let src = image.setAttribute(\"src\", x.src);\r\n+\r\n+  let itemPrice = document.createElement(\"span\");\r\n }\r\n"
+                },
+                {
+                    "date": 1669298045925,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -164,5 +164,6 @@\n \r\n   let src = image.setAttribute(\"src\", x.src);\r\n \r\n   let itemPrice = document.createElement(\"span\");\r\n+  itemPrice.createTextNode(x.price);\r\n }\r\n"
+                },
+                {
+                    "date": 1669298065512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -164,6 +164,6 @@\n \r\n   let src = image.setAttribute(\"src\", x.src);\r\n \r\n   let itemPrice = document.createElement(\"span\");\r\n-  itemPrice.createTextNode(x.price);\r\n+  itemPrice.appendChild(itemPrice.createTextNode(x.price));\r\n }\r\n"
+                },
+                {
+                    "date": 1669298083199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -164,6 +164,6 @@\n \r\n   let src = image.setAttribute(\"src\", x.src);\r\n \r\n   let itemPrice = document.createElement(\"span\");\r\n-  itemPrice.appendChild(itemPrice.createTextNode(x.price));\r\n+  itemPrice.appendChild(document.createTextNode(x.price));\r\n }\r\n"
+                },
+                {
+                    "date": 1669298205654,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -164,6 +164,9 @@\n \r\n   let src = image.setAttribute(\"src\", x.src);\r\n \r\n   let itemPrice = document.createElement(\"span\");\r\n+  itemPrice.className = \"cart-price\";\r\n   itemPrice.appendChild(document.createTextNode(x.price));\r\n+\r\n+  let;\r\n }\r\n"
+                },
+                {
+                    "date": 1669298250047,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -167,6 +167,7 @@\n   let itemPrice = document.createElement(\"span\");\r\n   itemPrice.className = \"cart-price\";\r\n   itemPrice.appendChild(document.createTextNode(x.price));\r\n \r\n-  let;\r\n+  let itemName = document.createElement(\"span\");\r\n+  itemPrice.className = \"cart-item-one\";\r\n }\r\n"
+                },
+                {
+                    "date": 1669298598727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -169,5 +169,9 @@\n   itemPrice.appendChild(document.createTextNode(x.price));\r\n \r\n   let itemName = document.createElement(\"span\");\r\n   itemPrice.className = \"cart-item-one\";\r\n+\r\n+  let icon = document.createTextNode(\"i\");\r\n+  icon.className = \"fa fa-times\";\r\n+  itemName.appendChild(icon);\r\n }\r\n"
+                },
+                {
+                    "date": 1669298713001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -160,8 +160,9 @@\n function insertCart(x) {\r\n   let list = document.getElementById(\"fav\");\r\n \r\n   let image = document.createElement(\"img\");\r\n+  list.appendChild(image);\r\n \r\n   let src = image.setAttribute(\"src\", x.src);\r\n \r\n   let itemPrice = document.createElement(\"span\");\r\n@@ -169,9 +170,8 @@\n   itemPrice.appendChild(document.createTextNode(x.price));\r\n \r\n   let itemName = document.createElement(\"span\");\r\n   itemPrice.className = \"cart-item-one\";\r\n-\r\n   let icon = document.createTextNode(\"i\");\r\n   icon.className = \"fa fa-times\";\r\n   itemName.appendChild(icon);\r\n }\r\n"
+                },
+                {
+                    "date": 1669298720193,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -160,12 +160,11 @@\n function insertCart(x) {\r\n   let list = document.getElementById(\"fav\");\r\n \r\n   let image = document.createElement(\"img\");\r\n+  let src = image.setAttribute(\"src\", x.src);\r\n   list.appendChild(image);\r\n \r\n-  let src = image.setAttribute(\"src\", x.src);\r\n-\r\n   let itemPrice = document.createElement(\"span\");\r\n   itemPrice.className = \"cart-price\";\r\n   itemPrice.appendChild(document.createTextNode(x.price));\r\n \r\n"
+                },
+                {
+                    "date": 1669298738826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -166,8 +166,9 @@\n \r\n   let itemPrice = document.createElement(\"span\");\r\n   itemPrice.className = \"cart-price\";\r\n   itemPrice.appendChild(document.createTextNode(x.price));\r\n+  list.appendChild(itemPrice);\r\n \r\n   let itemName = document.createElement(\"span\");\r\n   itemPrice.className = \"cart-item-one\";\r\n   let icon = document.createTextNode(\"i\");\r\n"
+                },
+                {
+                    "date": 1669298756756,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -173,5 +173,6 @@\n   itemPrice.className = \"cart-item-one\";\r\n   let icon = document.createTextNode(\"i\");\r\n   icon.className = \"fa fa-times\";\r\n   itemName.appendChild(icon);\r\n+  list.appendChild(itemName);\r\n }\r\n"
+                },
+                {
+                    "date": 1669298829986,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -170,8 +170,9 @@\n   list.appendChild(itemPrice);\r\n \r\n   let itemName = document.createElement(\"span\");\r\n   itemPrice.className = \"cart-item-one\";\r\n+  itemName.append(document.createTextNode(x.name));\r\n   let icon = document.createTextNode(\"i\");\r\n   icon.className = \"fa fa-times\";\r\n   itemName.appendChild(icon);\r\n   list.appendChild(itemName);\r\n"
+                },
+                {
+                    "date": 1669298904146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -171,8 +171,10 @@\n \r\n   let itemName = document.createElement(\"span\");\r\n   itemPrice.className = \"cart-item-one\";\r\n   itemName.append(document.createTextNode(x.name));\r\n+\r\n+  let removeCart = document.createElement(\"span\");\r\n   let icon = document.createTextNode(\"i\");\r\n   icon.className = \"fa fa-times\";\r\n   itemName.appendChild(icon);\r\n   list.appendChild(itemName);\r\n"
+                },
+                {
+                    "date": 1669298923383,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -175,7 +175,7 @@\n \r\n   let removeCart = document.createElement(\"span\");\r\n   let icon = document.createTextNode(\"i\");\r\n   icon.className = \"fa fa-times\";\r\n-  itemName.appendChild(icon);\r\n+  removeCart.appendChild(icon);\r\n   list.appendChild(itemName);\r\n }\r\n"
+                },
+                {
+                    "date": 1669298935955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -171,11 +171,11 @@\n \r\n   let itemName = document.createElement(\"span\");\r\n   itemPrice.className = \"cart-item-one\";\r\n   itemName.append(document.createTextNode(x.name));\r\n+  list.appendChild(itemName);\r\n \r\n   let removeCart = document.createElement(\"span\");\r\n   let icon = document.createTextNode(\"i\");\r\n   icon.className = \"fa fa-times\";\r\n   removeCart.appendChild(icon);\r\n-  list.appendChild(itemName);\r\n }\r\n"
+                },
+                {
+                    "date": 1669298957254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -177,5 +177,6 @@\n   let removeCart = document.createElement(\"span\");\r\n   let icon = document.createTextNode(\"i\");\r\n   icon.className = \"fa fa-times\";\r\n   removeCart.appendChild(icon);\r\n+  list.appendChild(removeCart);\r\n }\r\n"
+                },
+                {
+                    "date": 1669299094398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -174,8 +174,9 @@\n   itemName.append(document.createTextNode(x.name));\r\n   list.appendChild(itemName);\r\n \r\n   let removeCart = document.createElement(\"span\");\r\n+  removeCart.className = \"remove-cart\";\r\n   let icon = document.createTextNode(\"i\");\r\n   icon.className = \"fa fa-times\";\r\n   removeCart.appendChild(icon);\r\n   list.appendChild(removeCart);\r\n"
+                },
+                {
+                    "date": 1669299165881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -169,9 +169,9 @@\n   itemPrice.appendChild(document.createTextNode(x.price));\r\n   list.appendChild(itemPrice);\r\n \r\n   let itemName = document.createElement(\"span\");\r\n-  itemPrice.className = \"cart-item-one\";\r\n+  itemPrice.className = \"cart-item-name\";\r\n   itemName.append(document.createTextNode(x.name));\r\n   list.appendChild(itemName);\r\n \r\n   let removeCart = document.createElement(\"span\");\r\n"
+                },
+                {
+                    "date": 1669299327195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -175,9 +175,9 @@\n   list.appendChild(itemName);\r\n \r\n   let removeCart = document.createElement(\"span\");\r\n   removeCart.className = \"remove-cart\";\r\n-  let icon = document.createTextNode(\"i\");\r\n+  let icon = document.createElement(\"i\");\r\n   icon.className = \"fa fa-times\";\r\n   removeCart.appendChild(icon);\r\n   list.appendChild(removeCart);\r\n }\r\n"
+                },
+                {
+                    "date": 1669299607416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -159,8 +159,10 @@\n \r\n function insertCart(x) {\r\n   let list = document.getElementById(\"fav\");\r\n \r\n+  let favs = document.createElement(\"li\");\r\n+\r\n   let image = document.createElement(\"img\");\r\n   let src = image.setAttribute(\"src\", x.src);\r\n   list.appendChild(image);\r\n \r\n"
+                },
+                {
+                    "date": 1669299631841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -163,23 +163,23 @@\n   let favs = document.createElement(\"li\");\r\n \r\n   let image = document.createElement(\"img\");\r\n   let src = image.setAttribute(\"src\", x.src);\r\n-  list.appendChild(image);\r\n+  favs.appendChild(image);\r\n \r\n   let itemPrice = document.createElement(\"span\");\r\n   itemPrice.className = \"cart-price\";\r\n   itemPrice.appendChild(document.createTextNode(x.price));\r\n-  list.appendChild(itemPrice);\r\n+  favs.appendChild(itemPrice);\r\n \r\n   let itemName = document.createElement(\"span\");\r\n   itemPrice.className = \"cart-item-name\";\r\n   itemName.append(document.createTextNode(x.name));\r\n-  list.appendChild(itemName);\r\n+  favs.appendChild(itemName);\r\n \r\n   let removeCart = document.createElement(\"span\");\r\n   removeCart.className = \"remove-cart\";\r\n   let icon = document.createElement(\"i\");\r\n   icon.className = \"fa fa-times\";\r\n   removeCart.appendChild(icon);\r\n-  list.appendChild(removeCart);\r\n+  favs.appendChild(removeCart);\r\n }\r\n"
+                },
+                {
+                    "date": 1669299663312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -181,5 +181,7 @@\n   let icon = document.createElement(\"i\");\r\n   icon.className = \"fa fa-times\";\r\n   removeCart.appendChild(icon);\r\n   favs.appendChild(removeCart);\r\n+\r\n+  list.appendChild(favs);\r\n }\r\n"
+                },
+                {
+                    "date": 1669299829029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -171,9 +171,9 @@\n   itemPrice.appendChild(document.createTextNode(x.price));\r\n   favs.appendChild(itemPrice);\r\n \r\n   let itemName = document.createElement(\"span\");\r\n-  itemPrice.className = \"cart-item-name\";\r\n+  itemName.className = \"cart-item-name\";\r\n   itemName.append(document.createTextNode(x.name));\r\n   favs.appendChild(itemName);\r\n \r\n   let removeCart = document.createElement(\"span\");\r\n"
+                },
+                {
+                    "date": 1669299945632,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -159,29 +159,29 @@\n \r\n function insertCart(x) {\r\n   let list = document.getElementById(\"fav\");\r\n \r\n-  let favs = document.createElement(\"li\");\r\n+  let cartList = document.createElement(\"li\");\r\n \r\n   let image = document.createElement(\"img\");\r\n   let src = image.setAttribute(\"src\", x.src);\r\n-  favs.appendChild(image);\r\n+  cartList.appendChild(image);\r\n \r\n   let itemPrice = document.createElement(\"span\");\r\n   itemPrice.className = \"cart-price\";\r\n   itemPrice.appendChild(document.createTextNode(x.price));\r\n-  favs.appendChild(itemPrice);\r\n+  cartList.appendChild(itemPrice);\r\n \r\n   let itemName = document.createElement(\"span\");\r\n   itemName.className = \"cart-item-name\";\r\n   itemName.append(document.createTextNode(x.name));\r\n-  favs.appendChild(itemName);\r\n+  cartList.appendChild(itemName);\r\n \r\n   let removeCart = document.createElement(\"span\");\r\n   removeCart.className = \"remove-cart\";\r\n   let icon = document.createElement(\"i\");\r\n   icon.className = \"fa fa-times\";\r\n   removeCart.appendChild(icon);\r\n-  favs.appendChild(removeCart);\r\n+  cartList.appendChild(removeCart);\r\n \r\n-  list.appendChild(favs);\r\n+  list.appendChild(cartList);\r\n }\r\n"
+                },
+                {
+                    "date": 1669300750418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -115,36 +115,8 @@\n     cartBlock.style.display = \"\";\r\n   }\r\n }\r\n \r\n-// console.log(document.getElementById(\"subContainer\"));\r\n-// var myCart = attribute(\"cart-area\", \"div\", \"cart-block\");\r\n-\r\n-// var closeButton = attribute(\"fa fa-times\", \"i\");\r\n-// // closeButton.onclick = closeCart();\r\n-// myCart.appendChild(closeButton);\r\n-\r\n-// var list = attribute(\"\", \"ul\");\r\n-// myCart.appendChild(list);\r\n-\r\n-// // var unOrderList = attribute(\"\", \"li\");\r\n-// // list.appendChild(unOrderList);\r\n-\r\n-// var totalPrice = attribute(\"total\", \"div\");\r\n-\r\n-// var total = attribute(\"\", \"span\");\r\n-// total.appendChild(document.createTextNode(\"Total\"));\r\n-// totalPrice.appendChild(total);\r\n-\r\n-// var price = attribute(\"\", \"span\");\r\n-// price.appendChild(document.createTextNode(\"$80.00\"));\r\n-// totalPrice.appendChild(price);\r\n-\r\n-// myCart.appendChild(totalPrice);\r\n-// console.log(myCart);\r\n-\r\n-// document.getElementById(\"subContainer\").appendChild(myCart);\r\n-\r\n function addToCart(y) {\r\n   var identity = y.id;\r\n   console.log(identity);\r\n \r\n"
+                },
+                {
+                    "date": 1669305940794,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -115,8 +115,10 @@\n     cartBlock.style.display = \"\";\r\n   }\r\n }\r\n \r\n+var movedItems = [];\r\n+\r\n function addToCart(y) {\r\n   var identity = y.id;\r\n   console.log(identity);\r\n \r\n"
+                },
+                {
+                    "date": 1669305953362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,8 +125,9 @@\n   images.forEach((key) => {\r\n     if (key.id == identity) {\r\n       var obj = key;\r\n       console.log(obj);\r\n+      movedItems.push(key);\r\n       insertCart(obj);\r\n     }\r\n   });\r\n }\r\n"
+                },
+                {
+                    "date": 1669305972947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -131,8 +131,10 @@\n     }\r\n   });\r\n }\r\n \r\n+console.log(movedItems);\r\n+\r\n function insertCart(x) {\r\n   let list = document.getElementById(\"fav\");\r\n \r\n   let cartList = document.createElement(\"li\");\r\n"
+                },
+                {
+                    "date": 1669306080912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -115,9 +115,9 @@\n     cartBlock.style.display = \"\";\r\n   }\r\n }\r\n \r\n-var movedItems = [];\r\n+var movedItems = {};\r\n \r\n function addToCart(y) {\r\n   var identity = y.id;\r\n   console.log(identity);\r\n"
+                },
+                {
+                    "date": 1669306099640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,9 +125,9 @@\n   images.forEach((key) => {\r\n     if (key.id == identity) {\r\n       var obj = key;\r\n       console.log(obj);\r\n-      movedItems.push(key);\r\n+      movedItems.add(key);\r\n       insertCart(obj);\r\n     }\r\n   });\r\n }\r\n"
+                },
+                {
+                    "date": 1669306113155,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -115,9 +115,9 @@\n     cartBlock.style.display = \"\";\r\n   }\r\n }\r\n \r\n-var movedItems = {};\r\n+var movedItems = [];\r\n \r\n function addToCart(y) {\r\n   var identity = y.id;\r\n   console.log(identity);\r\n"
+                },
+                {
+                    "date": 1669306118885,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,9 +125,9 @@\n   images.forEach((key) => {\r\n     if (key.id == identity) {\r\n       var obj = key;\r\n       console.log(obj);\r\n-      movedItems.add(key);\r\n+      movedItems.push(key);\r\n       insertCart(obj);\r\n     }\r\n   });\r\n }\r\n"
+                },
+                {
+                    "date": 1669306212752,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -116,8 +116,9 @@\n   }\r\n }\r\n \r\n var movedItems = [];\r\n+console.log(movedItems);\r\n \r\n function addToCart(y) {\r\n   var identity = y.id;\r\n   console.log(identity);\r\n@@ -131,10 +132,8 @@\n     }\r\n   });\r\n }\r\n \r\n-console.log(movedItems);\r\n-\r\n function insertCart(x) {\r\n   let list = document.getElementById(\"fav\");\r\n \r\n   let cartList = document.createElement(\"li\");\r\n"
+                },
+                {
+                    "date": 1669306421022,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -160,4 +160,6 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n }\r\n+\r\n+var totalCart = document.getElementById(\"cartTotal\");\r\n"
+                },
+                {
+                    "date": 1669306484684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -159,7 +159,8 @@\n   removeCart.appendChild(icon);\r\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n+\r\n+  var totalCart = document.getElementById(\"cartTotal\");\r\n+  totalCart.innerHTML = \"$80.00\";\r\n }\r\n-\r\n-var totalCart = document.getElementById(\"cartTotal\");\r\n"
+                },
+                {
+                    "date": 1669306500336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -161,6 +161,6 @@\n \r\n   list.appendChild(cartList);\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n-  totalCart.innerHTML = \"$80.00\";\r\n+  totalCart.innerHTML = \"$70.00\";\r\n }\r\n"
+                },
+                {
+                    "date": 1669306652345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -161,6 +161,6 @@\n \r\n   list.appendChild(cartList);\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n-  totalCart.innerHTML = \"$70.00\";\r\n+  totalCart.innerHTML = \"70.00\";\r\n }\r\n"
+                },
+                {
+                    "date": 1669306727096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -161,6 +161,6 @@\n \r\n   list.appendChild(cartList);\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n-  totalCart.innerHTML = \"70.00\";\r\n+  totalCart.innerHTML = \"$70.00\";\r\n }\r\n"
+                },
+                {
+                    "date": 1669306885417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -161,6 +161,8 @@\n \r\n   list.appendChild(cartList);\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n-  totalCart.innerHTML = \"$70.00\";\r\n+  price = x.price;\r\n+  let result = price.substr(1);\r\n+  totalCart.innerHTML = result;\r\n }\r\n"
+                },
+                {
+                    "date": 1669306962205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -163,6 +163,7 @@\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n   price = x.price;\r\n   let result = price.substr(1);\r\n+  let cost = result.parseInt(result);\r\n   totalCart.innerHTML = result;\r\n }\r\n"
+                },
+                {
+                    "date": 1669306968930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -164,6 +164,6 @@\n   var totalCart = document.getElementById(\"cartTotal\");\r\n   price = x.price;\r\n   let result = price.substr(1);\r\n   let cost = result.parseInt(result);\r\n-  totalCart.innerHTML = result;\r\n+  totalCart.innerHTML = cost;\r\n }\r\n"
+                },
+                {
+                    "date": 1669307036529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -163,7 +163,7 @@\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n   price = x.price;\r\n   let result = price.substr(1);\r\n-  let cost = result.parseInt(result);\r\n+  let cost = parseInt(result);\r\n   totalCart.innerHTML = cost;\r\n }\r\n"
+                },
+                {
+                    "date": 1669307057241,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -163,7 +163,7 @@\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n   price = x.price;\r\n   let result = price.substr(1);\r\n-  let cost = parseInt(result);\r\n+  let cost = parseFloat(result);\r\n   totalCart.innerHTML = cost;\r\n }\r\n"
+                },
+                {
+                    "date": 1669307315376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -160,10 +160,13 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n+  price = x.price;\r\n+  let costs = [];\r\n+  costs.push(price);\r\n+\r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n-  price = x.price;\r\n   let result = price.substr(1);\r\n   let cost = parseFloat(result);\r\n   totalCart.innerHTML = cost;\r\n }\r\n"
+                },
+                {
+                    "date": 1669307403612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -164,9 +164,15 @@\n   price = x.price;\r\n   let costs = [];\r\n   costs.push(price);\r\n \r\n+  let finalPrice;\r\n+\r\n+  costs.forEach((i) => {\r\n+    let result = price.substr(1);\r\n+    let cost = parseFloat(result);\r\n+  });\r\n+\r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n-  let result = price.substr(1);\r\n-  let cost = parseFloat(result);\r\n+\r\n   totalCart.innerHTML = cost;\r\n }\r\n"
+                },
+                {
+                    "date": 1669307465728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -164,13 +164,14 @@\n   price = x.price;\r\n   let costs = [];\r\n   costs.push(price);\r\n \r\n-  let finalPrice;\r\n+  let finalPrice = 0;\r\n \r\n   costs.forEach((i) => {\r\n     let result = price.substr(1);\r\n     let cost = parseFloat(result);\r\n+    finalPrice =  \r\n   });\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n"
+                },
+                {
+                    "date": 1669307480164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -169,9 +169,9 @@\n \r\n   costs.forEach((i) => {\r\n     let result = price.substr(1);\r\n     let cost = parseFloat(result);\r\n-    finalPrice =  \r\n+    finalPrice = finalPrice + cost;\r\n   });\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n"
+                },
+                {
+                    "date": 1669307488629,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -174,6 +174,6 @@\n   });\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n-  totalCart.innerHTML = cost;\r\n+  totalCart.innerHTML = finalPrice;\r\n }\r\n"
+                },
+                {
+                    "date": 1669309079475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -164,9 +164,9 @@\n   price = x.price;\r\n   let costs = [];\r\n   costs.push(price);\r\n \r\n-  let finalPrice = 0;\r\n+  var finalPrice = 0;\r\n \r\n   costs.forEach((i) => {\r\n     let result = price.substr(1);\r\n     let cost = parseFloat(result);\r\n"
+                },
+                {
+                    "date": 1669309092856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -160,9 +160,9 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n-  price = x.price;\r\n+  var price = x.price;\r\n   let costs = [];\r\n   costs.push(price);\r\n \r\n   var finalPrice = 0;\r\n"
+                },
+                {
+                    "date": 1669309133951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -169,9 +169,9 @@\n \r\n   costs.forEach((i) => {\r\n     let result = price.substr(1);\r\n     let cost = parseFloat(result);\r\n-    finalPrice = finalPrice + cost;\r\n+    finalPrice += cost;\r\n   });\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n"
+                },
+                {
+                    "date": 1669309235111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -160,15 +160,15 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n-  var price = x.price;\r\n   let costs = [];\r\n   costs.push(price);\r\n \r\n   var finalPrice = 0;\r\n \r\n   costs.forEach((i) => {\r\n+    var price = x.price;\r\n     let result = price.substr(1);\r\n     let cost = parseFloat(result);\r\n     finalPrice += cost;\r\n   });\r\n"
+                },
+                {
+                    "date": 1669309262599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -160,15 +160,15 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n+  var price = x.price;\r\n   let costs = [];\r\n   costs.push(price);\r\n \r\n   var finalPrice = 0;\r\n \r\n   costs.forEach((i) => {\r\n-    var price = x.price;\r\n     let result = price.substr(1);\r\n     let cost = parseFloat(result);\r\n     finalPrice += cost;\r\n   });\r\n"
+                },
+                {
+                    "date": 1669309283003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -167,9 +167,9 @@\n \r\n   var finalPrice = 0;\r\n \r\n   costs.forEach((i) => {\r\n-    let result = price.substr(1);\r\n+    let result = i.substr(1);\r\n     let cost = parseFloat(result);\r\n     finalPrice += cost;\r\n   });\r\n \r\n"
+                },
+                {
+                    "date": 1669309353132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -167,8 +167,9 @@\n \r\n   var finalPrice = 0;\r\n \r\n   costs.forEach((i) => {\r\n+    console.log(i);\r\n     let result = i.substr(1);\r\n     let cost = parseFloat(result);\r\n     finalPrice += cost;\r\n   });\r\n"
+                },
+                {
+                    "date": 1669309408189,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -165,8 +165,9 @@\n   let costs = [];\r\n   costs.push(price);\r\n \r\n   var finalPrice = 0;\r\n+  console.log(finalPrice);\r\n \r\n   costs.forEach((i) => {\r\n     console.log(i);\r\n     let result = i.substr(1);\r\n"
+                },
+                {
+                    "date": 1669309651453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -172,8 +172,9 @@\n     console.log(i);\r\n     let result = i.substr(1);\r\n     let cost = parseFloat(result);\r\n     finalPrice += cost;\r\n+    console.log(finalPrice);\r\n   });\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n"
+                },
+                {
+                    "date": 1669309750035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -161,10 +161,11 @@\n \r\n   list.appendChild(cartList);\r\n \r\n   var price = x.price;\r\n-  let costs = [];\r\n+  var costs = [];\r\n   costs.push(price);\r\n+  console.log();\r\n \r\n   var finalPrice = 0;\r\n   console.log(finalPrice);\r\n \r\n"
+                },
+                {
+                    "date": 1669309755365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -163,9 +163,9 @@\n \r\n   var price = x.price;\r\n   var costs = [];\r\n   costs.push(price);\r\n-  console.log();\r\n+  console.log(costs);\r\n \r\n   var finalPrice = 0;\r\n   console.log(finalPrice);\r\n \r\n"
+                },
+                {
+                    "date": 1669309803000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -132,8 +132,10 @@\n     }\r\n   });\r\n }\r\n \r\n+var costs = [];\r\n+\r\n function insertCart(x) {\r\n   let list = document.getElementById(\"fav\");\r\n \r\n   let cartList = document.createElement(\"li\");\r\n@@ -161,9 +163,8 @@\n \r\n   list.appendChild(cartList);\r\n \r\n   var price = x.price;\r\n-  var costs = [];\r\n   costs.push(price);\r\n   console.log(costs);\r\n \r\n   var finalPrice = 0;\r\n"
+                },
+                {
+                    "date": 1669309945747,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -179,6 +179,6 @@\n   });\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n-  totalCart.innerHTML = finalPrice;\r\n+  totalCart.innerHTML = finalPrice.toFixed(2);\r\n }\r\n"
+                },
+                {
+                    "date": 1669310056619,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -132,10 +132,8 @@\n     }\r\n   });\r\n }\r\n \r\n-var costs = [];\r\n-\r\n function insertCart(x) {\r\n   let list = document.getElementById(\"fav\");\r\n \r\n   let cartList = document.createElement(\"li\");\r\n@@ -162,8 +160,16 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n+  var totalCart = document.getElementById(\"cartTotal\");\r\n+\r\n+  totalCart.innerHTML = finalPrice.toFixed(2);\r\n+}\r\n+\r\n+var costs = [];\r\n+\r\n+function calculateTotalPrice() {\r\n   var price = x.price;\r\n   costs.push(price);\r\n   console.log(costs);\r\n \r\n@@ -176,9 +182,5 @@\n     let cost = parseFloat(result);\r\n     finalPrice += cost;\r\n     console.log(finalPrice);\r\n   });\r\n-\r\n-  var totalCart = document.getElementById(\"cartTotal\");\r\n-\r\n-  totalCart.innerHTML = finalPrice.toFixed(2);\r\n }\r\n"
+                },
+                {
+                    "date": 1669310075419,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -160,16 +160,17 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n+  calculateTotalPrice(x);\r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n   totalCart.innerHTML = finalPrice.toFixed(2);\r\n }\r\n \r\n var costs = [];\r\n \r\n-function calculateTotalPrice() {\r\n+function calculateTotalPrice(x) {\r\n   var price = x.price;\r\n   costs.push(price);\r\n   console.log(costs);\r\n \r\n"
+                },
+                {
+                    "date": 1669310115542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -183,5 +183,6 @@\n     let cost = parseFloat(result);\r\n     finalPrice += cost;\r\n     console.log(finalPrice);\r\n   });\r\n+  return finalPrice;\r\n }\r\n"
+                },
+                {
+                    "date": 1669310128128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -160,9 +160,9 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n-  calculateTotalPrice(x);\r\n+  let finalPrice = calculateTotalPrice(x);\r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n   totalCart.innerHTML = finalPrice.toFixed(2);\r\n }\r\n"
+                },
+                {
+                    "date": 1669310338261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -154,9 +154,9 @@\n \r\n   let removeCart = document.createElement(\"span\");\r\n   removeCart.className = \"remove-cart\";\r\n   let icon = document.createElement(\"i\");\r\n-  icon.className = \"fa fa-times\";\r\n+  icon.className = \"fa fa-times trash\";\r\n   removeCart.appendChild(icon);\r\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n"
+                },
+                {
+                    "date": 1669310440548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,12 +33,9 @@\n       rate.appendChild(dolor);\r\n       innerDiv.appendChild(rate);\r\n \r\n       var add = attribute(\"add-button\", \"button\", key.id);\r\n-      add.onclick = function () {\r\n-        console.log(\"1\");\r\n-        addToCart(this);\r\n-      };\r\n+      add.onclick = addToCart(this);\r\n \r\n       var value = document.createTextNode(\"Add\");\r\n       add.style.cursor = \"pointer\";\r\n       add.appendChild(value);\r\n@@ -154,8 +151,11 @@\n \r\n   let removeCart = document.createElement(\"span\");\r\n   removeCart.className = \"remove-cart\";\r\n   let icon = document.createElement(\"i\");\r\n+\r\n+  icon.onclick = function () {};\r\n+\r\n   icon.className = \"fa fa-times trash\";\r\n   removeCart.appendChild(icon);\r\n   cartList.appendChild(removeCart);\r\n \r\n"
+                },
+                {
+                    "date": 1669310456632,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,12 @@\n       rate.appendChild(dolor);\r\n       innerDiv.appendChild(rate);\r\n \r\n       var add = attribute(\"add-button\", \"button\", key.id);\r\n-      add.onclick = addToCart(this);\r\n+      add.onclick = function () {\r\n+        console.log(\"1\");\r\n+        addToCart(this);\r\n+      };\r\n \r\n       var value = document.createTextNode(\"Add\");\r\n       add.style.cursor = \"pointer\";\r\n       add.appendChild(value);\r\n"
+                },
+                {
+                    "date": 1669310481395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -155,9 +155,11 @@\n   let removeCart = document.createElement(\"span\");\r\n   removeCart.className = \"remove-cart\";\r\n   let icon = document.createElement(\"i\");\r\n \r\n-  icon.onclick = function () {};\r\n+  icon.onclick = function () {\r\n+    removeItemFromCart(this);\r\n+  };\r\n \r\n   icon.className = \"fa fa-times trash\";\r\n   removeCart.appendChild(icon);\r\n   cartList.appendChild(removeCart);\r\n"
+                },
+                {
+                    "date": 1669310567370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -190,4 +190,8 @@\n     console.log(finalPrice);\r\n   });\r\n   return finalPrice;\r\n }\r\n+\r\n+function removeItemFromCart(s) {\r\n+  var row = s.parentNode.parentNode;\r\n+}\r\n"
+                },
+                {
+                    "date": 1669310575782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -193,5 +193,6 @@\n }\r\n \r\n function removeItemFromCart(s) {\r\n   var row = s.parentNode.parentNode;\r\n+  console.log(row);\r\n }\r\n"
+                },
+                {
+                    "date": 1669310711343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -194,5 +194,6 @@\n \r\n function removeItemFromCart(s) {\r\n   var row = s.parentNode.parentNode;\r\n   console.log(row);\r\n+  document.getElementById(\"fav\").deleteRow(row);\r\n }\r\n"
+                },
+                {
+                    "date": 1669310763668,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -192,8 +192,8 @@\n   return finalPrice;\r\n }\r\n \r\n function removeItemFromCart(s) {\r\n-  var row = s.parentNode.parentNode;\r\n+  var row = s.parentNode.parentNode.rowIndex;\r\n   console.log(row);\r\n   document.getElementById(\"fav\").deleteRow(row);\r\n }\r\n"
+                },
+                {
+                    "date": 1669310818310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -192,8 +192,8 @@\n   return finalPrice;\r\n }\r\n \r\n function removeItemFromCart(s) {\r\n-  var row = s.parentNode.parentNode.rowIndex;\r\n+  var row = s.parentNode.parentNode;\r\n   console.log(row);\r\n   document.getElementById(\"fav\").deleteRow(row);\r\n }\r\n"
+                },
+                {
+                    "date": 1669310919486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -192,8 +192,8 @@\n   return finalPrice;\r\n }\r\n \r\n function removeItemFromCart(s) {\r\n-  var row = s.parentNode.parentNode;\r\n+  var row = s.parentNode.parentNode.rowIndex;\r\n   console.log(row);\r\n   document.getElementById(\"fav\").deleteRow(row);\r\n }\r\n"
+                },
+                {
+                    "date": 1669311027676,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -194,6 +194,6 @@\n \r\n function removeItemFromCart(s) {\r\n   var row = s.parentNode.parentNode.rowIndex;\r\n   console.log(row);\r\n-  document.getElementById(\"fav\").deleteRow(row);\r\n+  document.getElementById(\"fav\").removeChild(row);\r\n }\r\n"
+                },
+                {
+                    "date": 1669311050284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -192,8 +192,8 @@\n   return finalPrice;\r\n }\r\n \r\n function removeItemFromCart(s) {\r\n-  var row = s.parentNode.parentNode.rowIndex;\r\n+  var row = s.parentNode.parentNode;\r\n   console.log(row);\r\n   document.getElementById(\"fav\").removeChild(row);\r\n }\r\n"
+                },
+                {
+                    "date": 1669312289561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -181,9 +181,9 @@\n \r\n   var finalPrice = 0;\r\n   console.log(finalPrice);\r\n \r\n-  costs.forEach((i) => {\r\n+  movedItems.forEach((i) => {\r\n     console.log(i);\r\n     let result = i.substr(1);\r\n     let cost = parseFloat(result);\r\n     finalPrice += cost;\r\n"
+                },
+                {
+                    "date": 1669312321263,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -174,18 +174,18 @@\n \r\n var costs = [];\r\n \r\n function calculateTotalPrice(x) {\r\n-  var price = x.price;\r\n-  costs.push(price);\r\n-  console.log(costs);\r\n+  // var price = x.price;\r\n+  // costs.push(price);\r\n+  // console.log(costs);\r\n \r\n   var finalPrice = 0;\r\n   console.log(finalPrice);\r\n \r\n   movedItems.forEach((i) => {\r\n     console.log(i);\r\n-    let result = i.substr(1);\r\n+    let result = i.price.substr(1);\r\n     let cost = parseFloat(result);\r\n     finalPrice += cost;\r\n     console.log(finalPrice);\r\n   });\r\n"
+                },
+                {
+                    "date": 1669314368262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -193,7 +193,7 @@\n }\r\n \r\n function removeItemFromCart(s) {\r\n   var row = s.parentNode.parentNode;\r\n-  console.log(row);\r\n+  console.log(row).index());\r\n   document.getElementById(\"fav\").removeChild(row);\r\n }\r\n"
+                },
+                {
+                    "date": 1669314392114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -193,7 +193,7 @@\n }\r\n \r\n function removeItemFromCart(s) {\r\n   var row = s.parentNode.parentNode;\r\n-  console.log(row).index());\r\n+  console.log(row.index);\r\n   document.getElementById(\"fav\").removeChild(row);\r\n }\r\n"
+                },
+                {
+                    "date": 1669314737110,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -194,6 +194,8 @@\n \r\n function removeItemFromCart(s) {\r\n   var row = s.parentNode.parentNode;\r\n   console.log(row.index);\r\n+  //var index = Array.prototype.indexOf.call(parent.child, row);\r\n+  Array.from(s.parentNode.parentNode.children).indexOf(row);\r\n   document.getElementById(\"fav\").removeChild(row);\r\n }\r\n"
+                },
+                {
+                    "date": 1669314754326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -195,7 +195,7 @@\n function removeItemFromCart(s) {\r\n   var row = s.parentNode.parentNode;\r\n   console.log(row.index);\r\n   //var index = Array.prototype.indexOf.call(parent.child, row);\r\n-  Array.from(s.parentNode.parentNode.children).indexOf(row);\r\n+  console.log(Array.from(s.parentNode.parentNode.children).indexOf(row));\r\n   document.getElementById(\"fav\").removeChild(row);\r\n }\r\n"
+                },
+                {
+                    "date": 1669314786418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -193,9 +193,9 @@\n }\r\n \r\n function removeItemFromCart(s) {\r\n   var row = s.parentNode.parentNode;\r\n-  console.log(row.index);\r\n+  console.log(row);\r\n   //var index = Array.prototype.indexOf.call(parent.child, row);\r\n   console.log(Array.from(s.parentNode.parentNode.children).indexOf(row));\r\n   document.getElementById(\"fav\").removeChild(row);\r\n }\r\n"
+                },
+                {
+                    "date": 1669314824419,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -195,7 +195,7 @@\n function removeItemFromCart(s) {\r\n   var row = s.parentNode.parentNode;\r\n   console.log(row);\r\n   //var index = Array.prototype.indexOf.call(parent.child, row);\r\n-  console.log(Array.from(s.parentNode.parentNode.children).indexOf(row));\r\n+  console.log(Array.from(s.parentNode.children).indexOf(row));\r\n   document.getElementById(\"fav\").removeChild(row);\r\n }\r\n"
+                },
+                {
+                    "date": 1669314863515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -194,8 +194,6 @@\n \r\n function removeItemFromCart(s) {\r\n   var row = s.parentNode.parentNode;\r\n   console.log(row);\r\n-  //var index = Array.prototype.indexOf.call(parent.child, row);\r\n-  console.log(Array.from(s.parentNode.children).indexOf(row));\r\n   document.getElementById(\"fav\").removeChild(row);\r\n }\r\n"
+                },
+                {
+                    "date": 1669315158782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -192,8 +192,8 @@\n   return finalPrice;\r\n }\r\n \r\n function removeItemFromCart(s) {\r\n-  var row = s.parentNode.parentNode;\r\n+  var row = s.parentNode;\r\n   console.log(row);\r\n   document.getElementById(\"fav\").removeChild(row);\r\n }\r\n"
+                },
+                {
+                    "date": 1669315610091,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -192,8 +192,9 @@\n   return finalPrice;\r\n }\r\n \r\n function removeItemFromCart(s) {\r\n-  var row = s.parentNode;\r\n+  var row = s.parentNode.parentNode;\r\n+  console.log(row.children[0]);\r\n   console.log(row);\r\n   document.getElementById(\"fav\").removeChild(row);\r\n }\r\n"
+                },
+                {
+                    "date": 1669315689529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -193,8 +193,9 @@\n }\r\n \r\n function removeItemFromCart(s) {\r\n   var row = s.parentNode.parentNode;\r\n-  console.log(row.children[0]);\r\n+  var priceNode = row.children[1];\r\n+  console.log(priceNode);\r\n   console.log(row);\r\n   document.getElementById(\"fav\").removeChild(row);\r\n }\r\n"
+                },
+                {
+                    "date": 1669315741073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -195,7 +195,7 @@\n function removeItemFromCart(s) {\r\n   var row = s.parentNode.parentNode;\r\n   var priceNode = row.children[1];\r\n   console.log(priceNode);\r\n-  console.log(row);\r\n+  let removedPrice = priceNode.innerHTML;\r\n   document.getElementById(\"fav\").removeChild(row);\r\n }\r\n"
+                },
+                {
+                    "date": 1669315753044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -196,6 +196,7 @@\n   var row = s.parentNode.parentNode;\r\n   var priceNode = row.children[1];\r\n   console.log(priceNode);\r\n   let removedPrice = priceNode.innerHTML;\r\n+  console.log(removedPrice);\r\n   document.getElementById(\"fav\").removeChild(row);\r\n }\r\n"
+                },
+                {
+                    "date": 1669315822124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -197,6 +197,9 @@\n   var priceNode = row.children[1];\r\n   console.log(priceNode);\r\n   let removedPrice = priceNode.innerHTML;\r\n   console.log(removedPrice);\r\n+  let result = removedPrice.substr(1);\r\n+  let cost = parseFloat(result);\r\n+\r\n   document.getElementById(\"fav\").removeChild(row);\r\n }\r\n"
+                },
+                {
+                    "date": 1669315859890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -188,18 +188,18 @@\n     let cost = parseFloat(result);\r\n     finalPrice += cost;\r\n     console.log(finalPrice);\r\n   });\r\n-  return finalPrice;\r\n-}\r\n \r\n-function removeItemFromCart(s) {\r\n-  var row = s.parentNode.parentNode;\r\n-  var priceNode = row.children[1];\r\n-  console.log(priceNode);\r\n-  let removedPrice = priceNode.innerHTML;\r\n-  console.log(removedPrice);\r\n-  let result = removedPrice.substr(1);\r\n-  let cost = parseFloat(result);\r\n+  function removeItemFromCart(s) {\r\n+    var row = s.parentNode.parentNode;\r\n+    var priceNode = row.children[1];\r\n+    console.log(priceNode);\r\n+    let removedPrice = priceNode.innerHTML;\r\n+    console.log(removedPrice);\r\n+    let result = removedPrice.substr(1);\r\n+    let cost = parseFloat(result);\r\n \r\n-  document.getElementById(\"fav\").removeChild(row);\r\n+    document.getElementById(\"fav\").removeChild(row);\r\n+  }\r\n+  return finalPrice;\r\n }\r\n"
+                },
+                {
+                    "date": 1669315896227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -197,9 +197,9 @@\n     let removedPrice = priceNode.innerHTML;\r\n     console.log(removedPrice);\r\n     let result = removedPrice.substr(1);\r\n     let cost = parseFloat(result);\r\n-\r\n+    finalPrice = finalPrice - cost;\r\n     document.getElementById(\"fav\").removeChild(row);\r\n   }\r\n   return finalPrice;\r\n }\r\n"
+                },
+                {
+                    "date": 1669315938946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -189,17 +189,18 @@\n     finalPrice += cost;\r\n     console.log(finalPrice);\r\n   });\r\n \r\n-  function removeItemFromCart(s) {\r\n-    var row = s.parentNode.parentNode;\r\n-    var priceNode = row.children[1];\r\n-    console.log(priceNode);\r\n-    let removedPrice = priceNode.innerHTML;\r\n-    console.log(removedPrice);\r\n-    let result = removedPrice.substr(1);\r\n-    let cost = parseFloat(result);\r\n-    finalPrice = finalPrice - cost;\r\n-    document.getElementById(\"fav\").removeChild(row);\r\n-  }\r\n   return finalPrice;\r\n }\r\n+\r\n+function removeItemFromCart(s) {\r\n+  var row = s.parentNode.parentNode;\r\n+  var priceNode = row.children[1];\r\n+  console.log(priceNode);\r\n+  let removedPrice = priceNode.innerHTML;\r\n+  console.log(removedPrice);\r\n+  let result = removedPrice.substr(1);\r\n+  let cost = parseFloat(result);\r\n+  finalPrice = finalPrice - cost;\r\n+  document.getElementById(\"fav\").removeChild(row);\r\n+}\r\n"
+                },
+                {
+                    "date": 1669315953663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -178,9 +178,9 @@\n   // var price = x.price;\r\n   // costs.push(price);\r\n   // console.log(costs);\r\n \r\n-  var finalPrice = 0;\r\n+  finalPrice = 0;\r\n   console.log(finalPrice);\r\n \r\n   movedItems.forEach((i) => {\r\n     console.log(i);\r\n"
+                },
+                {
+                    "date": 1669316070729,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -173,8 +173,10 @@\n }\r\n \r\n var costs = [];\r\n \r\n+var finalPrice = 0;\r\n+\r\n function calculateTotalPrice(x) {\r\n   // var price = x.price;\r\n   // costs.push(price);\r\n   // console.log(costs);\r\n"
+                },
+                {
+                    "date": 1669316077264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -180,9 +180,8 @@\n   // var price = x.price;\r\n   // costs.push(price);\r\n   // console.log(costs);\r\n \r\n-  finalPrice = 0;\r\n   console.log(finalPrice);\r\n \r\n   movedItems.forEach((i) => {\r\n     console.log(i);\r\n"
+                },
+                {
+                    "date": 1669316129418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -202,6 +202,7 @@\n   console.log(removedPrice);\r\n   let result = removedPrice.substr(1);\r\n   let cost = parseFloat(result);\r\n   finalPrice = finalPrice - cost;\r\n+  console.log(finalPrice);\r\n   document.getElementById(\"fav\").removeChild(row);\r\n }\r\n"
+                },
+                {
+                    "date": 1669316222787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -173,14 +173,13 @@\n }\r\n \r\n var costs = [];\r\n \r\n-var finalPrice = 0;\r\n-\r\n function calculateTotalPrice(x) {\r\n   // var price = x.price;\r\n   // costs.push(price);\r\n   // console.log(costs);\r\n+  var finalPrice = 0;\r\n \r\n   console.log(finalPrice);\r\n \r\n   movedItems.forEach((i) => {\r\n"
+                },
+                {
+                    "date": 1669316282809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -198,10 +198,10 @@\n   var priceNode = row.children[1];\r\n   console.log(priceNode);\r\n   let removedPrice = priceNode.innerHTML;\r\n   console.log(removedPrice);\r\n-  let result = removedPrice.substr(1);\r\n-  let cost = parseFloat(result);\r\n-  finalPrice = finalPrice - cost;\r\n-  console.log(finalPrice);\r\n+  // let result = removedPrice.substr(1);\r\n+  // let cost = parseFloat(result);\r\n+  // finalPrice = finalPrice - cost;\r\n+  // console.log(finalPrice);\r\n   document.getElementById(\"fav\").removeChild(row);\r\n }\r\n"
+                },
+                {
+                    "date": 1669316339243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -198,10 +198,9 @@\n   var priceNode = row.children[1];\r\n   console.log(priceNode);\r\n   let removedPrice = priceNode.innerHTML;\r\n   console.log(removedPrice);\r\n-  // let result = removedPrice.substr(1);\r\n-  // let cost = parseFloat(result);\r\n-  // finalPrice = finalPrice - cost;\r\n-  // console.log(finalPrice);\r\n+  let result = removedPrice.substr(1);\r\n+  let cost = parseFloat(result);\r\n   document.getElementById(\"fav\").removeChild(row);\r\n+  return cost;\r\n }\r\n"
+                },
+                {
+                    "date": 1669316372159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -165,8 +165,11 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n+\r\n+  var \r\n+\r\n   let finalPrice = calculateTotalPrice(x);\r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n   totalCart.innerHTML = finalPrice.toFixed(2);\r\n@@ -193,14 +196,15 @@\n   return finalPrice;\r\n }\r\n \r\n function removeItemFromCart(s) {\r\n+  let cost = 0;\r\n   var row = s.parentNode.parentNode;\r\n   var priceNode = row.children[1];\r\n   console.log(priceNode);\r\n   let removedPrice = priceNode.innerHTML;\r\n   console.log(removedPrice);\r\n   let result = removedPrice.substr(1);\r\n-  let cost = parseFloat(result);\r\n+   cost = parseFloat(result);\r\n   document.getElementById(\"fav\").removeChild(row);\r\n   return cost;\r\n }\r\n"
+                },
+                {
+                    "date": 1669316425574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -165,11 +165,10 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n+  var deletedCost = removeItemFromCart(x);\r\n \r\n-  var \r\n-\r\n   let finalPrice = calculateTotalPrice(x);\r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n   totalCart.innerHTML = finalPrice.toFixed(2);\r\n@@ -203,8 +202,8 @@\n   console.log(priceNode);\r\n   let removedPrice = priceNode.innerHTML;\r\n   console.log(removedPrice);\r\n   let result = removedPrice.substr(1);\r\n-   cost = parseFloat(result);\r\n+  cost = parseFloat(result);\r\n   document.getElementById(\"fav\").removeChild(row);\r\n   return cost;\r\n }\r\n"
+                },
+                {
+                    "date": 1669316488461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -156,18 +156,18 @@\n   removeCart.className = \"remove-cart\";\r\n   let icon = document.createElement(\"i\");\r\n \r\n   icon.onclick = function () {\r\n-    removeItemFromCart(this);\r\n+    var deletedCost = removeItemFromCart(this);\r\n   };\r\n \r\n   icon.className = \"fa fa-times trash\";\r\n   removeCart.appendChild(icon);\r\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n-  var deletedCost = removeItemFromCart(x);\r\n+  var deletedCost = removeItemFromCart();\r\n \r\n   let finalPrice = calculateTotalPrice(x);\r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n"
+                },
+                {
+                    "date": 1669316498196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -157,8 +157,9 @@\n   let icon = document.createElement(\"i\");\r\n \r\n   icon.onclick = function () {\r\n     var deletedCost = removeItemFromCart(this);\r\n+    deletedCost = g;\r\n   };\r\n \r\n   icon.className = \"fa fa-times trash\";\r\n   removeCart.appendChild(icon);\r\n"
+                },
+                {
+                    "date": 1669316516963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -155,8 +155,10 @@\n   let removeCart = document.createElement(\"span\");\r\n   removeCart.className = \"remove-cart\";\r\n   let icon = document.createElement(\"i\");\r\n \r\n+  var g = 0;\r\n+\r\n   icon.onclick = function () {\r\n     var deletedCost = removeItemFromCart(this);\r\n     deletedCost = g;\r\n   };\r\n"
+                },
+                {
+                    "date": 1669316586185,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -168,11 +168,11 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n-  var deletedCost = removeItemFromCart();\r\n+  let finalPrice = calculateTotalPrice(x);\r\n \r\n-  let finalPrice = calculateTotalPrice(x);\r\n+  let removedItemPrice = finalPrice - g;\r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n   totalCart.innerHTML = finalPrice.toFixed(2);\r\n }\r\n"
+                },
+                {
+                    "date": 1669316609558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -173,9 +173,9 @@\n \r\n   let removedItemPrice = finalPrice - g;\r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n-  totalCart.innerHTML = finalPrice.toFixed(2);\r\n+  totalCart.innerHTML = removedItemPrice.toFixed(2);\r\n }\r\n \r\n var costs = [];\r\n \r\n"
+                },
+                {
+                    "date": 1669316723663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -155,13 +155,10 @@\n   let removeCart = document.createElement(\"span\");\r\n   removeCart.className = \"remove-cart\";\r\n   let icon = document.createElement(\"i\");\r\n \r\n-  var g = 0;\r\n-\r\n   icon.onclick = function () {\r\n     var deletedCost = removeItemFromCart(this);\r\n-    deletedCost = g;\r\n   };\r\n \r\n   icon.className = \"fa fa-times trash\";\r\n   removeCart.appendChild(icon);\r\n@@ -170,12 +167,11 @@\n   list.appendChild(cartList);\r\n \r\n   let finalPrice = calculateTotalPrice(x);\r\n \r\n-  let removedItemPrice = finalPrice - g;\r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n-  totalCart.innerHTML = removedItemPrice.toFixed(2);\r\n+  totalCart.innerHTML = finalPrice.toFixed(2);\r\n }\r\n \r\n var costs = [];\r\n \r\n"
+                },
+                {
+                    "date": 1669316893029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -203,6 +203,11 @@\n   console.log(removedPrice);\r\n   let result = removedPrice.substr(1);\r\n   cost = parseFloat(result);\r\n   document.getElementById(\"fav\").removeChild(row);\r\n+\r\n+  let oldPrice = document.getElementById(\"cartTotal\").innerHTML;\r\n+  let resultTwo = oldPrice.substring(1);\r\n+  let costTwo = parseFloat(resultTwo);\r\n+  document.getElementById(\"cartTotal\").innerHTML = finalPrice.toFixed(2);\r\n   return cost;\r\n }\r\n"
+                },
+                {
+                    "date": 1669316913158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -207,7 +207,7 @@\n \r\n   let oldPrice = document.getElementById(\"cartTotal\").innerHTML;\r\n   let resultTwo = oldPrice.substring(1);\r\n   let costTwo = parseFloat(resultTwo);\r\n-  document.getElementById(\"cartTotal\").innerHTML = finalPrice.toFixed(2);\r\n+  document.getElementById(\"cartTotal\").innerHTML = (costTwo - cost).toFixed(2);\r\n   return cost;\r\n }\r\n"
+                },
+                {
+                    "date": 1669316992715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -205,8 +205,9 @@\n   cost = parseFloat(result);\r\n   document.getElementById(\"fav\").removeChild(row);\r\n \r\n   let oldPrice = document.getElementById(\"cartTotal\").innerHTML;\r\n+  console.log(oldPrice);\r\n   let resultTwo = oldPrice.substring(1);\r\n   let costTwo = parseFloat(resultTwo);\r\n   document.getElementById(\"cartTotal\").innerHTML = (costTwo - cost).toFixed(2);\r\n   return cost;\r\n"
+                },
+                {
+                    "date": 1669317118855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -208,7 +208,8 @@\n   let oldPrice = document.getElementById(\"cartTotal\").innerHTML;\r\n   console.log(oldPrice);\r\n   let resultTwo = oldPrice.substring(1);\r\n   let costTwo = parseFloat(resultTwo);\r\n+  console.log(costTwo);\r\n   document.getElementById(\"cartTotal\").innerHTML = (costTwo - cost).toFixed(2);\r\n   return cost;\r\n }\r\n"
+                },
+                {
+                    "date": 1669317165306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -206,10 +206,9 @@\n   document.getElementById(\"fav\").removeChild(row);\r\n \r\n   let oldPrice = document.getElementById(\"cartTotal\").innerHTML;\r\n   console.log(oldPrice);\r\n-  let resultTwo = oldPrice.substring(1);\r\n-  let costTwo = parseFloat(resultTwo);\r\n+  let costTwo = parseFloat(oldPrice);\r\n   console.log(costTwo);\r\n   document.getElementById(\"cartTotal\").innerHTML = (costTwo - cost).toFixed(2);\r\n   return cost;\r\n }\r\n"
+                },
+                {
+                    "date": 1669317402497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -174,13 +174,14 @@\n }\r\n \r\n var costs = [];\r\n \r\n+// console.log(costs);\r\n+var finalPrice = 0;\r\n+\r\n function calculateTotalPrice(x) {\r\n   // var price = x.price;\r\n   // costs.push(price);\r\n-  // console.log(costs);\r\n-  var finalPrice = 0;\r\n \r\n   console.log(finalPrice);\r\n \r\n   movedItems.forEach((i) => {\r\n@@ -190,9 +191,9 @@\n     finalPrice += cost;\r\n     console.log(finalPrice);\r\n   });\r\n \r\n-  return finalPrice;\r\n+  // return finalPrice;\r\n }\r\n \r\n function removeItemFromCart(s) {\r\n   let cost = 0;\r\n"
+                },
+                {
+                    "date": 1669317411971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -165,9 +165,9 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n-  let finalPrice = calculateTotalPrice(x);\r\n+  //let finalPrice = calculateTotalPrice(x);\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n   totalCart.innerHTML = finalPrice.toFixed(2);\r\n"
+                },
+                {
+                    "date": 1669317451637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -165,9 +165,9 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n-  //let finalPrice = calculateTotalPrice(x);\r\n+  let finalPrice = calculateTotalPrice(x);\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n   totalCart.innerHTML = finalPrice.toFixed(2);\r\n"
+                },
+                {
+                    "date": 1669317457631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -165,9 +165,9 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n-  let finalPrice = calculateTotalPrice(x);\r\n+  finalPrice = calculateTotalPrice(x);\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n   totalCart.innerHTML = finalPrice.toFixed(2);\r\n"
+                },
+                {
+                    "date": 1669317603276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -165,9 +165,9 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n-  finalPrice = calculateTotalPrice(x);\r\n+  let finalPrice = calculateTotalPrice(x);\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n   totalCart.innerHTML = finalPrice.toFixed(2);\r\n"
+                },
+                {
+                    "date": 1669317649698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -165,9 +165,9 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n-  let finalPrice = calculateTotalPrice(x);\r\n+  var finalPrice = calculateTotalPrice(x);\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n   totalCart.innerHTML = finalPrice.toFixed(2);\r\n"
+                },
+                {
+                    "date": 1669317671295,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -175,13 +175,13 @@\n \r\n var costs = [];\r\n \r\n // console.log(costs);\r\n-var finalPrice = 0;\r\n \r\n function calculateTotalPrice(x) {\r\n   // var price = x.price;\r\n   // costs.push(price);\r\n+  var finalPrice = 0;\r\n \r\n   console.log(finalPrice);\r\n \r\n   movedItems.forEach((i) => {\r\n"
+                },
+                {
+                    "date": 1669317685972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -165,9 +165,9 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n-  var finalPrice = calculateTotalPrice(x);\r\n+  let finalPrice = calculateTotalPrice(x);\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n   totalCart.innerHTML = finalPrice.toFixed(2);\r\n"
+                },
+                {
+                    "date": 1669317715069,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -173,15 +173,15 @@\n   totalCart.innerHTML = finalPrice.toFixed(2);\r\n }\r\n \r\n var costs = [];\r\n+var finalPrice = 0;\r\n \r\n // console.log(costs);\r\n \r\n function calculateTotalPrice(x) {\r\n   // var price = x.price;\r\n   // costs.push(price);\r\n-  var finalPrice = 0;\r\n \r\n   console.log(finalPrice);\r\n \r\n   movedItems.forEach((i) => {\r\n@@ -189,8 +189,9 @@\n     let result = i.price.substr(1);\r\n     let cost = parseFloat(result);\r\n     finalPrice += cost;\r\n     console.log(finalPrice);\r\n+    return finalPrice;\r\n   });\r\n \r\n   // return finalPrice;\r\n }\r\n"
+                },
+                {
+                    "date": 1669317743127,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -173,15 +173,15 @@\n   totalCart.innerHTML = finalPrice.toFixed(2);\r\n }\r\n \r\n var costs = [];\r\n-var finalPrice = 0;\r\n \r\n // console.log(costs);\r\n \r\n function calculateTotalPrice(x) {\r\n   // var price = x.price;\r\n   // costs.push(price);\r\n+  var finalPrice = 0;\r\n \r\n   console.log(finalPrice);\r\n \r\n   movedItems.forEach((i) => {\r\n"
+                },
+                {
+                    "date": 1669317788270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -165,9 +165,9 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n-  let finalPrice = calculateTotalPrice(x);\r\n+  let finalPrice = calculateTotalPrice();\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n   totalCart.innerHTML = finalPrice.toFixed(2);\r\n@@ -176,9 +176,9 @@\n var costs = [];\r\n \r\n // console.log(costs);\r\n \r\n-function calculateTotalPrice(x) {\r\n+function calculateTotalPrice() {\r\n   // var price = x.price;\r\n   // costs.push(price);\r\n   var finalPrice = 0;\r\n \r\n"
+                },
+                {
+                    "date": 1669317847057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -169,9 +169,9 @@\n   let finalPrice = calculateTotalPrice();\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n-  totalCart.innerHTML = finalPrice.toFixed(2);\r\n+  totalCart.innerHTML = finalPrice;\r\n }\r\n \r\n var costs = [];\r\n \r\n"
+                },
+                {
+                    "date": 1669317881401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -189,12 +189,11 @@\n     let result = i.price.substr(1);\r\n     let cost = parseFloat(result);\r\n     finalPrice += cost;\r\n     console.log(finalPrice);\r\n-    return finalPrice;\r\n   });\r\n \r\n-  // return finalPrice;\r\n+  return finalPrice;\r\n }\r\n \r\n function removeItemFromCart(s) {\r\n   let cost = 0;\r\n"
+                },
+                {
+                    "date": 1669317944854,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -165,8 +165,10 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n+  var finalPrice = 0;\r\n+\r\n   let finalPrice = calculateTotalPrice();\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n@@ -179,9 +181,8 @@\n \r\n function calculateTotalPrice() {\r\n   // var price = x.price;\r\n   // costs.push(price);\r\n-  var finalPrice = 0;\r\n \r\n   console.log(finalPrice);\r\n \r\n   movedItems.forEach((i) => {\r\n"
+                },
+                {
+                    "date": 1669317960511,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -179,11 +179,8 @@\n \r\n // console.log(costs);\r\n \r\n function calculateTotalPrice() {\r\n-  // var price = x.price;\r\n-  // costs.push(price);\r\n-\r\n   console.log(finalPrice);\r\n \r\n   movedItems.forEach((i) => {\r\n     console.log(i);\r\n@@ -191,10 +188,8 @@\n     let cost = parseFloat(result);\r\n     finalPrice += cost;\r\n     console.log(finalPrice);\r\n   });\r\n-\r\n-  return finalPrice;\r\n }\r\n \r\n function removeItemFromCart(s) {\r\n   let cost = 0;\r\n"
+                },
+                {
+                    "date": 1669317977545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -167,8 +167,20 @@\n   list.appendChild(cartList);\r\n \r\n   var finalPrice = 0;\r\n \r\n+  function calculateTotalPrice() {\r\n+    console.log(finalPrice);\r\n+\r\n+    movedItems.forEach((i) => {\r\n+      console.log(i);\r\n+      let result = i.price.substr(1);\r\n+      let cost = parseFloat(result);\r\n+      finalPrice += cost;\r\n+      console.log(finalPrice);\r\n+    });\r\n+  }\r\n+\r\n   let finalPrice = calculateTotalPrice();\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n@@ -178,20 +190,8 @@\n var costs = [];\r\n \r\n // console.log(costs);\r\n \r\n-function calculateTotalPrice() {\r\n-  console.log(finalPrice);\r\n-\r\n-  movedItems.forEach((i) => {\r\n-    console.log(i);\r\n-    let result = i.price.substr(1);\r\n-    let cost = parseFloat(result);\r\n-    finalPrice += cost;\r\n-    console.log(finalPrice);\r\n-  });\r\n-}\r\n-\r\n function removeItemFromCart(s) {\r\n   let cost = 0;\r\n   var row = s.parentNode.parentNode;\r\n   var priceNode = row.children[1];\r\n"
+                },
+                {
+                    "date": 1669318043493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -179,13 +179,13 @@\n       console.log(finalPrice);\r\n     });\r\n   }\r\n \r\n-  let finalPrice = calculateTotalPrice();\r\n+  let price = calculateTotalPrice();\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n-  totalCart.innerHTML = finalPrice;\r\n+  totalCart.innerHTML = rpice;\r\n }\r\n \r\n var costs = [];\r\n \r\n"
+                },
+                {
+                    "date": 1669318054989,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -183,9 +183,9 @@\n   let price = calculateTotalPrice();\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n-  totalCart.innerHTML = rpice;\r\n+  totalCart.innerHTML = price.toFixed(2);\r\n }\r\n \r\n var costs = [];\r\n \r\n"
+                },
+                {
+                    "date": 1669318100928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -177,8 +177,9 @@\n       let cost = parseFloat(result);\r\n       finalPrice += cost;\r\n       console.log(finalPrice);\r\n     });\r\n+    return finalPrice;\r\n   }\r\n \r\n   let price = calculateTotalPrice();\r\n \r\n"
+                },
+                {
+                    "date": 1669318152778,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -132,8 +132,9 @@\n     }\r\n   });\r\n }\r\n \r\n+var finalPrice = 0;\r\n function insertCart(x) {\r\n   let list = document.getElementById(\"fav\");\r\n \r\n   let cartList = document.createElement(\"li\");\r\n@@ -165,10 +166,8 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n-  var finalPrice = 0;\r\n-\r\n   function calculateTotalPrice() {\r\n     console.log(finalPrice);\r\n \r\n     movedItems.forEach((i) => {\r\n"
+                },
+                {
+                    "date": 1669318206057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -133,8 +133,9 @@\n   });\r\n }\r\n \r\n var finalPrice = 0;\r\n+\r\n function insertCart(x) {\r\n   let list = document.getElementById(\"fav\");\r\n \r\n   let cartList = document.createElement(\"li\");\r\n@@ -205,7 +206,9 @@\n   let oldPrice = document.getElementById(\"cartTotal\").innerHTML;\r\n   console.log(oldPrice);\r\n   let costTwo = parseFloat(oldPrice);\r\n   console.log(costTwo);\r\n-  document.getElementById(\"cartTotal\").innerHTML = (costTwo - cost).toFixed(2);\r\n+  erasedPrice = costTwo - cost;\r\n+  erasedPrice = finalPrice;\r\n+  document.getElementById(\"cartTotal\").innerHTML = erasedPrice.toFixed(2);\r\n   return cost;\r\n }\r\n"
+                },
+                {
+                    "date": 1669318232861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -209,6 +209,5 @@\n   console.log(costTwo);\r\n   erasedPrice = costTwo - cost;\r\n   erasedPrice = finalPrice;\r\n   document.getElementById(\"cartTotal\").innerHTML = erasedPrice.toFixed(2);\r\n-  return cost;\r\n }\r\n"
+                },
+                {
+                    "date": 1669318369079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -167,9 +167,9 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n-  function calculateTotalPrice() {\r\n+  let price = function calculateTotalPrice() {\r\n     console.log(finalPrice);\r\n \r\n     movedItems.forEach((i) => {\r\n       console.log(i);\r\n@@ -178,12 +178,10 @@\n       finalPrice += cost;\r\n       console.log(finalPrice);\r\n     });\r\n     return finalPrice;\r\n-  }\r\n+  };\r\n \r\n-  let price = calculateTotalPrice();\r\n-\r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n   totalCart.innerHTML = price.toFixed(2);\r\n }\r\n"
+                },
+                {
+                    "date": 1669318398249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -167,9 +167,9 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n-  let price = function calculateTotalPrice() {\r\n+  var price = function calculateTotalPrice() {\r\n     console.log(finalPrice);\r\n \r\n     movedItems.forEach((i) => {\r\n       console.log(i);\r\n"
+                },
+                {
+                    "date": 1669318425904,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -182,9 +182,9 @@\n   };\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n-  totalCart.innerHTML = price.toFixed(2);\r\n+  totalCart.innerHTML = price().toFixed(2);\r\n }\r\n \r\n var costs = [];\r\n \r\n"
+                },
+                {
+                    "date": 1669318821371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -167,8 +167,12 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n+  var totalCart = document.getElementById(\"cartTotal\");\r\n+\r\n+  totalCart.innerHTML = price().toFixed(2);\r\n+\r\n   var price = function calculateTotalPrice() {\r\n     console.log(finalPrice);\r\n \r\n     movedItems.forEach((i) => {\r\n@@ -179,12 +183,8 @@\n       console.log(finalPrice);\r\n     });\r\n     return finalPrice;\r\n   };\r\n-\r\n-  var totalCart = document.getElementById(\"cartTotal\");\r\n-\r\n-  totalCart.innerHTML = price().toFixed(2);\r\n }\r\n \r\n var costs = [];\r\n \r\n"
+                },
+                {
+                    "date": 1669318846735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -167,12 +167,8 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n-  var totalCart = document.getElementById(\"cartTotal\");\r\n-\r\n-  totalCart.innerHTML = price().toFixed(2);\r\n-\r\n   var price = function calculateTotalPrice() {\r\n     console.log(finalPrice);\r\n \r\n     movedItems.forEach((i) => {\r\n@@ -183,8 +179,12 @@\n       console.log(finalPrice);\r\n     });\r\n     return finalPrice;\r\n   };\r\n+\r\n+  var totalCart = document.getElementById(\"cartTotal\");\r\n+\r\n+  totalCart.innerHTML = price.toFixed(2);\r\n }\r\n \r\n var costs = [];\r\n \r\n"
+                },
+                {
+                    "date": 1669318858757,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -182,9 +182,9 @@\n   };\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n-  totalCart.innerHTML = price.toFixed(2);\r\n+  totalCart.innerHTML = price().toFixed(2);\r\n }\r\n \r\n var costs = [];\r\n \r\n"
+                },
+                {
+                    "date": 1669318894497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -167,21 +167,10 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n-  var price = function calculateTotalPrice() {\r\n-    console.log(finalPrice);\r\n+  var price = \r\n \r\n-    movedItems.forEach((i) => {\r\n-      console.log(i);\r\n-      let result = i.price.substr(1);\r\n-      let cost = parseFloat(result);\r\n-      finalPrice += cost;\r\n-      console.log(finalPrice);\r\n-    });\r\n-    return finalPrice;\r\n-  };\r\n-\r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n   totalCart.innerHTML = price().toFixed(2);\r\n }\r\n@@ -189,8 +178,21 @@\n var costs = [];\r\n \r\n // console.log(costs);\r\n \r\n+function calculateTotalPrice() {\r\n+  console.log(finalPrice);\r\n+\r\n+  movedItems.forEach((i) => {\r\n+    console.log(i);\r\n+    let result = i.price.substr(1);\r\n+    let cost = parseFloat(result);\r\n+    finalPrice += cost;\r\n+    console.log(finalPrice);\r\n+  });\r\n+  return finalPrice;\r\n+};\r\n+\r\n function removeItemFromCart(s) {\r\n   let cost = 0;\r\n   var row = s.parentNode.parentNode;\r\n   var priceNode = row.children[1];\r\n"
+                },
+                {
+                    "date": 1669318903804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -167,9 +167,9 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n-  var price = \r\n+  var price = calculateTotalPrice();\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n   totalCart.innerHTML = price().toFixed(2);\r\n@@ -189,9 +189,9 @@\n     finalPrice += cost;\r\n     console.log(finalPrice);\r\n   });\r\n   return finalPrice;\r\n-};\r\n+}\r\n \r\n function removeItemFromCart(s) {\r\n   let cost = 0;\r\n   var row = s.parentNode.parentNode;\r\n"
+                },
+                {
+                    "date": 1669318926601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -132,10 +132,8 @@\n     }\r\n   });\r\n }\r\n \r\n-var finalPrice = 0;\r\n-\r\n function insertCart(x) {\r\n   let list = document.getElementById(\"fav\");\r\n \r\n   let cartList = document.createElement(\"li\");\r\n@@ -171,16 +169,18 @@\n   var price = calculateTotalPrice();\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n-  totalCart.innerHTML = price().toFixed(2);\r\n+  totalCart.innerHTML = price.toFixed(2);\r\n }\r\n \r\n var costs = [];\r\n \r\n // console.log(costs);\r\n \r\n function calculateTotalPrice() {\r\n+  var finalPrice = 0;\r\n+\r\n   console.log(finalPrice);\r\n \r\n   movedItems.forEach((i) => {\r\n     console.log(i);\r\n"
+                },
+                {
+                    "date": 1669318953682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -207,7 +207,6 @@\n   console.log(oldPrice);\r\n   let costTwo = parseFloat(oldPrice);\r\n   console.log(costTwo);\r\n   erasedPrice = costTwo - cost;\r\n-  erasedPrice = finalPrice;\r\n   document.getElementById(\"cartTotal\").innerHTML = erasedPrice.toFixed(2);\r\n }\r\n"
+                },
+                {
+                    "date": 1669319197777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -207,6 +207,7 @@\n   console.log(oldPrice);\r\n   let costTwo = parseFloat(oldPrice);\r\n   console.log(costTwo);\r\n   erasedPrice = costTwo - cost;\r\n+  calculateTotalPrice() = erasedPrice\r\n   document.getElementById(\"cartTotal\").innerHTML = erasedPrice.toFixed(2);\r\n }\r\n"
+                },
+                {
+                    "date": 1669319231729,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -207,7 +207,7 @@\n   console.log(oldPrice);\r\n   let costTwo = parseFloat(oldPrice);\r\n   console.log(costTwo);\r\n   erasedPrice = costTwo - cost;\r\n-  calculateTotalPrice() = erasedPrice\r\n+  erasedPrice = calculateTotalPrice();\r\n   document.getElementById(\"cartTotal\").innerHTML = erasedPrice.toFixed(2);\r\n }\r\n"
+                },
+                {
+                    "date": 1669319255399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -207,7 +207,6 @@\n   console.log(oldPrice);\r\n   let costTwo = parseFloat(oldPrice);\r\n   console.log(costTwo);\r\n   erasedPrice = costTwo - cost;\r\n-  erasedPrice = calculateTotalPrice();\r\n   document.getElementById(\"cartTotal\").innerHTML = erasedPrice.toFixed(2);\r\n }\r\n"
+                },
+                {
+                    "date": 1669319442382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -167,8 +167,16 @@\n   list.appendChild(cartList);\r\n \r\n   var price = calculateTotalPrice();\r\n \r\n+  movedItems.forEach((i) => {\r\n+    console.log(i);\r\n+    let result = i.price.substr(1);\r\n+    let cost = parseFloat(result);\r\n+    finalPrice += cost;\r\n+    console.log(finalPrice);\r\n+  });\r\n+\r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n   totalCart.innerHTML = price.toFixed(2);\r\n }\r\n@@ -176,23 +184,23 @@\n var costs = [];\r\n \r\n // console.log(costs);\r\n \r\n-function calculateTotalPrice() {\r\n-  var finalPrice = 0;\r\n+// function calculateTotalPrice() {\r\n+var finalPrice = 0;\r\n \r\n+console.log(finalPrice);\r\n+\r\n+movedItems.forEach((i) => {\r\n+  console.log(i);\r\n+  let result = i.price.substr(1);\r\n+  let cost = parseFloat(result);\r\n+  finalPrice += cost;\r\n   console.log(finalPrice);\r\n+});\r\n+//   return finalPrice;\r\n+// }\r\n \r\n-  movedItems.forEach((i) => {\r\n-    console.log(i);\r\n-    let result = i.price.substr(1);\r\n-    let cost = parseFloat(result);\r\n-    finalPrice += cost;\r\n-    console.log(finalPrice);\r\n-  });\r\n-  return finalPrice;\r\n-}\r\n-\r\n function removeItemFromCart(s) {\r\n   let cost = 0;\r\n   var row = s.parentNode.parentNode;\r\n   var priceNode = row.children[1];\r\n"
+                },
+                {
+                    "date": 1669319470631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -165,9 +165,9 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n-  var price = calculateTotalPrice();\r\n+  // var price = calculateTotalPrice();\r\n \r\n   movedItems.forEach((i) => {\r\n     console.log(i);\r\n     let result = i.price.substr(1);\r\n@@ -177,9 +177,9 @@\n   });\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n-  totalCart.innerHTML = price.toFixed(2);\r\n+  totalCart.innerHTML = finalPrice.toFixed(2);\r\n }\r\n \r\n var costs = [];\r\n \r\n@@ -187,17 +187,17 @@\n \r\n // function calculateTotalPrice() {\r\n var finalPrice = 0;\r\n \r\n-console.log(finalPrice);\r\n+// console.log(finalPrice);\r\n \r\n-movedItems.forEach((i) => {\r\n-  console.log(i);\r\n-  let result = i.price.substr(1);\r\n-  let cost = parseFloat(result);\r\n-  finalPrice += cost;\r\n-  console.log(finalPrice);\r\n-});\r\n+// movedItems.forEach((i) => {\r\n+//   console.log(i);\r\n+//   let result = i.price.substr(1);\r\n+//   let cost = parseFloat(result);\r\n+//   finalPrice += cost;\r\n+//   console.log(finalPrice);\r\n+// });\r\n //   return finalPrice;\r\n // }\r\n \r\n function removeItemFromCart(s) {\r\n"
+                },
+                {
+                    "date": 1669319497166,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -215,6 +215,7 @@\n   console.log(oldPrice);\r\n   let costTwo = parseFloat(oldPrice);\r\n   console.log(costTwo);\r\n   erasedPrice = costTwo - cost;\r\n+  finalPrice = erasedPrice;\r\n   document.getElementById(\"cartTotal\").innerHTML = erasedPrice.toFixed(2);\r\n }\r\n"
+                },
+                {
+                    "date": 1669319653624,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -167,15 +167,15 @@\n   list.appendChild(cartList);\r\n \r\n   // var price = calculateTotalPrice();\r\n \r\n-  movedItems.forEach((i) => {\r\n-    console.log(i);\r\n-    let result = i.price.substr(1);\r\n-    let cost = parseFloat(result);\r\n-    finalPrice += cost;\r\n-    console.log(finalPrice);\r\n-  });\r\n+  // movedItems.forEach((i) => {\r\n+  console.log(x);\r\n+  let result = x.price.substr(1);\r\n+  let cost = parseFloat(result);\r\n+  finalPrice += cost;\r\n+  console.log(finalPrice);\r\n+  // });\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n   totalCart.innerHTML = finalPrice.toFixed(2);\r\n"
+                },
+                {
+                    "date": 1669319707296,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -165,17 +165,12 @@\n   cartList.appendChild(removeCart);\r\n \r\n   list.appendChild(cartList);\r\n \r\n-  // var price = calculateTotalPrice();\r\n-\r\n-  // movedItems.forEach((i) => {\r\n-  console.log(x);\r\n   let result = x.price.substr(1);\r\n   let cost = parseFloat(result);\r\n   finalPrice += cost;\r\n   console.log(finalPrice);\r\n-  // });\r\n \r\n   var totalCart = document.getElementById(\"cartTotal\");\r\n \r\n   totalCart.innerHTML = finalPrice.toFixed(2);\r\n"
+                },
+                {
+                    "date": 1669319746526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -175,27 +175,10 @@\n \r\n   totalCart.innerHTML = finalPrice.toFixed(2);\r\n }\r\n \r\n-var costs = [];\r\n-\r\n-// console.log(costs);\r\n-\r\n-// function calculateTotalPrice() {\r\n var finalPrice = 0;\r\n \r\n-// console.log(finalPrice);\r\n-\r\n-// movedItems.forEach((i) => {\r\n-//   console.log(i);\r\n-//   let result = i.price.substr(1);\r\n-//   let cost = parseFloat(result);\r\n-//   finalPrice += cost;\r\n-//   console.log(finalPrice);\r\n-// });\r\n-//   return finalPrice;\r\n-// }\r\n-\r\n function removeItemFromCart(s) {\r\n   let cost = 0;\r\n   var row = s.parentNode.parentNode;\r\n   var priceNode = row.children[1];\r\n"
+                },
+                {
+                    "date": 1669320921737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -151,8 +151,15 @@\n   itemName.className = \"cart-item-name\";\r\n   itemName.append(document.createTextNode(x.name));\r\n   cartList.appendChild(itemName);\r\n \r\n+  let decrease = document.createElement(\"i\");\r\n+  decrease.className = \"fa fa-minus-circle\";\r\n+  cartList.appendChild(decrease);\r\n+\r\n+  let quantity = document.createElement(\"span\");\r\n+  quantity.className = \"quantity\";\r\n+\r\n   let removeCart = document.createElement(\"span\");\r\n   removeCart.className = \"remove-cart\";\r\n   let icon = document.createElement(\"i\");\r\n \r\n"
+                },
+                {
+                    "date": 1669320952624,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -157,8 +157,9 @@\n   cartList.appendChild(decrease);\r\n \r\n   let quantity = document.createElement(\"span\");\r\n   quantity.className = \"quantity\";\r\n+  quantity.appendChild(document.createTextNode(\"1\"));\r\n \r\n   let removeCart = document.createElement(\"span\");\r\n   removeCart.className = \"remove-cart\";\r\n   let icon = document.createElement(\"i\");\r\n"
+                },
+                {
+                    "date": 1669320971528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -158,8 +158,9 @@\n \r\n   let quantity = document.createElement(\"span\");\r\n   quantity.className = \"quantity\";\r\n   quantity.appendChild(document.createTextNode(\"1\"));\r\n+  cartList.appendChild(quantity);\r\n \r\n   let removeCart = document.createElement(\"span\");\r\n   removeCart.className = \"remove-cart\";\r\n   let icon = document.createElement(\"i\");\r\n"
+                },
+                {
+                    "date": 1669321020296,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -160,8 +160,12 @@\n   quantity.className = \"quantity\";\r\n   quantity.appendChild(document.createTextNode(\"1\"));\r\n   cartList.appendChild(quantity);\r\n \r\n+  let increase = document.createElement(\"i\");\r\n+  decrease.className = \"fa fa-plus-square\";\r\n+  cartList.appendChild(increase);\r\n+\r\n   let removeCart = document.createElement(\"span\");\r\n   removeCart.className = \"remove-cart\";\r\n   let icon = document.createElement(\"i\");\r\n \r\n"
+                },
+                {
+                    "date": 1669321046639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -151,20 +151,20 @@\n   itemName.className = \"cart-item-name\";\r\n   itemName.append(document.createTextNode(x.name));\r\n   cartList.appendChild(itemName);\r\n \r\n-  let decrease = document.createElement(\"i\");\r\n-  decrease.className = \"fa fa-minus-circle\";\r\n-  cartList.appendChild(decrease);\r\n+  let increase = document.createElement(\"i\");\r\n+  decrease.className = \"fa fa-plus-square\";\r\n+  cartList.appendChild(increase);\r\n \r\n   let quantity = document.createElement(\"span\");\r\n   quantity.className = \"quantity\";\r\n   quantity.appendChild(document.createTextNode(\"1\"));\r\n   cartList.appendChild(quantity);\r\n \r\n-  let increase = document.createElement(\"i\");\r\n-  decrease.className = \"fa fa-plus-square\";\r\n-  cartList.appendChild(increase);\r\n+  let decrease = document.createElement(\"i\");\r\n+  decrease.className = \"fa fa-minus-circle\";\r\n+  cartList.appendChild(decrease);\r\n \r\n   let removeCart = document.createElement(\"span\");\r\n   removeCart.className = \"remove-cart\";\r\n   let icon = document.createElement(\"i\");\r\n"
+                },
+                {
+                    "date": 1669321093274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -152,9 +152,9 @@\n   itemName.append(document.createTextNode(x.name));\r\n   cartList.appendChild(itemName);\r\n \r\n   let increase = document.createElement(\"i\");\r\n-  decrease.className = \"fa fa-plus-square\";\r\n+  increase.className = \"fa fa-plus-square\";\r\n   cartList.appendChild(increase);\r\n \r\n   let quantity = document.createElement(\"span\");\r\n   quantity.className = \"quantity\";\r\n"
+                },
+                {
+                    "date": 1669321150227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -152,18 +152,18 @@\n   itemName.append(document.createTextNode(x.name));\r\n   cartList.appendChild(itemName);\r\n \r\n   let increase = document.createElement(\"i\");\r\n-  increase.className = \"fa fa-plus-square\";\r\n+  increase.className = \"fa fa-plus-square cart-price\";\r\n   cartList.appendChild(increase);\r\n \r\n   let quantity = document.createElement(\"span\");\r\n-  quantity.className = \"quantity\";\r\n+  quantity.className = \"cart-price\";\r\n   quantity.appendChild(document.createTextNode(\"1\"));\r\n   cartList.appendChild(quantity);\r\n \r\n   let decrease = document.createElement(\"i\");\r\n-  decrease.className = \"fa fa-minus-circle\";\r\n+  decrease.className = \"fa fa-minus-circle cart-price\";\r\n   cartList.appendChild(decrease);\r\n \r\n   let removeCart = document.createElement(\"span\");\r\n   removeCart.className = \"remove-cart\";\r\n"
+                },
+                {
+                    "date": 1669321163940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -152,9 +152,9 @@\n   itemName.append(document.createTextNode(x.name));\r\n   cartList.appendChild(itemName);\r\n \r\n   let increase = document.createElement(\"i\");\r\n-  increase.className = \"fa fa-plus-square cart-price\";\r\n+  increase.className = \"fa fa-plus-square\";\r\n   cartList.appendChild(increase);\r\n \r\n   let quantity = document.createElement(\"span\");\r\n   quantity.className = \"cart-price\";\r\n"
+                },
+                {
+                    "date": 1669321171544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -161,9 +161,9 @@\n   quantity.appendChild(document.createTextNode(\"1\"));\r\n   cartList.appendChild(quantity);\r\n \r\n   let decrease = document.createElement(\"i\");\r\n-  decrease.className = \"fa fa-minus-circle cart-price\";\r\n+  decrease.className = \"fa fa-minus-circle\";\r\n   cartList.appendChild(decrease);\r\n \r\n   let removeCart = document.createElement(\"span\");\r\n   removeCart.className = \"remove-cart\";\r\n"
+                },
+                {
+                    "date": 1669321191793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -152,18 +152,18 @@\n   itemName.append(document.createTextNode(x.name));\r\n   cartList.appendChild(itemName);\r\n \r\n   let increase = document.createElement(\"i\");\r\n-  increase.className = \"fa fa-plus-square\";\r\n+  increase.className = \"fa fa-plus-square remove-cart\";\r\n   cartList.appendChild(increase);\r\n \r\n   let quantity = document.createElement(\"span\");\r\n   quantity.className = \"cart-price\";\r\n   quantity.appendChild(document.createTextNode(\"1\"));\r\n   cartList.appendChild(quantity);\r\n \r\n   let decrease = document.createElement(\"i\");\r\n-  decrease.className = \"fa fa-minus-circle\";\r\n+  decrease.className = \"fa fa-minus-circle remove-cart\";\r\n   cartList.appendChild(decrease);\r\n \r\n   let removeCart = document.createElement(\"span\");\r\n   removeCart.className = \"remove-cart\";\r\n"
+                },
+                {
+                    "date": 1669321262490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -152,9 +152,9 @@\n   itemName.append(document.createTextNode(x.name));\r\n   cartList.appendChild(itemName);\r\n \r\n   let increase = document.createElement(\"i\");\r\n-  increase.className = \"fa fa-plus-square remove-cart\";\r\n+  increase.className = \" remove-cart fa fa-plus-square \";\r\n   cartList.appendChild(increase);\r\n \r\n   let quantity = document.createElement(\"span\");\r\n   quantity.className = \"cart-price\";\r\n"
+                },
+                {
+                    "date": 1669321268394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -152,9 +152,9 @@\n   itemName.append(document.createTextNode(x.name));\r\n   cartList.appendChild(itemName);\r\n \r\n   let increase = document.createElement(\"i\");\r\n-  increase.className = \" remove-cart fa fa-plus-square \";\r\n+  increase.className = \"remove-cart fa fa-plus-square\";\r\n   cartList.appendChild(increase);\r\n \r\n   let quantity = document.createElement(\"span\");\r\n   quantity.className = \"cart-price\";\r\n"
+                },
+                {
+                    "date": 1669321291816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -152,9 +152,9 @@\n   itemName.append(document.createTextNode(x.name));\r\n   cartList.appendChild(itemName);\r\n \r\n   let increase = document.createElement(\"i\");\r\n-  increase.className = \"remove-cart fa fa-plus-square\";\r\n+  increase.className = \"fa fa-plus-square\";\r\n   cartList.appendChild(increase);\r\n \r\n   let quantity = document.createElement(\"span\");\r\n   quantity.className = \"cart-price\";\r\n"
+                },
+                {
+                    "date": 1669321568356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -136,8 +136,9 @@\n function insertCart(x) {\r\n   let list = document.getElementById(\"fav\");\r\n \r\n   let cartList = document.createElement(\"li\");\r\n+  cartList.className(\"list\");\r\n \r\n   let image = document.createElement(\"img\");\r\n   let src = image.setAttribute(\"src\", x.src);\r\n   cartList.appendChild(image);\r\n"
+                },
+                {
+                    "date": 1669321617957,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -136,9 +136,9 @@\n function insertCart(x) {\r\n   let list = document.getElementById(\"fav\");\r\n \r\n   let cartList = document.createElement(\"li\");\r\n-  cartList.className(\"list\");\r\n+  cartList.className = \"list\";\r\n \r\n   let image = document.createElement(\"img\");\r\n   let src = image.setAttribute(\"src\", x.src);\r\n   cartList.appendChild(image);\r\n"
+                },
+                {
+                    "date": 1669351152369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -153,8 +153,11 @@\n   itemName.append(document.createTextNode(x.name));\r\n   cartList.appendChild(itemName);\r\n \r\n   let increase = document.createElement(\"i\");\r\n+  increase.onclick = function () {\r\n+    increaseCount(this);\r\n+  };\r\n   increase.className = \"fa fa-plus-square\";\r\n   cartList.appendChild(increase);\r\n \r\n   let quantity = document.createElement(\"span\");\r\n"
+                },
+                {
+                    "date": 1669351198228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -213,4 +213,8 @@\n   erasedPrice = costTwo - cost;\r\n   finalPrice = erasedPrice;\r\n   document.getElementById(\"cartTotal\").innerHTML = erasedPrice.toFixed(2);\r\n }\r\n+\r\n+function increaseCount(y) {\r\n+  console.log(y);\r\n+}\r\n"
+                },
+                {
+                    "date": 1669351325032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -216,5 +216,6 @@\n }\r\n \r\n function increaseCount(y) {\r\n   console.log(y);\r\n+  var plus = y.parentNode.parentNode;\r\n }\r\n"
+                },
+                {
+                    "date": 1669351397608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -217,5 +217,7 @@\n \r\n function increaseCount(y) {\r\n   console.log(y);\r\n   var plus = y.parentNode.parentNode;\r\n+  var target = plus.children[4];\r\n+  console.log(target);\r\n }\r\n"
+                },
+                {
+                    "date": 1669351421752,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -217,7 +217,8 @@\n \r\n function increaseCount(y) {\r\n   console.log(y);\r\n   var plus = y.parentNode.parentNode;\r\n+  console.log(plus);\r\n   var target = plus.children[4];\r\n   console.log(target);\r\n }\r\n"
+                },
+                {
+                    "date": 1669351435812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -216,9 +216,9 @@\n }\r\n \r\n function increaseCount(y) {\r\n   console.log(y);\r\n-  var plus = y.parentNode.parentNode;\r\n+  var plus = y.parentNode;\r\n   console.log(plus);\r\n   var target = plus.children[4];\r\n   console.log(target);\r\n }\r\n"
+                },
+                {
+                    "date": 1669351529613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -220,5 +220,6 @@\n   var plus = y.parentNode;\r\n   console.log(plus);\r\n   var target = plus.children[4];\r\n   console.log(target);\r\n+  console.log(target.innerText);\r\n }\r\n"
+                },
+                {
+                    "date": 1669351571377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -220,6 +220,8 @@\n   var plus = y.parentNode;\r\n   console.log(plus);\r\n   var target = plus.children[4];\r\n   console.log(target);\r\n-  console.log(target.innerText);\r\n+  let new = target.innerText;\r\n+\r\n+  target.innerText = \r\n }\r\n"
+                },
+                {
+                    "date": 1669351640205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -220,8 +220,8 @@\n   var plus = y.parentNode;\r\n   console.log(plus);\r\n   var target = plus.children[4];\r\n   console.log(target);\r\n-  let new = target.innerText;\r\n+  var h = target.innerText;\r\n \r\n-  target.innerText = \r\n+  target.innertext = h++;\r\n }\r\n"
+                },
+                {
+                    "date": 1669351654598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -222,6 +222,6 @@\n   var target = plus.children[4];\r\n   console.log(target);\r\n   var h = target.innerText;\r\n \r\n-  target.innertext = h++;\r\n+  target.innerText = h++;\r\n }\r\n"
+                },
+                {
+                    "date": 1669351678339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -222,6 +222,6 @@\n   var target = plus.children[4];\r\n   console.log(target);\r\n   var h = target.innerText;\r\n \r\n-  target.innerText = h++;\r\n+  target.innerText = ++h;\r\n }\r\n"
+                },
+                {
+                    "date": 1669351701620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -221,7 +221,6 @@\n   console.log(plus);\r\n   var target = plus.children[4];\r\n   console.log(target);\r\n   var h = target.innerText;\r\n-\r\n   target.innerText = ++h;\r\n }\r\n"
+                },
+                {
+                    "date": 1669351840377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -222,5 +222,7 @@\n   var target = plus.children[4];\r\n   console.log(target);\r\n   var h = target.innerText;\r\n   target.innerText = ++h;\r\n+\r\n+  var currentItem = plus.children[1];\r\n }\r\n"
+                },
+                {
+                    "date": 1669351858675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -224,5 +224,6 @@\n   var h = target.innerText;\r\n   target.innerText = ++h;\r\n \r\n   var currentItem = plus.children[1];\r\n+  finalPrice = finalPrice + currentItem;\r\n }\r\n"
+                },
+                {
+                    "date": 1669351902179,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -225,5 +225,6 @@\n   target.innerText = ++h;\r\n \r\n   var currentItem = plus.children[1];\r\n   finalPrice = finalPrice + currentItem;\r\n+  console.log(finalPrice);\r\n }\r\n"
+                },
+                {
+                    "date": 1669351954277,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -224,7 +224,8 @@\n   var h = target.innerText;\r\n   target.innerText = ++h;\r\n \r\n   var currentItem = plus.children[1];\r\n+  var currentItemPrice = currentItem.innerText;\r\n   finalPrice = finalPrice + currentItem;\r\n   console.log(finalPrice);\r\n }\r\n"
+                },
+                {
+                    "date": 1669352005351,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -225,7 +225,8 @@\n   target.innerText = ++h;\r\n \r\n   var currentItem = plus.children[1];\r\n   var currentItemPrice = currentItem.innerText;\r\n-  finalPrice = finalPrice + currentItem;\r\n+  let withoutDolor = currentItemPrice.substr(1);\r\n+  finalPrice = finalPrice + currentItemPrice;\r\n   console.log(finalPrice);\r\n }\r\n"
+                },
+                {
+                    "date": 1669352115678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -225,8 +225,9 @@\n   target.innerText = ++h;\r\n \r\n   var currentItem = plus.children[1];\r\n   var currentItemPrice = currentItem.innerText;\r\n-  let withoutDolor = currentItemPrice.substr(1);\r\n+  let withDolor = currentItemPrice.substr(1);\r\n+  let withOutDolor = withDolor.parseFloat(withDolor);\r\n   finalPrice = finalPrice + currentItemPrice;\r\n   console.log(finalPrice);\r\n }\r\n"
+                },
+                {
+                    "date": 1669352122688,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -227,7 +227,7 @@\n   var currentItem = plus.children[1];\r\n   var currentItemPrice = currentItem.innerText;\r\n   let withDolor = currentItemPrice.substr(1);\r\n   let withOutDolor = withDolor.parseFloat(withDolor);\r\n-  finalPrice = finalPrice + withOutDolor;\r\n+  finalPrice = finalPrice + withOutDolor ;\r\n   console.log(finalPrice);\r\n }\r\n"
+                },
+                {
+                    "date": 1669353849459,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,263 @@\n+var images = {};\r\n+let file = \"Flowers.json\";\r\n+fetch(file) //api for the get request\r\n+  .then((response) => response.json())\r\n+  .then((data) => {\r\n+    images = data;\r\n+    // console.log(images);\r\n+\r\n+    data.forEach((key) => {\r\n+      var firstDiv = document.createElement(\"div\");\r\n+      firstDiv.className = \"block\";\r\n+      // console.log(firstDiv);\r\n+\r\n+      var img = document.createElement(\"img\");\r\n+      img.setAttribute(\"src\", key.src);\r\n+      // console.log(data[key]);\r\n+      firstDiv.appendChild(img);\r\n+      var dolor = document.createTextNode(key.price);\r\n+      var innerDiv = attribute(\"price\", \"div\", \"block-one\");\r\n+\r\n+      // console.log(innerDiv);\r\n+\r\n+      var name = document.createElement(\"span\");\r\n+      name.appendChild(document.createTextNode(key.name));\r\n+      innerDiv.appendChild(name);\r\n+\r\n+      // console.log(name);\r\n+      let b = star();\r\n+      innerDiv.appendChild(b);\r\n+\r\n+      var rate = document.createElement(\"span\");\r\n+\r\n+      rate.appendChild(dolor);\r\n+      innerDiv.appendChild(rate);\r\n+\r\n+      var add = attribute(\"add-button\", \"button\", key.id);\r\n+      add.onclick = function () {\r\n+        console.log(\"1\");\r\n+        addToCart(this);\r\n+      };\r\n+\r\n+      var value = document.createTextNode(\"Add\");\r\n+      add.style.cursor = \"pointer\";\r\n+      add.appendChild(value);\r\n+      innerDiv.appendChild(add);\r\n+\r\n+      firstDiv.appendChild(innerDiv);\r\n+      // console.log(firstDiv);\r\n+      var c = document.getElementById(\"first-one\");\r\n+      c.appendChild(firstDiv);\r\n+      // console.log(firstDiv.innerHTML);\r\n+    });\r\n+    // buy.addEventListener(\"click\", (e) => {\r\n+    //   console.log(e);\r\n+    // });\r\n+  });\r\n+\r\n+function star() {\r\n+  let ratings = document.createElement(\"div\");\r\n+  ratings.className = \"ratings\";\r\n+  ratings.setAttribute(\"id\", \"rating-block-one\");\r\n+  console.log(ratings);\r\n+\r\n+  for (let i = 0; i <= 4; i++) {\r\n+    let j = attribute(\"fa fa-star-o\", \"i\", \"f\");\r\n+    j.setAttribute(\"area-hidden\", \"true\");\r\n+    ratings.appendChild(j);\r\n+  }\r\n+\r\n+  return ratings;\r\n+}\r\n+\r\n+function attribute(className = \"\", tag = \"\", id = \"\") {\r\n+  let j = document.createElement(tag);\r\n+  j.className = className;\r\n+  j.setAttribute(\"id\", id);\r\n+  return j;\r\n+}\r\n+\r\n+function login() {\r\n+  let name = document.getElementById(\"name-popup\");\r\n+  let menu = document.getElementById(\"menu\");\r\n+\r\n+  console.log(name);\r\n+  console.log(name.style.display);\r\n+\r\n+  if (name.style.display == \"\") {\r\n+    console.log(name.style.display);\r\n+    name.style.display = \"block\";\r\n+  }\r\n+}\r\n+\r\n+function closePopup() {\r\n+  let name = document.getElementById(\"name-popup\");\r\n+  let close = document.getElementById(\"close\");\r\n+\r\n+  if (name.style.display == \"block\") {\r\n+    name.style.display = \"\";\r\n+  }\r\n+}\r\n+\r\n+function showCart() {\r\n+  let cart = document.getElementById(\"cart-button\");\r\n+  let cartBlock = document.getElementById(\"cart-block\");\r\n+\r\n+  if (cartBlock.style.display == \"\") {\r\n+    cartBlock.style.display = \"block\";\r\n+  }\r\n+}\r\n+\r\n+function closeCart() {\r\n+  let cartBlock = document.getElementById(\"cart-block\");\r\n+\r\n+  if (cartBlock.style.display == \"block\") {\r\n+    cartBlock.style.display = \"\";\r\n+  }\r\n+}\r\n+\r\n+var movedItems = [];\r\n+console.log(movedItems);\r\n+\r\n+function addToCart(y) {\r\n+  var identity = y.id;\r\n+  console.log(identity);\r\n+\r\n+  images.forEach((key) => {\r\n+    if (key.id == identity) {\r\n+      var obj = key;\r\n+      console.log(obj);\r\n+      movedItems.push(key);\r\n+      insertCart(obj);\r\n+    }\r\n+  });\r\n+}\r\n+\r\n+function insertCart(x) {\r\n+  let list = document.getElementById(\"fav\");\r\n+\r\n+  let cartList = document.createElement(\"li\");\r\n+  cartList.className = \"list\";\r\n+\r\n+  let image = document.createElement(\"img\");\r\n+  let src = image.setAttribute(\"src\", x.src);\r\n+  cartList.appendChild(image);\r\n+\r\n+  let itemPrice = document.createElement(\"span\");\r\n+  itemPrice.className = \"cart-price\";\r\n+  itemPrice.appendChild(document.createTextNode(x.price));\r\n+  cartList.appendChild(itemPrice);\r\n+\r\n+  let itemName = document.createElement(\"span\");\r\n+  itemName.className = \"cart-item-name\";\r\n+  itemName.append(document.createTextNode(x.name));\r\n+  cartList.appendChild(itemName);\r\n+\r\n+  let increase = document.createElement(\"i\");\r\n+  increase.onclick = function () {\r\n+    increaseCount(this);\r\n+  };\r\n+  increase.className = \"fa fa-plus-square\";\r\n+  cartList.appendChild(increase);\r\n+\r\n+  let quantity = document.createElement(\"span\");\r\n+  quantity.className = \"cart-price\";\r\n+  quantity.appendChild(document.createTextNode(\"1\"));\r\n+  cartList.appendChild(quantity);\r\n+\r\n+  let decrease = document.createElement(\"i\");\r\n+  decrease.className = \"fa fa-minus-circle remove-cart\";\r\n+  cartList.appendChild(decrease);\r\n+\r\n+  decrease.onclick = function () {\r\n+    decreaseCount(this);\r\n+  };\r\n+\r\n+  let removeCart = document.createElement(\"span\");\r\n+  removeCart.className = \"remove-cart\";\r\n+  let icon = document.createElement(\"i\");\r\n+\r\n+  icon.onclick = function () {\r\n+    var deletedCost = removeItemFromCart(this);\r\n+  };\r\n+\r\n+  icon.className = \"fa fa-times trash\";\r\n+  removeCart.appendChild(icon);\r\n+  cartList.appendChild(removeCart);\r\n+\r\n+  list.appendChild(cartList);\r\n+\r\n+  let result = x.price.substr(1);\r\n+  let cost = parseFloat(result);\r\n+  finalPrice += cost;\r\n+  console.log(finalPrice);\r\n+\r\n+  var totalCart = document.getElementById(\"cartTotal\");\r\n+\r\n+  totalCart.innerHTML = finalPrice.toFixed(2);\r\n+}\r\n+\r\n+var finalPrice = 0;\r\n+\r\n+function removeItemFromCart(s) {\r\n+  let cost = 0;\r\n+  var row = s.parentNode.parentNode;\r\n+  var priceNode = row.children[1];\r\n+  console.log(priceNode);\r\n+  let removedPrice = priceNode.innerHTML;\r\n+  console.log(removedPrice);\r\n+  let result = removedPrice.substr(1);\r\n+  cost = parseFloat(result);\r\n+  document.getElementById(\"fav\").removeChild(row);\r\n+\r\n+  let target = row.children[4];\r\n+  let h = target.innerText;\r\n+\r\n+  let oldPrice = document.getElementById(\"cartTotal\").innerHTML;\r\n+  console.log(oldPrice);\r\n+  let costTwo = parseFloat(oldPrice);\r\n+  console.log(costTwo);\r\n+  erasedPrice = costTwo - cost * h;\r\n+  finalPrice = erasedPrice;\r\n+  document.getElementById(\"cartTotal\").innerHTML = erasedPrice.toFixed(2);\r\n+}\r\n+\r\n+function increaseCount(y) {\r\n+  console.log(y);\r\n+  let plus = y.parentNode;\r\n+  console.log(plus);\r\n+  let target = plus.children[4];\r\n+  console.log(target);\r\n+  let h = target.innerText;\r\n+  target.innerText = ++h;\r\n+\r\n+  let currentItem = plus.children[1];\r\n+  let currentItemPrice = currentItem.innerText;\r\n+  let withDolor = currentItemPrice.substr(1);\r\n+  console.log(withDolor);\r\n+  let withOutDolor = parseFloat(withDolor);\r\n+  console.log(withOutDolor);\r\n+  finalPrice = finalPrice + withOutDolor;\r\n+  console.log(finalPrice);\r\n+  document.getElementById(\"cartTotal\").innerHTML = finalPrice.toFixed(2);\r\n+}\r\n+\r\n+function decreaseCount(y) {\r\n+  console.log(y);\r\n+\r\n+  let plus = y.parentNode;\r\n+  console.log(plus);\r\n+  let target = plus.children[4];\r\n+  console.log(target);\r\n+  let h = target.innerText;\r\n+  target.innerText = --h;\r\n+\r\n+  let currentItem = plus.children[1];\r\n+  let currentItemPrice = currentItem.innerText;\r\n+  let withDolor = currentItemPrice.substr(1);\r\n+  console.log(withDolor);\r\n+  let withOutDolor = parseFloat(withDolor);\r\n+  console.log(withOutDolor);\r\n+\r\n+  let currentFlowerPrice = finalPrice - target * withOutDolor;\r\n+}\r\n"
+                }
+            ],
+            "date": 1669206664390,
+            "name": "Commit-0",
+            "content": "fetch(\"Flower.json\") //api for the get request\r\n  .then((response) => response.json())\r\n  .then((data) => console.log(data));\r\n"
+        }
+    ]
+}

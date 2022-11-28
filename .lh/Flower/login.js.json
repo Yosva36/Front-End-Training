@@ -1,0 +1,82 @@
+{
+    "sourceFile": "Flower/login.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 16,
+            "patches": [
+                {
+                    "date": 1669555330012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1669555503136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,4 +9,12 @@\n     console.log(name.style.display);\r\n     name.style.display = \"block\";\r\n   }\r\n }\r\n+\r\n+function closePopup() {\r\n+  let name = document.getElementById(\"name-popup\");\r\n+  let close = document.getElementById(\"close\");\r\n+  if (name.style.display == \"block\") {\r\n+    name.style.display = \"\";\r\n+  }\r\n+}\r\n"
+                },
+                {
+                    "date": 1669626473035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,20 +1,30 @@\n-function login() {\r\n-  let name = document.getElementById(\"name-popup\");\r\n-  let menu = document.getElementById(\"menu\");\r\n+// function login() {\r\n+//   let name = document.getElementById(\"name-popup\");\r\n+//   let menu = document.getElementById(\"menu\");\r\n \r\n-  console.log(name);\r\n-  console.log(name.style.display);\r\n+//   console.log(name);\r\n+//   console.log(name.style.display);\r\n \r\n-  if (name.style.display == \"\") {\r\n-    console.log(name.style.display);\r\n-    name.style.display = \"block\";\r\n-  }\r\n-}\r\n+//   if (name.style.display == \"\") {\r\n+//     console.log(name.style.display);\r\n+//     name.style.display = \"block\";\r\n+//   }\r\n+// }\r\n \r\n-function closePopup() {\r\n-  let name = document.getElementById(\"name-popup\");\r\n-  let close = document.getElementById(\"close\");\r\n-  if (name.style.display == \"block\") {\r\n-    name.style.display = \"\";\r\n-  }\r\n-}\r\n+// function closePopup() {\r\n+//   let name = document.getElementById(\"name-popup\");\r\n+//   let close = document.getElementById(\"close\");\r\n+//   if (name.style.display == \"block\") {\r\n+//     name.style.display = \"\";\r\n+//   }\r\n+// }\r\n+const myPromise = new Promise((resolve, reject) => {\r\n+  setTimeout(() => {\r\n+    resolve(\"foo\");\r\n+  }, 3000);\r\n+});\r\n+\r\n+myPromise\r\n+  .then(handleFulfilledA, handleRejectedA)\r\n+  .then(handleFulfilledB, handleRejectedB)\r\n+  .then(handleFulfilledC, handleRejectedC);\r\n"
+                },
+                {
+                    "date": 1669626655811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,7 @@\n     resolve(\"foo\");\r\n   }, 3000);\r\n });\r\n \r\n-myPromise\r\n-  .then(handleFulfilledA, handleRejectedA)\r\n-  .then(handleFulfilledB, handleRejectedB)\r\n-  .then(handleFulfilledC, handleRejectedC);\r\n+myPromise.then(() => {\r\n+  console.log(\"...\");\r\n+});\r\n"
+                },
+                {
+                    "date": 1669626686552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,6 +24,6 @@\n   }, 3000);\r\n });\r\n \r\n myPromise.then(() => {\r\n-  console.log(\"...\");\r\n+  console.log(\"...\", resolve);\r\n });\r\n"
+                },
+                {
+                    "date": 1669626700052,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,6 +24,6 @@\n   }, 3000);\r\n });\r\n \r\n myPromise.then(() => {\r\n-  console.log(\"...\", resolve);\r\n+  console.log(\"...\");\r\n });\r\n"
+                },
+                {
+                    "date": 1669626872414,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,7 +23,7 @@\n     resolve(\"foo\");\r\n   }, 3000);\r\n });\r\n \r\n-myPromise.then(() => {\r\n-  console.log(\"...\");\r\n+myPromise.then((data) => {\r\n+  console.log(\"...\", data);\r\n });\r\n"
+                },
+                {
+                    "date": 1669626946888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n //   }\r\n // }\r\n const myPromise = new Promise((resolve, reject) => {\r\n   setTimeout(() => {\r\n-    resolve(\"foo\");\r\n+    reject(\"foo\");\r\n   }, 3000);\r\n });\r\n \r\n myPromise.then((data) => {\r\n"
+                },
+                {
+                    "date": 1669626956221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n //   }\r\n // }\r\n const myPromise = new Promise((resolve, reject) => {\r\n   setTimeout(() => {\r\n-    reject(\"foo\");\r\n+    reject(\"fo\");\r\n   }, 3000);\r\n });\r\n \r\n myPromise.then((data) => {\r\n"
+                },
+                {
+                    "date": 1669627304398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n //   }\r\n // }\r\n const myPromise = new Promise((resolve, reject) => {\r\n   setTimeout(() => {\r\n-    reject(\"fo\");\r\n+    resolve(\"fo\");\r\n   }, 3000);\r\n });\r\n \r\n myPromise.then((data) => {\r\n"
+                },
+                {
+                    "date": 1669627374917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,7 +23,12 @@\n     resolve(\"fo\");\r\n   }, 3000);\r\n });\r\n \r\n-myPromise.then((data) => {\r\n-  console.log(\"...\", data);\r\n-});\r\n+myPromise.then(\r\n+  (data) => {\r\n+    console.log(\"...\", data);\r\n+  },\r\n+  (data) => {\r\n+    console.log(\"....\", dat);\r\n+  }\r\n+);\r\n"
+                },
+                {
+                    "date": 1669627380879,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n //   }\r\n // }\r\n const myPromise = new Promise((resolve, reject) => {\r\n   setTimeout(() => {\r\n-    resolve(\"fo\");\r\n+    reject(\"fo\");\r\n   }, 3000);\r\n });\r\n \r\n myPromise.then(\r\n"
+                },
+                {
+                    "date": 1669627390172,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,7 +28,7 @@\n   (data) => {\r\n     console.log(\"...\", data);\r\n   },\r\n   (data) => {\r\n-    console.log(\"....\", dat);\r\n+    console.log(\"....\", data);\r\n   }\r\n );\r\n"
+                },
+                {
+                    "date": 1669627513004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,8 @@\n myPromise.then(\r\n   (data) => {\r\n     console.log(\"...\", data);\r\n   },\r\n-  (data) => {\r\n-    console.log(\"....\", data);\r\n+  (h) => {\r\n+    console.log(\"....\", h);\r\n   }\r\n );\r\n"
+                },
+                {
+                    "date": 1669629877554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,34 +1,34 @@\n-// function login() {\r\n-//   let name = document.getElementById(\"name-popup\");\r\n-//   let menu = document.getElementById(\"menu\");\r\n+function login() {\r\n+  let name = document.getElementById(\"name-popup\");\r\n+  let menu = document.getElementById(\"menu\");\r\n \r\n-//   console.log(name);\r\n-//   console.log(name.style.display);\r\n+  console.log(name);\r\n+  console.log(name.style.display);\r\n \r\n-//   if (name.style.display == \"\") {\r\n-//     console.log(name.style.display);\r\n-//     name.style.display = \"block\";\r\n-//   }\r\n+  if (name.style.display == \"\") {\r\n+    console.log(name.style.display);\r\n+    name.style.display = \"block\";\r\n+  }\r\n+}\r\n+\r\n+function closePopup() {\r\n+  let name = document.getElementById(\"name-popup\");\r\n+  let close = document.getElementById(\"close\");\r\n+  if (name.style.display == \"block\") {\r\n+    name.style.display = \"\";\r\n+  }\r\n // }\r\n+// const myPromise = new Promise((resolve, reject) => {\r\n+//   setTimeout(() => {\r\n+//     reject(\"fo\");\r\n+//   }, 3000);\r\n+// });\r\n \r\n-// function closePopup() {\r\n-//   let name = document.getElementById(\"name-popup\");\r\n-//   let close = document.getElementById(\"close\");\r\n-//   if (name.style.display == \"block\") {\r\n-//     name.style.display = \"\";\r\n+// myPromise.then(\r\n+//   (data) => {\r\n+//     console.log(\"...\", data);\r\n+//   },\r\n+//   (h) => {\r\n+//     console.log(\"....\", h);\r\n //   }\r\n-// }\r\n-const myPromise = new Promise((resolve, reject) => {\r\n-  setTimeout(() => {\r\n-    reject(\"fo\");\r\n-  }, 3000);\r\n-});\r\n-\r\n-myPromise.then(\r\n-  (data) => {\r\n-    console.log(\"...\", data);\r\n-  },\r\n-  (h) => {\r\n-    console.log(\"....\", h);\r\n-  }\r\n-);\r\n+// );\r\n"
+                },
+                {
+                    "date": 1669629883561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n   let close = document.getElementById(\"close\");\r\n   if (name.style.display == \"block\") {\r\n     name.style.display = \"\";\r\n   }\r\n+}\r\n // }\r\n // const myPromise = new Promise((resolve, reject) => {\r\n //   setTimeout(() => {\r\n //     reject(\"fo\");\r\n"
+                },
+                {
+                    "date": 1669643893083,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,19 +17,4 @@\n   if (name.style.display == \"block\") {\r\n     name.style.display = \"\";\r\n   }\r\n }\r\n-// }\r\n-// const myPromise = new Promise((resolve, reject) => {\r\n-//   setTimeout(() => {\r\n-//     reject(\"fo\");\r\n-//   }, 3000);\r\n-// });\r\n-\r\n-// myPromise.then(\r\n-//   (data) => {\r\n-//     console.log(\"...\", data);\r\n-//   },\r\n-//   (h) => {\r\n-//     console.log(\"....\", h);\r\n-//   }\r\n-// );\r\n"
+                }
+            ],
+            "date": 1669555330012,
+            "name": "Commit-0",
+            "content": "function login() {\r\n  let name = document.getElementById(\"name-popup\");\r\n  let menu = document.getElementById(\"menu\");\r\n\r\n  console.log(name);\r\n  console.log(name.style.display);\r\n\r\n  if (name.style.display == \"\") {\r\n    console.log(name.style.display);\r\n    name.style.display = \"block\";\r\n  }\r\n}\r\n"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Form/form.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1669783936040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1669783936040,
+            "name": "Commit-0",
+            "content": "function validateName(name, msg) {\r\n  console.log(name);\r\n  let username = document.forms[\"reg\"].elements[name];\r\n  let value = username.value;\r\n  nameRegex = /^[a-zA-Z]+$/;\r\n  if (value.match(nameRegex)) {\r\n    username.style.border = \"1px solid green\";\r\n    document.getElementById(msg).innerText = \"\";\r\n  } else {\r\n    document.getElementById(msg).innerText = \"Give name properly\";\r\n    username.style.border = \"1px solid red\";\r\n    username.value = \"\";\r\n  }\r\n}\r\n\r\nfunction validatePhoneNumber(number, msg) {\r\n  let phoneNumberRegex = /^[6-9][0-9]{9}$/;\r\n  let attribute = document.forms[\"reg\"].elements[number];\r\n  let phoneNumber = attribute.value;\r\n  if (phoneNumber.match(phoneNumberRegex)) {\r\n    attribute.style.border = \"1px solid green\";\r\n    document.getElementById(msg).innerText = \"\";\r\n  } else {\r\n    document.getElementById(msg).innerText = \"Give phone number properly\";\r\n    attribute.style.border = \"1px solid red\";\r\n    attribute.value = \"\";\r\n  }\r\n}\r\n\r\nfunction validateMail(mail, msg) {\r\n  let attribute = document.forms[\"reg\"].elements[mail];\r\n  let emailRegex =\r\n    /^(([^<>()[\\]\\.,;:\\s@\\\"]+(\\.[^<>()[\\]\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@(([^<>()[\\]\\.,;:\\s@\\\"]+\\.)+[^<>()[\\]\\.,;:\\s@\\\"]{2,})$/i;\r\n  let email = attribute.value;\r\n  if (email.match(emailRegex)) {\r\n    attribute.style.border = \"1px solid green\";\r\n    document.getElementById(msg).innerText = \"\";\r\n  } else {\r\n    document.getElementById(msg).innerText = \"Give email properly\";\r\n    attribute.style.border = \"1px solid red\";\r\n    attribute.value = \"\";\r\n  }\r\n}\r\n\r\nfunction validatePincode(pincode, msg) {\r\n  let attribute = document.forms[\"reg\"].elements[pincode];\r\n  let pincodeRegex = /^(\\d{6})$/;\r\n\r\n  let code = attribute.value;\r\n\r\n  if (code.match(pincodeRegex)) {\r\n    attribute.style.border = \"1px solid green\";\r\n    document.getElementById(msg).innerText = \"\";\r\n  } else {\r\n    document.getElementById(msg).innerText = \"Give pincode properly\";\r\n    attribute.style.border = \"1px solid red\";\r\n    attribute.value = \"\";\r\n  }\r\n}\r\n\r\nfunction showPg(x) {\r\n  if (x.checked) {\r\n    document.getElementById(\"study\").style.display = \"block\";\r\n    //   document.forms[\"reg\"].elements[\"viewPg\"].style.display = \"block\";\r\n  } else {\r\n    document.getElementById(\"study\").style.display = \"none\";\r\n  }\r\n}\r\n\r\nlet myForm = document.reg;\r\n\r\nmyForm.addEventListener(\"submit\", (e) => {\r\n  e.preventDefault();\r\n\r\n  const data = new FormData(myForm);\r\n  const myObj = Object.fromEntries(data);\r\n  console.log(myObj);\r\n\r\n  const myJson = JSON.stringify(myObj);\r\n  localStorage.setItem(\"form\", myJson);\r\n});\r\n"
+        }
+    ]
+}
